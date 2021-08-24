@@ -7,8 +7,12 @@ import Footer from './containers/footer/Footer';
 import './App.css';
 
 function App() {
+  let defaultLang = localStorage.getItem('tajik_tour_lang') || navigator.language;
+  if (defaultLang !== 'en' || 'ru') defaultLang = 'ru';
+
   const wrapper = useRef();
   const [device, setDevice] = useState('');
+  const [lang, setLang] = useState(defaultLang);
 
   useEffect(() => {
     let wrapperWidth = wrapper.current.offsetWidth;
@@ -22,9 +26,14 @@ function App() {
     };
   }, [device]);
 
+  function switchLang(lang) {
+    setLang(lang);
+    localStorage.setItem('tajik_tour_lang', lang);
+  }
+
   return (
-    <WrapperContext.Provider value={wrapper}>
-      <div className="wrapper" ref={wrapper} data-device={device}>
+    <WrapperContext.Provider value={{wrapper, lang, switchLang: switchLang}}>
+      <div className="wrapper" ref={wrapper} data-device={device} lang={lang}>
         <Header device={device} />
         <div className="layout">
           <Content />
