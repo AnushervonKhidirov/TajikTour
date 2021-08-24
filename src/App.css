@@ -12,3 +12,8 @@ a {
 	color: inherit;
 	text-decoration: inherit;
 }
+
+svg {
+  pointer-events: none;
+	fill: inherit;
+}

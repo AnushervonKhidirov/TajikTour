@@ -8,7 +8,8 @@ import './App.css';
 
 function App() {
   let defaultLang = localStorage.getItem('tajik_tour_lang') || navigator.language;
-  if (defaultLang !== 'en' || 'ru') defaultLang = 'ru';
+
+  if (defaultLang !== 'en' && 'ru') defaultLang = 'ru';
 
   const wrapper = useRef();
   const [device, setDevice] = useState('');
