@@ -1,8 +1,11 @@
 import React from 'react';
+import Headline from '../components/common/headline/Headline';
 
 function Home() {
   return (
-    <div>home</div>
+    <div>
+      <Headline title="Our Destination" />
+    </div>
   );
 }
 
