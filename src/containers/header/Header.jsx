@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { WrapperContext, HeaderContext } from '../../Context';
 import { NavLink } from 'react-router-dom';
-import { LogoIcon, LangIcon, FacebookIcon } from '../../components/common/Icons';
+import { LogoIcon, LangIcon, FacebookIcon, Twitter, LinkedIn, Pinterest } from '../../components/common/Icons';
 import './header.css';
 
 function Header() {
@@ -67,17 +67,17 @@ function Social() {
     {
       title: 'Twitter',
       link: 'https://twitter.com/',
-      component: 'tw'
+      component: <Twitter />
     },
     {
       title: 'LinkedIn',
       link: 'https://www.linkedin.com/',
-      component: 'in'
+      component: <LinkedIn />
     },
     {
       title: 'Pinterest',
       link: 'https://www.pinterest.com/',
-      component: 'p'
+      component: <Pinterest />
     }
   ];
 
@@ -150,7 +150,6 @@ function Logo() {
         <LogoIcon />
       </div>
     </NavLink>
-
   );
 }
 
