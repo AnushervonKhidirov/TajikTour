@@ -1,5 +1,5 @@
 export const locale = {
-  ourDestinations: 'Наши предназначения',
+  ourDestinations: 'Наши направления',
   asia: 'Азия',
   europe: 'Европа',
   oceania: 'Океания',

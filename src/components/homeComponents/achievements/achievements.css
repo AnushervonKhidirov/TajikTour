@@ -1,0 +1,23 @@
+.achievements_block.block_item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: rebeccapurple;
+  padding: 4em 0;
+}
+
+.achievements_item {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 15px;
+}
+
+.achievements_number {
+  font-size: 3em;
+  margin-right: .5em;
+}
+
+.achievements_name {
+  width: 8em;
+}

@@ -1,0 +1,16 @@
+export const locale = {
+  events: 'События',
+  ourPorposals: 'Наши предложения',
+  porposalsTitle: 'Статьи и новости',
+  porposalsDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor leo quam, in lacinia lacus congue venenatis.',
+  porposalsLink: 'Наш блог',
+  travelEvents: 'Travel Events',
+  travelEventsDesc: 'Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis.',
+  bestBeaches: 'Лучшие пляжи',
+  bestBeachesDesc: 'Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis.',
+  magicBlooms: 'Волшебные цветы',
+  magicBloomsDesc: 'Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis.',
+  alternativeTrips: 'Альтернативные поездки',
+  alternativeTripsDesc: 'Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis.',
+  eventsLink: 'Читать дальше',
+}

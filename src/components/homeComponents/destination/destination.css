@@ -1,17 +1,17 @@
-.destination_item {
-  display: grid;
-  width: 450px;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-gap: 1.5em;
-}
-
 .destinations {
   display: grid;
   width: fit-content;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1.5em;
   margin: auto;
+}
+
+.destination_item {
+  display: grid;
+  width: 450px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 1.5em;
 }
 
 

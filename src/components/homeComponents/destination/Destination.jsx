@@ -60,12 +60,12 @@ function Destination() {
 
   return (
     <DestinationContext.Provider value={locales}>
-      <div className="destination_block">
-      <Headline title={locales.ourDestinations} />
+      <div className="destination_block block_item">
+        <Headline title={locales.ourDestinations} />
 
         <div className="destinations">
           {destinationData.map((dest, index) => {
-            return <DestinationItem dests={dest} key={'destination-' + index} />
+            return <DestinationItem dests={dest} smallDest={dest.smallDest} key={'destination-' + index} />
           })}
         </div>
       </div>
@@ -75,11 +75,14 @@ function Destination() {
 
 function DestinationItem(props) {
   const dest = props.dests;
+  const smallDest = props.smallDest;
 
   return (
     <div className="destination_item">
       <DestinationBigPackage dest={dest.bigDest} />
-      <DestinationSmallPackage dest={dest.smallDest} />
+      {smallDest.map((smallDest, index) => {
+        return <DestinationSmallPackage dest={smallDest} index={index} key={smallDest.title + index.toString()} />
+      })}
     </div>
   );
 }
@@ -102,20 +105,14 @@ function DestinationSmallPackage(props) {
   const dest = props.dest;
 
   return (
-    <>
-      {dest.map((dest, index) => {
-        return (
-          <div className={`destination_list_item destination_list_item-${index}`} key={dest.title + index.toString()}>
-            <div className="destination_img"></div>
-            <div className="destination_desc">
-              <h3 className="title">{dest.title}</h3>
-              <div className="location">{dest.location}</div>
-              <div className="link">{locale.from} {dest.price} $</div>
-            </div>
-          </div>
-        );
-      })}
-    </>
+    <div className={`destination_list_item destination_list_item-${props.index}`}>
+      <div className="destination_img"></div>
+      <div className="destination_desc">
+        <h3 className="title">{dest.title}</h3>
+        <div className="location">{dest.location}</div>
+        <div className="link">{locale.from} {dest.price} $</div>
+      </div>
+    </div>
   );
 }
 
