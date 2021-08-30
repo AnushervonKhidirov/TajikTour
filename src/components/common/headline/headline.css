@@ -2,5 +2,11 @@ h1.headline {
   color: var(--darkGrey);
   text-align: center;
   text-transform: uppercase;
-  margin: 1em 0;
+  margin-bottom: 1em;
+}
+
+@media screen and (max-width: 568px) {
+  h1.headline {
+    font-size: 1.2em;
+  }
 }

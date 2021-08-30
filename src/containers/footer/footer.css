@@ -1,7 +1,6 @@
 footer {
   background-size: cover;
   background-position: center;
-  padding: 50px;
 }
 
 
@@ -10,7 +9,6 @@ footer {
 ================ */
 .footer_block {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   grid-gap: 2em;
   background: #fff;
   color: #9a9a9a;
@@ -24,7 +22,6 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 2em 1em 0 2em;
 }
 
 .footer_logo {
@@ -37,9 +34,9 @@ footer {
 ================ */
 .footer_right {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  width: fit-content;
   grid-gap: 2em;
-  padding: 2em 2em 0 1em;
+  margin: auto;
 }
 
 .footer_right h5.list_title {
@@ -67,24 +64,115 @@ footer {
   transform: rotate(45deg);
 }
 
-.list_arrow::after {
-  content: '';
-}
-
 .list_text {
-  font-size: .8em;
   margin-bottom: .3em;
 }
 
 
 /* ================
-	right
+	bottom
 ================ */
 .footer_bottom {
   display: flex;
   justify-content: space-between;
-  grid-column: 1/3;
   background: var(--gradient90);
   color: #fff;
   padding: 1em;
+}
+
+
+/* ================
+	adaptive
+================ */
+@media screen and (min-width: 1200px) {
+  .footer_block {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer_desc {
+    font-size: 1.2em;
+  }
+
+  .footer_right h5.list_title {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .list_text {
+    font-size: 0.8em;
+  }
+
+  .footer_right h5.list_title {
+    font-size: 1em;
+  }
+}
+
+
+@media screen and (min-width: 992px) {
+  .footer_block {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer_left {
+    padding: 2em 1em 0 2em;
+  }
+
+  .footer_right {
+    padding: 2em 2em 0 1em;
+  }
+
+  .footer_bottom {
+    grid-column: 1/3;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .footer_left {
+    max-width: 500px;
+    margin: 1em auto 0;
+  }
+
+  .footer_left,
+  .footer_right {
+    padding: 0 2em;
+  }
+}
+
+
+@media screen and (min-width: 568px) {
+  footer {
+    padding: 3em;
+  }
+
+  .footer_right {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 568px) {
+  footer {
+    padding: 2em 1em;
+  }
+
+  .footer_right {
+    grid-template-columns: 1fr;
+  }
+
+  .footer_right h5.list_title {
+    width: 10em;
+  }
+
+  .footer_list {
+    display: flex;
+  }
+
+  .footer_bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .left_text {
+    margin-bottom: 0.5em;
+  }
 }

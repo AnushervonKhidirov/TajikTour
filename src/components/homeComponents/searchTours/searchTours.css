@@ -46,3 +46,38 @@ form.search_tour {
   text-transform: uppercase;
   border: none;
 }
+
+
+/* ================
+	adaptive
+================ */
+@media screen and (min-width: 992px) {
+  form.search_tour {
+    width: 925px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  form.search_tour {
+    width: 650px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  form.search_tour {
+    width: 100%;
+  }
+}
+
+
+@media screen and (min-width: 568px) {
+  form.search_tour {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 568px) {
+  form.search_tour {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

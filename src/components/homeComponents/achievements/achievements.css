@@ -1,4 +1,4 @@
-.achievements_block.block_item {
+/* .achievements_block.block_item {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -6,10 +6,26 @@
   background-position: center;
   margin-top: 2em;
   padding: 4em 0;
+} */
+
+.achievements_block.block_item {
+  background-size: cover;
+  background-position: center;
+  margin-top: 2em;
+  padding: 4em 0;
+}
+
+.achievents_inner {
+  display: grid;
+  width: 925px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.5em;
+  margin: auto;
 }
 
 .achievements_item {
   display: flex;
+  justify-content: center;
   align-items: center;
   color: #fff;
   font-size: 15px;
@@ -22,4 +38,37 @@
 
 .achievements_name {
   width: 8em;
+}
+
+
+
+
+/* ================
+	adaptive
+================ */
+@media screen and (min-width: 992px) {
+  .achievents_inner {
+    width: 925px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .achievents_inner {
+    width: 650px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .achievents_inner {
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 568px) {
+  .achievents_inner {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

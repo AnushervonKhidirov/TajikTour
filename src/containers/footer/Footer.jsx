@@ -45,7 +45,7 @@ function Footer() {
     ],
     footerBottom: {
       leftText: locales.bottomFooterText,
-      rightText: '© Tajic Tour 2021'
+      rightText: '© Tajik Tour 2021'
     }
   }
 

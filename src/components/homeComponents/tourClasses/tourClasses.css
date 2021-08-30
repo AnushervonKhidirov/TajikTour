@@ -81,3 +81,29 @@ h2.classes_type {
 .classes_wrapper:nth-child(2) .month {
   background: transparent;
 }
+
+
+/* ================
+	adaptive
+================ */
+@media screen and (min-width: 992px) {
+  .classes {
+    display: grid;
+    width: 925px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.5em;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .classes {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .classes_wrapper {
+    width: 270px;
+  }
+}
