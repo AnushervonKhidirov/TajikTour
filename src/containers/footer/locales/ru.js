@@ -1,0 +1,22 @@
+export const locale = {
+  footerDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut diam et nibh condimentum venenatis eu ac magnasin. Quisque interdum est mauris, eget ullamcorper.',
+  ourAgency: 'Наше агентство',
+  services: 'Услуги',
+  insurancee: 'Страхование',
+  agency: 'Агентство',
+  tourism: 'Туризм',
+  payment: 'Оплата',
+  partners: 'Партнеры',
+  booking: 'Бронирование',
+  rentalCar: 'RentalCar',
+  hostelWorld: 'HostelWorld',
+  trivago: 'Trivago',
+  tripAdvisor: 'TripAdvisor',
+  lastMinute: 'Последнее',
+  london: 'Лондон',
+  california: 'Калифорния',
+  indonesia: 'Индонезия',
+  europe: 'Европа',
+  oceania: 'Океания',
+  bottomFooterText: 'Самая лучшая туристическая компания'
+}
