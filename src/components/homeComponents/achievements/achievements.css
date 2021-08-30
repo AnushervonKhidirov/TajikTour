@@ -2,7 +2,9 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: rebeccapurple;
+  background-size: cover;
+  background-position: center;
+  margin-top: 2em;
   padding: 4em 0;
 }
 

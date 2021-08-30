@@ -26,7 +26,7 @@ function Events() {
         title: locales.travelEvents,
         desc: locales.travelEventsDesc,
         link: {
-          title: locales.eventsLink,
+          title: locales.link,
           href: '/news'
         }
       },
@@ -35,7 +35,7 @@ function Events() {
         title: locales.bestBeaches,
         desc: locales.bestBeachesDesc,
         link: {
-          title: locales.eventsLink,
+          title: locales.link,
           href: '/news'
         }
       },
@@ -44,7 +44,7 @@ function Events() {
         title: locales.magicBlooms,
         desc: locales.magicBloomsDesc,
         link: {
-          title: locales.eventsLink,
+          title: locales.link,
           href: '/news'
         }
       },
@@ -53,7 +53,7 @@ function Events() {
         title: locales.alternativeTrips,
         desc: locales.alternativeTripsDesc,
         link: {
-          title: locales.eventsLink,
+          title: locales.link,
           href: '/news'
         }
       }

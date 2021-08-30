@@ -13,6 +13,6 @@ export const locale = {
   seychelles: 'Seychelles',
   phuket: 'Phuket',
   packages: 'packages',
-  packagesMoreFour: 'packages',
-  from: 'From'
+  from: 'From',
+  linkText: 'View Destination'
 }

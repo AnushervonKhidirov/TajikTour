@@ -12,7 +12,7 @@ export const locale = {
   hawaii: 'Гаваи',
   seychelles: 'Сейшелы',
   phuket: 'Пхукет',
-  packages: 'тур пакета',
-  packagesMoreFour: 'тур пакетов',
-  from: 'От'
+  packages: 'тур пакеты',
+  from: 'От',
+  linkText: 'Посмотреть назначения'
 }

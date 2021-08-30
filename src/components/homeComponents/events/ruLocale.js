@@ -12,5 +12,5 @@ export const locale = {
   magicBloomsDesc: 'Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis.',
   alternativeTrips: 'Альтернативные поездки',
   alternativeTripsDesc: 'Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis.',
-  eventsLink: 'Читать дальше',
+  link: 'Читать дальше',
 }
