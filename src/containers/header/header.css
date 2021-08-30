@@ -1,6 +1,6 @@
 header {
-  border: 1px solid #000;
   box-sizing: border-box;
+  box-shadow: 0 1em 1em rgba(0, 0, 0, .1);
 }
 
 header ul {
@@ -91,10 +91,10 @@ ul.lang_list li {
 .menu_link {
   display: inline-block;
   color: var(--darkGrey);
+  font-weight: 600;
   margin-left: 15px;
   padding: 10px;
   transition: all .3s;
-  font-weight: 600;
 }
 
 .menu_link.active,
