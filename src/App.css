@@ -1,4 +1,5 @@
 body {
+	cursor: default;
 	overflow-x: hidden;
 }
 
@@ -16,4 +17,8 @@ a {
 svg {
   pointer-events: none;
 	fill: inherit;
+}
+
+sup {
+	font-size: .5em;
 }
