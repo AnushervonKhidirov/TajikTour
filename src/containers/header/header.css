@@ -90,7 +90,7 @@ ul.lang_list li {
 
 .menu_link {
   display: inline-block;
-  color: #727475;
+  color: var(--darkGrey);
   margin-left: 15px;
   padding: 10px;
   transition: all .3s;

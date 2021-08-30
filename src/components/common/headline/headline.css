@@ -1,5 +1,5 @@
 h1.headline {
-  color: #555;
+  color: var(--darkGrey);
   text-align: center;
   text-transform: uppercase;
   margin: 1em 0;

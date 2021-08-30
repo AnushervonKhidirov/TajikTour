@@ -67,7 +67,7 @@
 }
 
 .destination_desc .title {
-  color: #555;
+  color: var(--darkGrey);
 }
 
 .destination_desc .location {

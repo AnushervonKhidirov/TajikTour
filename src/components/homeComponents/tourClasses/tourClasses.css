@@ -3,13 +3,13 @@
   width: 925px;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.5em;
-  color: #555;
+  color: var(--darkGrey);
   margin: auto;
 }
 
 
 .classes_block {
-  border: 1px solid #f1f1f1;
+  border: 1px solid var(--borderColor);
   padding: 1em;
 }
 
@@ -26,7 +26,7 @@
 }
 
 .month {
-  background: #555;
+  background: var(--darkGrey);
   color: #fff;
   font-size: .7em;
   text-transform: uppercase;
@@ -36,7 +36,7 @@
 }
 
 h2.classes_type {
-  border-bottom: 1px solid #f1f1f1;
+  border-bottom: 1px solid var(--borderColor);
   padding-bottom: 1em;
 }
 
