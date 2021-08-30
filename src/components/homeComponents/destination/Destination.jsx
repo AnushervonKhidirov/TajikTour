@@ -138,8 +138,6 @@ function DestinationBigPackage(props) {
   const locale = useContext(DestinationContext);
   const dest = props.dest;
 
-  console.log(dest.img);
-
   return (
     <div className="destination_package" style={{backgroundImage: `url(./img/${dest.img})`}}>
       <div className="text">
