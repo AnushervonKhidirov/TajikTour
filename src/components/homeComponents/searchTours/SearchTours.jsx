@@ -24,11 +24,11 @@ function SearchTour() {
         },
         {
           value: 'italy',
-          title: '&nbsp;&nbsp;- Italy'
+          title: '\u00A0 - Italy'
         },
         {
           value: 'netherlands',
-          title: '&nbsp;&nbsp;- Netherlands'
+          title: '\u00A0 - Netherlands'
         },
         {
           value: 'asia',
@@ -36,7 +36,7 @@ function SearchTour() {
         },
         {
           value: 'thailandia',
-          title: '&nbsp;&nbsp;- Thailandia'
+          title: '\u00A0 - Thailandia'
         },
         {
           value: 'united_states',
