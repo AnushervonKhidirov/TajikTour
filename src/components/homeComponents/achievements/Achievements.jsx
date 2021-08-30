@@ -38,11 +38,11 @@ function Achievements() {
   );
 }
 
-function AchievementsItem(props) {
+function AchievementsItem({ number, name }) {
   return (
     <div className="achievements_item">
-      <div className="achievements_number">{props.number}</div>
-      <div className="achievements_name">{props.name}</div>
+      <div className="achievements_number">{number}</div>
+      <div className="achievements_name">{name}</div>
     </div>
   );
 }

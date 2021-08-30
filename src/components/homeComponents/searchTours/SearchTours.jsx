@@ -162,7 +162,7 @@ function SearchTour() {
   );
 }
 
-function SearchForm( {selects} ) {
+function SearchForm({ selects }) {
   return (
     <form name="search" className="search_tour">
       {selects.map(select => {
@@ -174,7 +174,7 @@ function SearchForm( {selects} ) {
   );
 }
 
-function Selects( {title, options, selectName} ) {
+function Selects({ title, options, selectName }) {
   return (
     <div className="select_wrapper">
       <h6 className="title">{title}</h6>
@@ -188,7 +188,7 @@ function Selects( {title, options, selectName} ) {
   );
 }
 
-function Options( {value, title} ) {
+function Options({ value, title }) {
   return (
     <option value={value}>{title}</option>
   );

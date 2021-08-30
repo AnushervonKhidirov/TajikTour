@@ -74,24 +74,24 @@ function Events() {
 }
 
 
-function Proposals(props) {
+function Proposals({ supTitle, title, desc, link }) {
   return (
     <div className="proposals">
-      <div className="sup_title">{props.supTitle}</div>
-      <h1 className="title">{props.title}</h1>
-      <div className="desc">{props.desc}</div>
-      <Link to={props.link.href} className="link">{props.link.title}</Link>
+      <div className="sup_title">{supTitle}</div>
+      <h1 className="title">{title}</h1>
+      <div className="desc">{desc}</div>
+      <Link to={link.href} className="link">{link.title}</Link>
     </div>
   )
 }
 
-function EventItems(props) {
+function EventItems({ date, title, desc, link }) {
   return (
     <div className="event">
-      <div className="event_date">{props.date}</div>
-      <h2 className="event_title">{props.title}</h2>
-      <div className="event_desc">{props.desc}</div>
-      <Link to={props.link.href} className="event_link">{props.link.title}</Link>
+      <div className="event_date">{date}</div>
+      <h2 className="event_title">{title}</h2>
+      <div className="event_desc">{desc}</div>
+      <Link to={link.href} className="event_link">{link.title}</Link>
     </div>
   );
 }

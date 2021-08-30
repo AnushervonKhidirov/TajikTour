@@ -92,7 +92,7 @@ function FooterRight() {
 }
 
 
-function List( {title, list} ) {
+function List({ title, list }) {
   return (
     <div className="footer_list">
       <h5 className="list_title">{title}</h5>
@@ -104,7 +104,7 @@ function List( {title, list} ) {
   );
 }
 
-function ListItem( {listText} ) {
+function ListItem({ listText }) {
   return (
     <li>
       <div className="list_arrow"></div>

@@ -78,23 +78,23 @@ function TourClasses() {
 }
 
 
-function ClassesItom(props) {
+function ClassesItom({ price, type, list, link, monthly }) {
   return (
     <div className="classes_wrapper">
       <div className="price_block">
-        <div className="price">{props.price}<sup>$</sup></div>
-        <div className="month">{props.monthly}</div>
+        <div className="price">{price}<sup>$</sup></div>
+        <div className="month">{monthly}</div>
       </div>
 
-      <h2 className="classes_type">{props.type}</h2>
+      <h2 className="classes_type">{type}</h2>
 
       <ul className="classes_list">
-        {props.list.map((list, index) => {
-          return <li className="list_item" key={`${props.type}_class_list-${index.toString()}`}><CheckMarkIcon /> {list}</li>
+        {list.map((list, index) => {
+          return <li className="list_item" key={`${type}_class_list-${index.toString()}`}><CheckMarkIcon /> {list}</li>
         })}
       </ul>
 
-      <Link to={props.link.href} className="classes_link">{props.link.title}</Link>
+      <Link to={link.href} className="classes_link">{link.title}</Link>
     </div>
   );
 }

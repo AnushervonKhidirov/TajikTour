@@ -112,7 +112,7 @@ function Destination() {
 
         <div className="destinations">
           {destinationData.map((dest, index) => {
-            return <DestinationItem dests={dest} smallDest={dest.smallDest} key={'destination-' + index} />
+            return <DestinationItem bigDest={dest.bigDest} smallDest={dest.smallDest} key={'destination-' + index} />
           })}
         </div>
       </div>
@@ -120,13 +120,11 @@ function Destination() {
   );
 }
 
-function DestinationItem(props) {
-  const dest = props.dests;
-  const smallDest = props.smallDest;
+function DestinationItem({ bigDest, smallDest }) {
 
   return (
     <div className="destination_item">
-      <DestinationBigPackage dest={dest.bigDest} />
+      <DestinationBigPackage dest={bigDest} />
       {smallDest.map((smallDest, index) => {
         return <DestinationSmallPackage dest={smallDest} index={index} key={smallDest.title + index.toString()} />
       })}
@@ -134,42 +132,42 @@ function DestinationItem(props) {
   );
 }
 
-function DestinationBigPackage(props) {
+function DestinationBigPackage({ dest }) {
   const locale = useContext(DestinationContext);
-  const dest = props.dest;
+  const {location, packagesLength, img, inner} = dest;
 
   return (
-    <div className="destination_package" style={{backgroundImage: `url(./img/${dest.img})`}}>
+    <div className="destination_package" style={{backgroundImage: `url(./img/${img})`}}>
       <div className="text">
-        <div className="location">{dest.location}</div>
-        <div className="packages">{dest.packagesLength} {dest.packagesLength > 4 ? locale.packagesMoreFour : locale.packages}</div>
+        <div className="location">{location}</div>
+        <div className="packages">{locale.packages}: {packagesLength}</div>
       </div>
 
       <div className="destination_inner">
-        <h3 className="title">{dest.inner.title}</h3>
+        <h3 className="title">{inner.title}</h3>
         <ul>
-          {dest.inner.list.map((list, index) => {
+          {inner.list.map((list, index) => {
             return <Link to={list.href} key={list.title + index.toString()}><li>{list.title}</li></Link>
           })}
         </ul>
 
-        <Link to={dest.inner.link.href} className="link">{dest.inner.link.title}</Link>
+        <Link to={inner.link.href} className="link">{inner.link.title}</Link>
       </div>
     </div>
   );
 }
 
-function DestinationSmallPackage(props) {
+function DestinationSmallPackage({ dest, index }) {
   const locale = useContext(DestinationContext);
-  const dest = props.dest;
+  const { img, title, location, price } = dest;
 
   return (
-    <div className={`destination_list_item destination_list_item-${props.index}`}>
-      <div className="destination_img" style={{backgroundImage: `url(./img/${dest.img})`}}></div>
+    <div className={`destination_list_item destination_list_item-${index}`}>
+      <div className="destination_img" style={{backgroundImage: `url(./img/${img})`}}></div>
       <div className="destination_desc">
-        <h3 className="title">{dest.title}</h3>
-        <div className="location">{dest.location}</div>
-        <div className="link">{locale.from} {dest.price} $</div>
+        <h3 className="title">{title}</h3>
+        <div className="location">{location}</div>
+        <div className="link">{locale.from} {price} $</div>
       </div>
     </div>
   );
