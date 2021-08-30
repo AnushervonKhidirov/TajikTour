@@ -2,7 +2,8 @@ import { createContext } from "react";
 
 const WrapperContext = createContext();
 const HeaderContext = createContext();
+const FooterContext = createContext();
 const DestinationContext = createContext();
 const SearchTourForm = createContext();
 
-export { WrapperContext, HeaderContext, DestinationContext, SearchTourForm };
+export { WrapperContext, HeaderContext, FooterContext, DestinationContext, SearchTourForm };
