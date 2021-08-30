@@ -13,5 +13,8 @@ code {
 }
 
 :root {
-  --primary: #14b9d5
+  --darkBlue: #002aff;
+  --lightBlue: #0075ff;
+  --gradient90: linear-gradient(90deg, var(--darkBlue), var(--lightBlue));
+  --gradient45: linear-gradient(45deg, var(--darkBlue), var(--lightBlue));
 }
