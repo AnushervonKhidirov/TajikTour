@@ -7,140 +7,140 @@ function SearchTour() {
   const wrapper = useContext(WrapperContext);
   const [locales, setLocales] = useState({});
 
-  useEffect(() => import(`./${wrapper.lang}Locale`).then((locale) => setLocales(locale.locale)), [wrapper.lang]);
+  useEffect(() => import(`./locales/${wrapper.lang}`).then(locale => setLocales(locale.locale)), [wrapper.lang]);
 
   const selectsData = [
     {
       selectName: 'destination',
-      title: 'Destination',
+      title: locales.destination,
       options: [
         {
           value: 'all_destinations',
-          title: 'All Destinations'
+          title: locales.allDestinations
         },
         {
           value: 'europe',
-          title: 'Europe'
+          title: locales.europe
         },
         {
           value: 'italy',
-          title: '\u00A0 - Italy'
+          title: `\u00A0 - ${locales.italy}`
         },
         {
           value: 'netherlands',
-          title: '\u00A0 - Netherlands'
+          title: `\u00A0 - ${locales.netherlands}`
         },
         {
           value: 'asia',
-          title: 'Asia'
+          title: locales.asia
         },
         {
           value: 'thailandia',
-          title: '\u00A0 - Thailandia'
+          title: `\u00A0 - ${locales.thailandia}`
         },
         {
           value: 'united_states',
-          title: 'United States'
+          title: locales.unitedStates
         },
         {
           value: 'oceania',
-          title: 'Oceania'
+          title: locales.oceania
         }
       ]
     },
     {
       selectName: 'typology',
-      title: 'Typology',
+      title: locales.typology,
       options: [
         {
-          value: 'All Typologies',
-          title: 'All Typologies'
+          value: 'all_typologies',
+          title: locales.allTypologies
         },
         {
-          value: 'Relax',
-          title: 'Relax'
+          value: 'relax',
+          title: locales.relax
         },
         {
-          value: 'Cultural',
-          title: 'Cultural'
+          value: 'cultural',
+          title: locales.cultural
         },
         {
-          value: 'Sport',
-          title: 'Sport'
+          value: 'sport',
+          title: locales.sport
         },
         {
-          value: 'History',
-          title: 'History'
+          value: 'history',
+          title: locales.history
         }
       ]
     },
     {
       selectName: 'durations',
-      title: 'Durations',
+      title: locales.durations,
       options: [
         {
           value: 'all_durations',
-          title: 'All Durations'
+          title: locales.allDurations
         },
         {
           value: '1-3_days',
-          title: '1 - 3 Days'
+          title: locales.days1_3
         },
         {
           value: '3-6_days',
-          title: '3 - 6 Days'
+          title: locales.days3_6
         },
         {
           value: '6-9_days',
-          title: '6 - 9 Days'
+          title: locales.days6_9
         },
         {
           value: '9-12_days',
-          title: '9 - 12 Days'
+          title: locales.days9_12
         }
       ]
     },
     {
       selectName: 'difficulty',
-      title: 'Difficulty',
+      title: locales.difficulty,
       options: [
         {
           value: 'all_difficulty',
-          title: 'All Difficulty'
+          title: locales.allDifficulty
         },
         {
           value: 'high',
-          title: 'High'
+          title: locales.high
         },
         {
           value: 'low',
-          title: 'Low'
+          title: locales.low
         },
         {
           value: 'medium',
-          title: 'Medium'
+          title: locales.medium
         }
       ]
     },
     {
       selectName: 'minAge',
-      title: 'Min Age',
+      title: locales.minAge,
       options: [
         {
           value: 'all_age',
-          title: 'All Age'
+          title: locales.allAge
         },
         {
           value: '10_years',
-          title: '10 Years'
+          title: locales.years10
         },
         {
           value: '18_years',
-          title: '18 years'
+          title: locales.years18
         },
         {
           value: '3_years',
-          title: '3 Years'
+          title: locales.years3
         }
       ]
     }

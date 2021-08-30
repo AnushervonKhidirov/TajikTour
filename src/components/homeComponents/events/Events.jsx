@@ -8,7 +8,7 @@ function Events() {
   const wrapper = useContext(WrapperContext);
   const [locales, setLocales] = useState({});
 
-  useEffect(() => import(`./${wrapper.lang}Locale`).then(locale => setLocales(locale.locale)), [wrapper.lang]);
+  useEffect(() => import(`./locales/${wrapper.lang}`).then(locale => setLocales(locale.locale)), [wrapper.lang]);
 
   const eventsData = {
     porposals: {
