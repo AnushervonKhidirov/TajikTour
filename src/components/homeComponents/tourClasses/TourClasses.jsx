@@ -80,7 +80,7 @@ function TourClasses() {
 
 function ClassesItom(props) {
   return (
-    <div className="classes_block">
+    <div className="classes_wrapper">
       <div className="price_block">
         <div className="price">{props.price}<sup>$</sup></div>
         <div className="month">{props.monthly}</div>

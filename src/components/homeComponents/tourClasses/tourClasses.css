@@ -8,7 +8,7 @@
 }
 
 
-.classes_block {
+.classes_wrapper {
   border: 1px solid var(--borderColor);
   padding: 1em;
 }
@@ -67,17 +67,17 @@ h2.classes_type {
 }
 
 
-.classes_block:nth-child(2) {
+.classes_wrapper:nth-child(2) {
   background: var(--gradient90);
   border: none;
 }
 
-.classes_block:nth-child(2) * {
+.classes_wrapper:nth-child(2) * {
   background: transparent;
   color: #fff !important;
   fill: #fff;
 }
 
-.classes_block:nth-child(2) .month {
+.classes_wrapper:nth-child(2) .month {
   background: transparent;
 }
