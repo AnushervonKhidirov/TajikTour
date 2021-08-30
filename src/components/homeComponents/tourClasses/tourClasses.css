@@ -1,0 +1,83 @@
+.classes {
+  display: grid;
+  width: 925px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5em;
+  color: #555;
+  margin: auto;
+}
+
+
+.classes_block {
+  border: 1px solid #f1f1f1;
+  padding: 1em;
+}
+
+.price_block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1em 0 2em 0;
+}
+
+.price {
+  font-size: 3em;
+  font-weight: 700;
+}
+
+.month {
+  background: #555;
+  color: #fff;
+  font-size: .7em;
+  text-transform: uppercase;
+  border: 1px solid #fff;
+  border-radius: 5em;
+  padding: .3em 1em;
+}
+
+h2.classes_type {
+  border-bottom: 1px solid #f1f1f1;
+  padding-bottom: 1em;
+}
+
+.classes_list {
+  list-style-type: none;
+  margin: 2em 0 2em 1em;
+  padding: 0;
+}
+
+.list_item {
+  display: grid;
+  grid-template-columns: .7em auto;
+  grid-gap: .5em;
+  color: #9a9a9a;
+  line-height: 1;
+  margin-bottom: 1em;
+  fill: #68b78c;
+}
+
+.classes_link {
+  display: inline-block;
+  background: var(--gradient90);
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  margin-top: 1em;
+  padding: .3em 1em;
+}
+
+
+.classes_block:nth-child(2) {
+  background: var(--gradient90);
+  border: none;
+}
+
+.classes_block:nth-child(2) * {
+  background: transparent;
+  color: #fff !important;
+  fill: #fff;
+}
+
+.classes_block:nth-child(2) .month {
+  background: transparent;
+}
