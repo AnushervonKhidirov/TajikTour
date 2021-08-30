@@ -16,7 +16,7 @@ header ul {
 .top__header {
   display: flex;
   justify-content: space-between;
-  background: #0071a7;
+  background: var(--gradient90);
   color: #fff;
   padding: 10px 50px;
   box-sizing: border-box;
@@ -74,16 +74,18 @@ ul.lang_list li {
 ================ */
 .main_header {
   display: flex;
+  width: 925px;
   justify-content: space-between;
   align-items: center;
   background: #fff;
-  padding: 10px 50px;
+  margin: auto;
+  padding: 10px 0;
 }
 
 .logo_icon {
   width: 50px;
   height: 50px;
-  fill: #0071a7;
+  fill: var(--darkBlue);
 }
 
 .menu_link {
@@ -92,9 +94,10 @@ ul.lang_list li {
   margin-left: 15px;
   padding: 10px;
   transition: all .3s;
+  font-weight: 600;
 }
 
 .menu_link.active,
 .menu_link:hover {
-  color: #0071a7;
+  color: var(--darkBlue);
 }
