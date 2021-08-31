@@ -165,7 +165,7 @@ ul.lang_list li {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 490px) {
   .header_menu {
     grid-template-columns: repeat(2, auto);
   }
