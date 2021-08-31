@@ -1,7 +1,8 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { WrapperContext, HeaderContext } from '../../Context';
 import { NavLink } from 'react-router-dom';
-import { LogoIcon, LangIcon, FacebookIcon, Twitter, LinkedIn, Pinterest } from '../../components/common/Icons';
+import Logo from '../../components/common/logo/Logo';
+import { LangIcon, FacebookIcon, Twitter, LinkedIn, Pinterest } from '../../components/common/Icons';
 import './header.css';
 
 function Header() {
@@ -143,14 +144,14 @@ function Menu() {
 }
 
 
-function Logo() {
-  return (
-    <NavLink to='/'>
-      <div className="logo">
-        <LogoIcon />
-      </div>
-    </NavLink>
-  );
-}
+// function Logo() {
+//   return (
+//     <NavLink to='/'>
+//       <div className="logo">
+//         <LogoIcon />
+//       </div>
+//     </NavLink>
+//   );
+// }
 
 export default Header;
