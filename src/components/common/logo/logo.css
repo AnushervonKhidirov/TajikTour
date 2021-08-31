@@ -1,0 +1,24 @@
+.logo {
+  display: flex;
+  align-items: center;
+  color: var(--lightBlue);
+  fill: var(--lightBlue);
+  font-size: 15px;
+  font-family: 'PalatinoLinotype-Roman', 'Palatino Linotype';
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.logo_icon {
+  width: 5em;
+  height: 5em;
+}
+
+.logo_title {
+  text-transform: uppercase;
+}
+
+.logo_slogan {
+  font-size: .7em;
+}

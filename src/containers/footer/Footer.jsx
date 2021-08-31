@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { WrapperContext, FooterContext } from '../../Context';
-import { LogoIcon } from '../../components/common/Icons';
+import Logo from '../../components/common/logo/Logo';
 import './footer.css';
 
 function Footer() {
@@ -73,7 +73,7 @@ function FooterLeft() {
 
   return (
     <div className="footer_left">
-      <div className="footer_logo"><LogoIcon /></div>
+      <div className="footer_logo"><Logo /></div>
       <div className="footer_desc">{footerDesc}</div>
     </div>
   );
