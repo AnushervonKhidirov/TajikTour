@@ -13,10 +13,8 @@ export const locale = {
   seychelles: 'Seychelles',
   phuket: 'Phuket',
   linkText: 'Details',
-  typologies: {
-    cultural: 'Cultural',
-    relax: 'Relax',
-    history: 'History',
-    sport: 'Sport'
-  }
+  cultural: 'Cultural',
+  relax: 'Relax',
+  history: 'History',
+  sport: 'Sport'
 }

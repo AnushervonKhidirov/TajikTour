@@ -15,7 +15,7 @@ function PackageList() {
       img: 'koh_samui.jpg',
       title: locales.kohSamui,
       location: locales.europe,
-      typologies: [locales.typologies.cultural, locales.typologies.relax],
+      typologies: [locales.cultural, locales.relax],
       price: 700,
       desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut efficitur ante. Donec dapibus dictum scelerisque.',
       link: '/packages/'
@@ -25,7 +25,7 @@ function PackageList() {
       img: 'bora_bora.jpg',
       title: locales.boraBora,
       location: locales.asia,
-      typologies: [locales.typologies.history, locales.typologies.cultural],
+      typologies: [locales.history, locales.cultural],
       sale: true,
       wasPrice: 700,
       price: 500,
@@ -37,7 +37,7 @@ function PackageList() {
       img: 'maldives.jpg',
       title: locales.maldives,
       location: locales.oceania,
-      typologies: [locales.typologies.sport, locales.typologies.relax],
+      typologies: [locales.sport, locales.relax],
       price: 400,
       desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut efficitur ante. Donec dapibus dictum scelerisque.',
       link: '/packages/'
@@ -47,7 +47,7 @@ function PackageList() {
       img: 'phuket.jpg',
       title: locales.phuket,
       location: locales.thailandia,
-      typologies: [locales.typologies.relax, locales.typologies.cultural],
+      typologies: [locales.relax, locales.cultural],
       price: 1200,
       desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut efficitur ante. Donec dapibus dictum scelerisque.',
       link: '/packages/'
@@ -57,7 +57,7 @@ function PackageList() {
       img: 'seychelles.jpg',
       title: locales.seychelles,
       location: locales.netherlands,
-      typologies: [locales.typologies.history, locales.typologies.sport],
+      typologies: [locales.history, locales.sport],
       price: 1500,
       desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut efficitur ante. Donec dapibus dictum scelerisque.',
       link: '/packages/'
@@ -67,7 +67,7 @@ function PackageList() {
       img: 'hawaii.jpg',
       title: locales.hawaii,
       location: locales.italy,
-      typologies: [locales.typologies.sport, locales.typologies.relax],
+      typologies: [locales.sport, locales.relax],
       sale: true,
       wasPrice: 950,
       price: 730,
