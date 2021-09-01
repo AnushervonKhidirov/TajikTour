@@ -13,7 +13,7 @@ function Header() {
 
   return (
     <HeaderContext.Provider value={locales}>
-      <header className="header">
+      <header>
         <TopHeader />
         <MainHeader />
       </header>
@@ -85,7 +85,11 @@ function Social() {
   return (
     <ul className="social_list">
       {socials.map((social, index) => {
-        return <li key={social.title + index}><a href={social.link} title={social.title} rel="noreferrer" target="_blank">{social.component}</a></li>
+        return (
+          <li key={social.title + index}>
+            <a href={social.link} title={social.title} rel="noreferrer" target="_blank">{social.component}</a>
+          </li>
+        );
       })}
     </ul>
   );
@@ -117,19 +121,23 @@ function Menu() {
     setMenuBtn([
       {
         title: header.menu && header.menu.home,
-        link: '/'
+        link: '/',
+        exact: true
       },
       {
         title: header.menu && header.menu.packages,
-        link: '/packages'
+        link: '/packages',
+        exact: false
       },
       {
         title: header.menu && header.menu.news,
-        link: '/news'
+        link: '/news',
+        exact: false
       },
       {
         title: header.menu && header.menu.contacts,
-        link: '/contacts'
+        link: '/contacts',
+        exact: true
       }
     ])
   }, [header.menu])
@@ -137,21 +145,16 @@ function Menu() {
   return (
     <div className="header_menu">
       {menuBtn.map((navLink, index) => {
-        return <NavLink to={navLink.link} exact={true} activeClassName="active" className="menu_link" key={index}>{navLink.title}</NavLink>
+        return <NavLink
+          to={navLink.link}
+          exact={navLink.exact}
+          activeClassName="active"
+          className="menu_link"
+          key={index}>{navLink.title}
+        </NavLink>
       })}
     </div>
   );
 }
-
-
-// function Logo() {
-//   return (
-//     <NavLink to='/'>
-//       <div className="logo">
-//         <LogoIcon />
-//       </div>
-//     </NavLink>
-//   );
-// }
 
 export default Header;

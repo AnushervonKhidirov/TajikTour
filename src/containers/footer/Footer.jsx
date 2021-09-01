@@ -51,7 +51,7 @@ function Footer() {
 
   return (
     <FooterContext.Provider value={footerData}>
-      <footer className="footer" style={{backgroundImage: `url(./img/footer.jpg)`}}>
+      <footer style={{backgroundImage: `url(/img/others/footer.jpg)`}}>
         <FooterInner />
       </footer>
     </FooterContext.Provider>
@@ -107,7 +107,7 @@ function List({ title, list }) {
 function ListItem({ listText }) {
   return (
     <li>
-      <div className="list_arrow"></div>
+      <div className="list_arrow" />
       <div className="list_text">{listText}</div>
     </li>
   );

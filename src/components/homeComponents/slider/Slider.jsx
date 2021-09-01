@@ -80,7 +80,7 @@ function Slider() {
 function Slide({ img, saleText, date, link, index, active }) {
   return (
     <div className={`slide_item slide_item-${index} ${active}`}>
-      <div className="slide_img" style={{backgroundImage: `url(./img/${img})`}}></div>
+      <div className="slide_img" style={{backgroundImage: `url(/img/slider/${img})`}} />
 
       <div className="slide_date">
         <div>Only until</div>
@@ -89,7 +89,7 @@ function Slide({ img, saleText, date, link, index, active }) {
 
       <div className="slide_sale">
         <div className="sale_text">{saleText}</div>
-        <Link to={link} className="sale_link"><span>Shop Now</span><div className="link_bg"></div></Link>
+        <Link to={link} className="sale_link">Shop Now</Link>
       </div>
     </div>
   );
@@ -101,8 +101,8 @@ function Arrows() {
 
   return (
     <div className="slider_arrows">
-      <div className="left_arrow slider_arrow" onClick={() => sliderHandler(currentSlide - 1)}></div>
-      <div className="right_arrow slider_arrow" onClick={() => sliderHandler(currentSlide + 1)}></div>
+      <div className="left_arrow slider_arrow" onClick={() => sliderHandler(currentSlide - 1)} />
+      <div className="right_arrow slider_arrow" onClick={() => sliderHandler(currentSlide + 1)} />
     </div>
   );
 }
@@ -120,7 +120,7 @@ function ThumbsWrapper() {
 }
 
 function Thumb({ active, switchSlide }) {
-  return <div className={`thumb_item ${active}`} onClick={switchSlide}></div>
+  return <div className={`thumb_item ${active}`} onClick={switchSlide} />
 }
 
 export default Slider;

@@ -90,7 +90,7 @@ function ClassesItom({ price, type, list, link, monthly }) {
 
       <ul className="classes_list">
         {list.map((list, index) => {
-          return <li className="list_item" key={`${type}_class_list-${index.toString()}`}><CheckMarkIcon /> {list}</li>
+          return <li className="list_item" key={`${type}_class_list-${index.toString()}`}><CheckMarkIcon />{list}</li>
         })}
       </ul>
 

@@ -137,7 +137,7 @@ function DestinationBigPackage({ dest }) {
   const {location, packagesLength, img, inner} = dest;
 
   return (
-    <div className="destination_package" style={{backgroundImage: `url(./img/${img})`}}>
+    <div className="destination_package" style={{backgroundImage: `url(/img/main_tab/${img})`}}>
       <div className="text">
         <div className="location">{location}</div>
         <div className="packages">{locale.packages}: {packagesLength}</div>
@@ -163,7 +163,7 @@ function DestinationSmallPackage({ dest, index }) {
 
   return (
     <div className={`destination_list_item destination_list_item-${index}`}>
-      <div className="destination_img" style={{backgroundImage: `url(./img/${img})`}}></div>
+      <div className="destination_img" style={{backgroundImage: `url(/img/destinations/${img})`}} />
       <div className="destination_desc">
         <h3 className="title">{title}</h3>
         <div className="location">{location}</div>

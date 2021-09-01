@@ -153,7 +153,7 @@ function SearchTour() {
 
   return (
     <SearchTourForm.Provider value={{submitFn: submitForm, submitLocale: locales.search}}>
-      <div className="search_block block_item" style={{backgroundImage: `url(./img/search_tour.jpg)`}}>
+      <div className="search_block block_item" style={{backgroundImage: `url(/img/main_tab/search_tour.jpg)`}}>
         <Headline title={locales.searchTour} light />
 
         <SearchForm selects={selectsData} />

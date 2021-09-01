@@ -28,7 +28,7 @@ function Achievements() {
   ]
 
   return (
-    <div className="achievements_block block_item" style={{backgroundImage: `url(./img/achievements.jpg)`}}>
+    <div className="achievements_block block_item" style={{backgroundImage: `url(/img/main_tab/achievements.jpg)`}}>
       <div className="achievents_inner">
         {achievementsData.map((achievement, index) => {
           return <AchievementsItem name={achievement.name} number={achievement.number} key={achievement.name + index.toString()} />
