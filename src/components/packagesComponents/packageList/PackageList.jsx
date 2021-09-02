@@ -1,7 +1,8 @@
 import React, {useState, useEffect, useContext} from 'react';
 import { WrapperContext } from '../../../Context';
 import { Link } from 'react-router-dom';
-import './packagesList.css';
+import styles from './PackageList.module.css'
+// import './packagesList.css';
 
 function PackageList() {
   const wrapper = useContext(WrapperContext);
@@ -77,7 +78,7 @@ function PackageList() {
   ]
 
   return (
-    <div className="packages_wrapper">
+    <div className={styles.packages_wrapper}>
       {packagesData.map(packageItem => {
         return <Package packageData={packageItem} linkText={locales.linkText} key={packageItem.key} />
       })}
@@ -87,21 +88,21 @@ function PackageList() {
 
 function Package({ packageData, linkText }) {
   return (
-    <div className="package">
-      {packageData.sale && <div className="sale">Sale</div>}
+    <div className={styles.package}>
+      {packageData.sale && <div className={styles.sale}>Sale</div>}
 
-      <div className="package_img" style={{backgroundImage: `url(/img/packages/${packageData.img})`}} />
+      <div className={styles.package_img} style={{backgroundImage: `url(/img/packages/${packageData.img})`}} />
 
-      <div className="package_inner">
+      <div className={styles.package_inner}>
         <PackagePlace title={packageData.title} location={packageData.location} />
 
-        <div className="typologies-price">
+        <div className={styles.typologies_price}>
           <Typologies typologies={packageData.typologies} />
           <Price wasPrice={packageData.wasPrise} price={packageData.price} />
         </div>
 
-        <div className="desc">{packageData.desc}</div>
-        <Link to={packageData.link + packageData.key} className="details">{linkText}</Link>
+        <div className={styles.desc}>{packageData.desc}</div>
+        <Link to={packageData.link + packageData.key} className={styles.details}>{linkText}</Link>
       </div>
     </div>
   );
@@ -109,16 +110,16 @@ function Package({ packageData, linkText }) {
 
 function PackagePlace({ title, location }) {
   return (
-    <div className="place">
-      <h3 className="place_title">{title}</h3>
-      <div className="place_location">{location}</div>
+    <div className={styles.place}>
+      <h3 className={styles.place_title}>{title}</h3>
+      <div className={styles.place_location}>{location}</div>
     </div>
   );
 }
 
 function Typologies({ typologies }) {
   return (
-    <ul className="typologies">
+    <ul className={styles.typologies}>
       {typologies.map((typology, index) => {
         return <li key={`typology-${index}`}>{typology}</li>
       })}
@@ -128,9 +129,9 @@ function Typologies({ typologies }) {
 
 function Price({ wasPrice, price }) {
   return (
-    <div className="price_wrapper">
-      {wasPrice && <div className="was_price">{wasPrice}</div>}
-      <div className="price">{price} $</div>
+    <div className={styles.price_wrapper}>
+      {wasPrice && <div className={styles.was_price}>{wasPrice}</div>}
+      <div className={styles.price}>{price} $</div>
     </div>
   );
 }

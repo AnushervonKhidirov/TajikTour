@@ -1,9 +1,9 @@
-import React from "react";
-import "./loader.css";
+import React from 'react';
+import styles from './Loader.module.css';
 
-export default function Loader(props) {
+export default function Loader({ customStyles }) {
   return (
-    <div className="loader" style={props.styles}>
+    <div className={styles.loader} style={customStyles}>
       <div />
       <div />
       <div />

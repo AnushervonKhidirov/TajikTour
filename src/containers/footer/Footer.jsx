@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { WrapperContext, FooterContext } from '../../Context';
 import Logo from '../../components/common/logo/Logo';
-import './footer.css';
+import styles from './Footer.module.css';
 
 function Footer() {
   const wrapper = useContext(WrapperContext);
@@ -60,7 +60,7 @@ function Footer() {
 
 function FooterInner() {
   return (
-    <div className="footer_block">
+    <div className={styles.footer_block}>
       <FooterLeft />
       <FooterRight />
       <BottomFooter />
@@ -72,9 +72,9 @@ function FooterLeft() {
   const { footerDesc } = useContext(FooterContext);
 
   return (
-    <div className="footer_left">
-      <div className="footer_logo"><Logo /></div>
-      <div className="footer_desc">{footerDesc}</div>
+    <div className={styles.footer_left}>
+      <div className={styles.footer_logo}><Logo /></div>
+      <div className={styles.footer_desc}>{footerDesc}</div>
     </div>
   );
 }
@@ -83,7 +83,7 @@ function FooterRight() {
   const { footerLists } = useContext(FooterContext);
 
   return (
-    <div className="footer_right">
+    <div className={styles.footer_right}>
       {footerLists.map((lists, index) => {
         return <List title={lists.title} list={lists.list} key={lists.title + index.toString()} />
       })}
@@ -94,8 +94,8 @@ function FooterRight() {
 
 function List({ title, list }) {
   return (
-    <div className="footer_list">
-      <h5 className="list_title">{title}</h5>
+    <div className={styles.footer_list}>
+      <h5 className={styles.list_title}>{title}</h5>
 
       <ul>
         {list.map((listItem, index) => <ListItem listText={listItem} key={listItem + index.toString()} />)}
@@ -107,8 +107,8 @@ function List({ title, list }) {
 function ListItem({ listText }) {
   return (
     <li>
-      <div className="list_arrow" />
-      <div className="list_text">{listText}</div>
+      <div className={styles.list_arrow} />
+      <div className={styles.list_text}>{listText}</div>
     </li>
   );
 }
@@ -117,9 +117,9 @@ function BottomFooter() {
   const { leftText, rightText } = useContext(FooterContext).footerBottom;
 
   return (
-    <div className="footer_bottom">
-      <div className="left_text">{leftText}</div>
-      <div className="right_text">{rightText}</div>
+    <div className={styles.footer_bottom}>
+      <div className={styles.left_text}>{leftText}</div>
+      <div className={styles.right_text}>{rightText}</div>
     </div>
   );
 }

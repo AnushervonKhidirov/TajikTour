@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { WrapperContext } from '../../../Context';
 import Headline from '../../common/headline/Headline';
 import { CheckMarkIcon } from '../../common/Icons';
-import './tourClasses.css';
+import styles from './TourClasses.module.css';
 
 function TourClasses() {
   const wrapper = useContext(WrapperContext);
@@ -57,10 +57,10 @@ function TourClasses() {
   ]
 
   return (
-    <div className="classes_block block_item">
+    <div className={`${styles.classes_block} block_item`}>
       <Headline title="Classes" />
 
-      <div className="classes">
+      <div className={styles.classes}>
         {classesData.map((classes, index) => {
           return (
             <ClassesItom 
@@ -80,21 +80,21 @@ function TourClasses() {
 
 function ClassesItom({ price, type, list, link, monthly }) {
   return (
-    <div className="classes_wrapper">
-      <div className="price_block">
-        <div className="price">{price}<sup>$</sup></div>
-        <div className="month">{monthly}</div>
+    <div className={styles.classes_wrapper}>
+      <div className={styles.price_block}>
+        <div className={styles.price}>{price}<sup>$</sup></div>
+        <div className={styles.month}>{monthly}</div>
       </div>
 
-      <h2 className="classes_type">{type}</h2>
+      <h2 className={styles.classes_type}>{type}</h2>
 
-      <ul className="classes_list">
+      <ul className={styles.classes_list}>
         {list.map((list, index) => {
-          return <li className="list_item" key={`${type}_class_list-${index.toString()}`}><CheckMarkIcon />{list}</li>
+          return <li className={styles.list_item} key={`${type}_class_list-${index.toString()}`}><CheckMarkIcon />{list}</li>
         })}
       </ul>
 
-      <Link to={link.href} className="classes_link">{link.title}</Link>
+      <Link to={link.href} className={styles.classes_link}>{link.title}</Link>
     </div>
   );
 }

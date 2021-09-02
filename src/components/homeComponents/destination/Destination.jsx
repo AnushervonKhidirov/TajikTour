@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { WrapperContext, DestinationContext } from '../../../Context';
 import Headline from '../../common/headline/Headline';
-import './destination.css';
+import styles from './Destination.module.css';
 
 function Destination() {
   const wrapper = useContext(WrapperContext);
@@ -107,10 +107,10 @@ function Destination() {
 
   return (
     <DestinationContext.Provider value={locales}>
-      <div className="destination_block block_item">
+      <div className={`${styles.destination_block} block_item`}>
         <Headline title={locales.ourDestinations} />
 
-        <div className="destinations">
+        <div className={styles.destinations}>
           {destinationData.map((dest, index) => {
             return <DestinationItem bigDest={dest.bigDest} smallDest={dest.smallDest} key={'destination-' + index} />
           })}
@@ -123,10 +123,10 @@ function Destination() {
 function DestinationItem({ bigDest, smallDest }) {
 
   return (
-    <div className="destination_item">
+    <div className={styles.destination_item}>
       <DestinationBigPackage dest={bigDest} />
       {smallDest.map((smallDest, index) => {
-        return <DestinationSmallPackage dest={smallDest} index={index} key={smallDest.title + index.toString()} />
+        return <DestinationSmallPackage dest={smallDest} key={smallDest.title + index.toString()} />
       })}
     </div>
   );
@@ -137,37 +137,37 @@ function DestinationBigPackage({ dest }) {
   const {location, packagesLength, img, inner} = dest;
 
   return (
-    <div className="destination_package" style={{backgroundImage: `url(/img/main_tab/${img})`}}>
-      <div className="text">
-        <div className="location">{location}</div>
-        <div className="packages">{locale.packages}: {packagesLength}</div>
+    <div className={styles.destination_package} style={{backgroundImage: `url(/img/main_tab/${img})`}}>
+      <div className={styles.text}>
+        <div className={styles.location}>{location}</div>
+        <div className={styles.packages}>{locale.packages}: {packagesLength}</div>
       </div>
 
-      <div className="destination_inner">
-        <h3 className="title">{inner.title}</h3>
+      <div className={styles.destination_inner}>
+        <h3 className={styles.title}>{inner.title}</h3>
         <ul>
           {inner.list.map((list, index) => {
             return <Link to={list.href} key={list.title + index.toString()}><li>{list.title}</li></Link>
           })}
         </ul>
 
-        <Link to={inner.link.href} className="link">{inner.link.title}</Link>
+        <Link to={inner.link.href} className={styles.link}>{inner.link.title}</Link>
       </div>
     </div>
   );
 }
 
-function DestinationSmallPackage({ dest, index }) {
+function DestinationSmallPackage({ dest }) {
   const locale = useContext(DestinationContext);
   const { img, title, location, price } = dest;
 
   return (
-    <div className={`destination_list_item destination_list_item-${index}`}>
-      <div className="destination_img" style={{backgroundImage: `url(/img/destinations/${img})`}} />
-      <div className="destination_desc">
-        <h3 className="title">{title}</h3>
-        <div className="location">{location}</div>
-        <div className="link">{locale.from} {price} $</div>
+    <div className={styles.destination_list_item}>
+      <div className={styles.destination_img} style={{backgroundImage: `url(/img/destinations/${img})`}} />
+      <div className={styles.destination_desc}>
+        <h3 className={styles.title}>{title}</h3>
+        <div className={styles.location}>{location}</div>
+        <div className={styles.link}>{locale.from} {price} $</div>
       </div>
     </div>
   );

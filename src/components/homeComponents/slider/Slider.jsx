@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { SliderContext } from '../../../Context';
-import './slider.css';
+import styles from './Slider.module.css';
 
 const sliderInner = [
   {
@@ -34,7 +34,7 @@ function Slider() {
     const thumbsClasses = [];
 
     for (let i = 0; i <= slideLength; i++) {
-      i === currentSlide ? thumbsClasses.push('active') : thumbsClasses.push('');
+      i === currentSlide ? thumbsClasses.push(styles.active) : thumbsClasses.push('');
     }
 
     setactiveSlide(thumbsClasses)
@@ -55,9 +55,9 @@ function Slider() {
   }
 
   return (
-    <SliderContext.Provider value={{ sliderHandler: sliderHandler, currentSlide: currentSlide, activeSlide: activeSlide }}>
-      <div className={`slider_wrapper slide-${currentSlide}`}>
-        <div className="slides">
+    <SliderContext.Provider value={{ sliderHandler: sliderHandler, activeSlide: activeSlide }}>
+      <div className={styles.slider_wrapper}>
+        <div className={styles.slides}>
           {sliderInner.map((slide, index) => {
             return <Slide 
               img={slide.img} 
@@ -79,17 +79,17 @@ function Slider() {
 
 function Slide({ img, saleText, date, link, index, active }) {
   return (
-    <div className={`slide_item slide_item-${index} ${active}`}>
-      <div className="slide_img" style={{backgroundImage: `url(/img/slider/${img})`}} />
+    <div className={`${styles.slide_item} ${active}`}>
+      <div className={styles.slide_img} style={{backgroundImage: `url(/img/slider/${img})`}} />
 
-      <div className="slide_date">
+      <div className={styles.slide_date}>
         <div>Only until</div>
         <div>{date}</div>
       </div>
 
-      <div className="slide_sale">
-        <div className="sale_text">{saleText}</div>
-        <Link to={link} className="sale_link">Shop Now</Link>
+      <div className={styles.slide_sale}>
+        <div className={styles.sale_text}>{saleText}</div>
+        <Link to={link} className={styles.sale_link}>Shop Now</Link>
       </div>
     </div>
   );
@@ -101,8 +101,8 @@ function Arrows() {
 
   return (
     <div className="slider_arrows">
-      <div className="left_arrow slider_arrow" onClick={() => sliderHandler(currentSlide - 1)} />
-      <div className="right_arrow slider_arrow" onClick={() => sliderHandler(currentSlide + 1)} />
+      <div className={`${styles.left_arrow} ${styles.slider_arrow}`} onClick={() => sliderHandler(currentSlide - 1)} />
+      <div className={`${styles.right_arrow} ${styles.slider_arrow}`} onClick={() => sliderHandler(currentSlide + 1)} />
     </div>
   );
 }
@@ -111,7 +111,7 @@ function ThumbsWrapper() {
   const { sliderHandler, activeSlide } = useContext(SliderContext);
 
   return (
-    <div className="slider_thumbs">
+    <div className={styles.slider_thumbs}>
       {sliderInner.map((thumb, index) => {
         return <Thumb active={activeSlide[index]} switchSlide={() => sliderHandler(index)} key={'thumb-' + index.toString()} />
       })}
@@ -120,7 +120,7 @@ function ThumbsWrapper() {
 }
 
 function Thumb({ active, switchSlide }) {
-  return <div className={`thumb_item ${active}`} onClick={switchSlide} />
+  return <div className={`${styles.thumb_item} ${active}`} onClick={switchSlide} />
 }
 
 export default Slider;

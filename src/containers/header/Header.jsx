@@ -3,7 +3,7 @@ import { WrapperContext, HeaderContext } from '../../Context';
 import { NavLink } from 'react-router-dom';
 import Logo from '../../components/common/logo/Logo';
 import { LangIcon, FacebookIcon, Twitter, LinkedIn, Pinterest } from '../../components/common/Icons';
-import './header.css';
+import styles from './Header.module.css';
 
 function Header() {
   const wrapper = useContext(WrapperContext);
@@ -24,13 +24,13 @@ function Header() {
 // top
 function TopHeader() {
   return (
-    <div className="top__header">
-      <div className="left_header">
+    <div className={styles.top__header}>
+      <div className={styles.left_header}>
         <Languages />
         <Social />
       </div>
 
-      <div className="right_header">
+      <div className={styles.right_header}>
         <ContactUs />
       </div>
     </div>
@@ -43,13 +43,13 @@ function Languages() {
   const langs = ['ru', 'en'];
 
   return (
-    <div className="languages">
-      <div className="lang_icon">
+    <div className={styles.languages}>
+      <div className={styles.lang_icon}>
         <LangIcon />
       </div>
       <span>{header.langText}</span>
 
-      <ul className="lang_list">
+      <ul className={styles.lang_list}>
         {langs.map(lang => {
           return <li onClick={() => wrapper.switchLang(lang)} key={lang}>{lang}</li>;
         })}
@@ -83,7 +83,7 @@ function Social() {
   ];
 
   return (
-    <ul className="social_list">
+    <ul className={styles.social_list}>
       {socials.map((social, index) => {
         return (
           <li key={social.title + index}>
@@ -107,7 +107,7 @@ function ContactUs() {
 
 // bottom
 function MainHeader() {
-  return <div className="main_header">
+  return <div className={styles.main_header}>
     <Logo />
     <Menu />
   </div>;
@@ -143,13 +143,13 @@ function Menu() {
   }, [header.menu])
 
   return (
-    <div className="header_menu">
+    <div className={styles.header_menu}>
       {menuBtn.map((navLink, index) => {
         return <NavLink
           to={navLink.link}
           exact={navLink.exact}
-          activeClassName="active"
-          className="menu_link"
+          activeClassName={styles.active}
+          className={styles.menu_link}
           key={index}>{navLink.title}
         </NavLink>
       })}

@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useContext } from "react";
-import { WrapperContext, SearchTourForm } from "../../../Context";
-import Headline from "../../common/headline/Headline";
-import "./searchTours.css";
+import React, { useState, useEffect, useContext } from 'react';
+import { WrapperContext, SearchTourForm } from '../../../Context';
+import Headline from '../../common/headline/Headline';
+import styles from './SearchTours.module.css';
 
 function SearchTour() {
   const wrapper = useContext(WrapperContext);
@@ -153,7 +153,7 @@ function SearchTour() {
 
   return (
     <SearchTourForm.Provider value={{submitFn: submitForm, submitLocale: locales.search}}>
-      <div className="search_block block_item" style={{backgroundImage: `url(/img/main_tab/search_tour.jpg)`}}>
+      <div className={`${styles.search_block} block_item`} style={{backgroundImage: `url(/img/main_tab/search_tour.jpg)`}}>
         <Headline title={locales.searchTour} light />
 
         <SearchForm selects={selectsData} />
@@ -164,7 +164,7 @@ function SearchTour() {
 
 function SearchForm({ selects }) {
   return (
-    <form name="search" className="search_tour">
+    <form name="search" className={styles.search_tour}>
       {selects.map(select => {
         return <Selects title={select.title} options={select.options} selectName={select.selectName} key={select.selectName} />
       })}
@@ -176,8 +176,8 @@ function SearchForm({ selects }) {
 
 function Selects({ title, options, selectName }) {
   return (
-    <div className="select_wrapper">
-      <h6 className="title">{title}</h6>
+    <div className={styles.select_wrapper}>
+      <h6 className={styles.title}>{title}</h6>
 
       <select name={selectName}>
         {options.map(option => {
@@ -198,8 +198,8 @@ function SubmitBtn() {
   const {submitLocale, submitFn} = useContext(SearchTourForm);
 
   return (
-    <div className="submit_wrapper">
-      <button className="submit_form" onClick={submitFn}>{submitLocale}</button>
+    <div className={styles.submit_wrapper}>
+      <button className={styles.submit_form} onClick={submitFn}>{submitLocale}</button>
     </div>
   );
 }

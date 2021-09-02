@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { WrapperContext } from '../../../Context';
 import Headline from '../../common/headline/Headline';
-import './events.css';
+import styles from './Events.module.css';
 
 function Events() {
   const wrapper = useContext(WrapperContext);
@@ -61,9 +61,9 @@ function Events() {
   }
 
   return (
-    <div className="events_block block_item">
+    <div className={`${styles.events_block} block_item`}>
       <Headline title="Events" />
-      <div className="events">
+      <div className={styles.events}>
         <Proposals supTitle={eventsData.porposals.supTitle} title={eventsData.porposals.title} desc={eventsData.porposals.desc} link={eventsData.porposals.link} />
         {eventsData.events.map((event, index) => {
           return <EventItems date={event.date} title={event.title} desc={event.desc} link={event.link} key={event.title + index.toString()} />
@@ -76,22 +76,22 @@ function Events() {
 
 function Proposals({ supTitle, title, desc, link }) {
   return (
-    <div className="proposals">
-      <div className="sup_title">{supTitle}</div>
-      <h1 className="title">{title}</h1>
-      <div className="desc">{desc}</div>
-      <Link to={link.href} className="link">{link.title}</Link>
+    <div className={styles.proposals}>
+      <div className={styles.sup_title}>{supTitle}</div>
+      <h1 className={styles.title}>{title}</h1>
+      <div className={styles.desc}>{desc}</div>
+      <Link to={link.href} className={styles.link}>{link.title}</Link>
     </div>
   )
 }
 
 function EventItems({ date, title, desc, link }) {
   return (
-    <div className="event">
-      <div className="event_date">{date}</div>
-      <h2 className="event_title">{title}</h2>
-      <div className="event_desc">{desc}</div>
-      <Link to={link.href} className="event_link">{link.title}</Link>
+    <div className={styles.event}>
+      <div className={styles.event_date}>{date}</div>
+      <h2 className={styles.event_title}>{title}</h2>
+      <div className={styles.event_desc}>{desc}</div>
+      <Link to={link.href} className={styles.event_link}>{link.title}</Link>
     </div>
   );
 }
