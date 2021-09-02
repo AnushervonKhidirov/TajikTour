@@ -42,7 +42,7 @@ function Slider() {
   
   function sliderHandler(current) {
     if (!isRotate) return;
-    
+    console.log(current);
     setIsRotate(false);
     setCurrentSlide(showCurrentSlide(current));
     setTimeout(() => setIsRotate(true), 1000);
@@ -55,7 +55,7 @@ function Slider() {
   }
 
   return (
-    <SliderContext.Provider value={{ sliderHandler: sliderHandler, activeSlide: activeSlide }}>
+    <SliderContext.Provider value={{ sliderHandler: sliderHandler, currentSlide: currentSlide, activeSlide: activeSlide }}>
       <div className={styles.slider_wrapper}>
         <div className={styles.slides}>
           {sliderInner.map((slide, index) => {
