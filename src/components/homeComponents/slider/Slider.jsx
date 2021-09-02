@@ -42,7 +42,6 @@ function Slider() {
   
   function sliderHandler(current) {
     if (!isRotate) return;
-    console.log(current);
     setIsRotate(false);
     setCurrentSlide(showCurrentSlide(current));
     setTimeout(() => setIsRotate(true), 1000);
