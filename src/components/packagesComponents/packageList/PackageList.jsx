@@ -2,7 +2,6 @@ import React, { useState, useEffect, useContext } from 'react';
 import { WrapperContext } from '../../../Context';
 import { Link } from 'react-router-dom';
 import styles from './PackageList.module.css'
-// import './packagesList.css';
 
 function PackageList() {
   const wrapper = useContext(WrapperContext);
@@ -80,16 +79,16 @@ function PackageList() {
   return (
     <div className={styles.packages_wrapper}>
       {packagesData.map(packageItem => {
-        return <Package packageData={packageItem} linkText={locales.linkText} key={packageItem.key} />
+        return <Package packageData={packageItem} locale={locales} key={packageItem.key} />
       })}
     </div>
   );
 }
 
-function Package({ packageData, linkText }) {
+function Package({ packageData, locale }) {
   return (
     <div className={styles.package}>
-      {packageData.sale && <div className={styles.sale}>Sale</div>}
+      {packageData.sale && <div className={styles.sale}>{locale.sale}</div>}
 
       <div className={styles.package_img} style={{backgroundImage: `url(/img/packages/${packageData.img})`}} />
 
@@ -98,11 +97,11 @@ function Package({ packageData, linkText }) {
 
         <div className={styles.typologies_price}>
           <Typologies typologies={packageData.typologies} />
-          <Price wasPrice={packageData.wasPrise} price={packageData.price} />
+          <Price wasPrice={packageData.wasPrice} price={packageData.price} />
         </div>
 
         <div className={styles.desc}>{packageData.desc}</div>
-        <Link to={packageData.link + packageData.key} className={styles.details}>{linkText}</Link>
+        <Link to={packageData.link + packageData.key} className={styles.details}>{locale.linkText}</Link>
       </div>
     </div>
   );
@@ -135,6 +134,5 @@ function Price({ wasPrice, price }) {
     </div>
   );
 }
-
 
 export default PackageList;
