@@ -6,140 +6,141 @@ import styles from './SearchTours.module.css';
 function SearchTour() {
   const wrapper = useContext(WrapperContext);
   const [locales, setLocales] = useState({});
+  const [formData, setFormData] = useState({});
 
   useEffect(() => import(`./locales/${wrapper.lang}`).then(locale => setLocales(locale.locale)), [wrapper.lang]);
 
   const selectsData = [
     {
-      selectName: 'destination',
+      selectName: 'Destination',
       title: locales.destination,
       options: [
         {
-          value: 'all_destinations',
+          value: 'All Destinations',
           title: locales.allDestinations
         },
         {
-          value: 'europe',
+          value: 'Europe',
           title: locales.europe
         },
         {
-          value: 'italy',
+          value: 'Italy',
           title: `\u00A0 - ${locales.italy}`
         },
         {
-          value: 'netherlands',
+          value: 'Netherlands',
           title: `\u00A0 - ${locales.netherlands}`
         },
         {
-          value: 'asia',
+          value: 'Asia',
           title: locales.asia
         },
         {
-          value: 'thailandia',
+          value: 'Thailandia',
           title: `\u00A0 - ${locales.thailandia}`
         },
         {
-          value: 'united_states',
+          value: 'United States',
           title: locales.unitedStates
         },
         {
-          value: 'oceania',
+          value: 'Oceania',
           title: locales.oceania
         }
       ]
     },
     {
-      selectName: 'typology',
+      selectName: 'Typology',
       title: locales.typology,
       options: [
         {
-          value: 'all_typologies',
+          value: 'All Typologies',
           title: locales.allTypologies
         },
         {
-          value: 'relax',
+          value: 'Relax',
           title: locales.relax
         },
         {
-          value: 'cultural',
+          value: 'Cultural',
           title: locales.cultural
         },
         {
-          value: 'sport',
+          value: 'Sport',
           title: locales.sport
         },
         {
-          value: 'history',
+          value: 'History',
           title: locales.history
         }
       ]
     },
     {
-      selectName: 'durations',
+      selectName: 'Durations',
       title: locales.durations,
       options: [
         {
-          value: 'all_durations',
+          value: 'All Durations',
           title: locales.allDurations
         },
         {
-          value: '1-3_days',
+          value: '1 - 3 days',
           title: locales.days1_3
         },
         {
-          value: '3-6_days',
+          value: '3 - 6 days',
           title: locales.days3_6
         },
         {
-          value: '6-9_days',
+          value: '6 - 9 days',
           title: locales.days6_9
         },
         {
-          value: '9-12_days',
+          value: '9 - 12 days',
           title: locales.days9_12
         }
       ]
     },
     {
-      selectName: 'difficulty',
+      selectName: 'Difficulty',
       title: locales.difficulty,
       options: [
         {
-          value: 'all_difficulty',
+          value: 'All Difficulty',
           title: locales.allDifficulty
         },
         {
-          value: 'high',
+          value: 'High',
           title: locales.high
         },
         {
-          value: 'low',
+          value: 'Low',
           title: locales.low
         },
         {
-          value: 'medium',
+          value: 'Medium',
           title: locales.medium
         }
       ]
     },
     {
-      selectName: 'minAge',
+      selectName: 'Min Age',
       title: locales.minAge,
       options: [
         {
-          value: 'all_age',
+          value: 'All Age',
           title: locales.allAge
         },
         {
-          value: '10_years',
+          value: '10 years',
           title: locales.years10
         },
         {
-          value: '18_years',
+          value: '18 years',
           title: locales.years18
         },
         {
-          value: '3_years',
+          value: '3 years',
           title: locales.years3
         }
       ]
@@ -148,11 +149,17 @@ function SearchTour() {
 
   function submitForm(e) {
     e.preventDefault();
-    console.log('Send');
+    console.log(JSON.stringify(formData));
+  }
+
+  function recordValues(e) {
+    let selectsValue = {};
+    selectsValue[e.target.name] = e.target.value;
+    setFormData(Object.assign(formData, selectsValue));
   }
 
   return (
-    <SearchTourForm.Provider value={{submitFn: submitForm, submitLocale: locales.search}}>
+    <SearchTourForm.Provider value={{submitFn: submitForm, recordValues: recordValues, submitLocale: locales.search}}>
       <div className={`${styles.search_block} block_item`} style={{backgroundImage: `url(/img/main_tab/search_tour.jpg)`}}>
         <Headline title={locales.searchTour} light />
 
@@ -163,8 +170,9 @@ function SearchTour() {
 }
 
 function SearchForm({ selects }) {
+  const { submitFn } = useContext(SearchTourForm);
   return (
-    <form name="search" className={styles.search_tour}>
+    <form name="search" className={styles.search_tour} onSubmit={e => submitFn(e)}>
       {selects.map(select => {
         return <Selects title={select.title} options={select.options} selectName={select.selectName} key={select.selectName} />
       })}
@@ -175,11 +183,13 @@ function SearchForm({ selects }) {
 }
 
 function Selects({ title, options, selectName }) {
+  const { recordValues } = useContext(SearchTourForm);
+
   return (
     <div className={styles.select_wrapper}>
       <h6 className={styles.title}>{title}</h6>
 
-      <select name={selectName}>
+      <select name={selectName} onChange={e => recordValues(e)}>
         {options.map(option => {
           return <Options value={option.value} title={option.title} key={option.value} />
         })}
@@ -195,11 +205,11 @@ function Options({ value, title }) {
 }
 
 function SubmitBtn() {
-  const {submitLocale, submitFn} = useContext(SearchTourForm);
+  const { submitLocale } = useContext(SearchTourForm);
 
   return (
     <div className={styles.submit_wrapper}>
-      <button className={styles.submit_form} onClick={submitFn}>{submitLocale}</button>
+      <button className={styles.submit_form}>{submitLocale}</button>
     </div>
   );
 }
