@@ -5,19 +5,21 @@ import styles from './Form.module.css';
 function Form({ tourPackage }) {
   const wrapper = useContext(WrapperContext);
   const [locales, setLocales] = useState({});
-  const [formData, setFormData] = useState({});
+  const [sendData, setSendData] = useState({});
 
   useEffect(() => import(`./locales/${wrapper.lang}`).then(locale => setLocales(locale.locale)), [wrapper.lang]);
+  useEffect(() => tourPackage && setSendData({'Tour Package': tourPackage}), [tourPackage]);
 
   function sendForm(e) {
     e.preventDefault();
-    console.log(JSON.stringify(formData));
+    console.log(JSON.stringify(sendData));
   }
 
   function recordValues(e) {
-    let selectsValue = {};
+    let selectsValue = sendData;
     selectsValue[e.target.name] = e.target.value;
-    setFormData(Object.assign(formData, selectsValue));
+    selectsValue[e.target.name] === '' && delete selectsValue[e.target.name];
+    setSendData(selectsValue);
   }
 
   return (
