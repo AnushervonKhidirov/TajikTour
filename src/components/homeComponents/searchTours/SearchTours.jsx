@@ -29,7 +29,6 @@ function SearchTour() {
   function recordValues(e) {
     sendData[e.target.name] = e.target.value;
     setSendData(sendData);
-    console.log(sendData);
   }
 
   return (
