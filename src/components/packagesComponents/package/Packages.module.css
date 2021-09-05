@@ -35,6 +35,10 @@
   margin-top: 1em;
 }
 
+.days_list li {
+  margin-bottom: 1em;
+}
+
 
 /* ================
 	gallery
