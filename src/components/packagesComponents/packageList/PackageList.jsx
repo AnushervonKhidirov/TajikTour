@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useContext } from 'react';
+import { useLocation } from 'react-router-dom';
 import { WrapperContext } from '../../../Context';
 import { Link } from 'react-router-dom';
 import styles from './PackageList.module.css'
 
 function PackageList() {
   const wrapper = useContext(WrapperContext);
+  const path = useLocation().pathname;
   const [locales, setLocales] = useState({});
 
   useEffect(() => import(`./locales/${wrapper.lang}`).then(locale => setLocales(locale.locale)), [wrapper.lang]);
@@ -17,8 +19,7 @@ function PackageList() {
       location: locales.europe,
       typologies: [locales.cultural, locales.relax],
       price: 700,
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut efficitur ante. Donec dapibus dictum scelerisque.',
-      link: '/packages/'
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut efficitur ante. Donec dapibus dictum scelerisque.'
     },
     {
       key: 'bora_bora',
@@ -29,8 +30,7 @@ function PackageList() {
       sale: true,
       wasPrice: 700,
       price: 500,
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut efficitur ante. Donec dapibus dictum scelerisque.',
-      link: '/packages/'
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut efficitur ante. Donec dapibus dictum scelerisque.'
     },
     {
       key: 'maldives',
@@ -39,8 +39,7 @@ function PackageList() {
       location: locales.oceania,
       typologies: [locales.sport, locales.relax],
       price: 400,
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut efficitur ante. Donec dapibus dictum scelerisque.',
-      link: '/packages/'
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut efficitur ante. Donec dapibus dictum scelerisque.'
     },
     {
       key: 'phuket',
@@ -49,8 +48,7 @@ function PackageList() {
       location: locales.thailandia,
       typologies: [locales.relax, locales.cultural],
       price: 1200,
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut efficitur ante. Donec dapibus dictum scelerisque.',
-      link: '/packages/'
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut efficitur ante. Donec dapibus dictum scelerisque.'
     },
     {
       key: 'seychelles',
@@ -59,8 +57,7 @@ function PackageList() {
       location: locales.netherlands,
       typologies: [locales.history, locales.sport],
       price: 1500,
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut efficitur ante. Donec dapibus dictum scelerisque.',
-      link: '/packages/'
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut efficitur ante. Donec dapibus dictum scelerisque.'
     },
     {
       key: 'hawaii',
@@ -71,21 +68,20 @@ function PackageList() {
       sale: true,
       wasPrice: 950,
       price: 730,
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut efficitur ante. Donec dapibus dictum scelerisque.',
-      link: '/packages/'
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut efficitur ante. Donec dapibus dictum scelerisque.'
     }
   ]
 
   return (
     <div className={styles.packages_wrapper}>
       {packagesData.map(packageItem => {
-        return <Package packageData={packageItem} locale={locales} key={packageItem.key} />
+        return <Package packageData={packageItem} locale={locales} path={path} key={packageItem.key} />
       })}
     </div>
   );
 }
 
-function Package({ packageData, locale }) {
+function Package({ packageData, locale, path }) {
   return (
     <div className={styles.package}>
       {packageData.sale && <div className={styles.sale}>{locale.sale}</div>}
@@ -101,7 +97,7 @@ function Package({ packageData, locale }) {
         </div>
 
         <div className={styles.desc}>{packageData.desc}</div>
-        <Link to={packageData.link + packageData.key} className={styles.details}>{locale.linkText}</Link>
+        <Link to={`${path}/${packageData.key}`} className={styles.details}>{locale.linkText}</Link>
       </div>
     </div>
   );
