@@ -42,7 +42,7 @@
 	events
 ================ */
 .event {
-  color: #9a9a9a;
+  color: var(--lightGrey);
   font-size: 14px;
   border: 1px solid var(--borderColor);
 }

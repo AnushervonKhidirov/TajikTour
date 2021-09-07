@@ -14,6 +14,7 @@ code {
 
 :root {
   --darkGrey: #555;
+  --lightGrey: #9a9a9a;
   --darkBlue: #002aff;
   --lightBlue: #0075ff;
   --gradient90: linear-gradient(90deg, var(--darkBlue), var(--lightBlue));

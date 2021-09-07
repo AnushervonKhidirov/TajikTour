@@ -1,5 +1,5 @@
 .package_wrapper {
-  color: #9a9a9a;
+  color: var(--lightGrey);
   margin: auto;
 }
 

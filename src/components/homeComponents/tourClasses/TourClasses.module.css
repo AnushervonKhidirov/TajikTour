@@ -50,7 +50,7 @@ h2.classes_type {
   display: grid;
   grid-template-columns: .7em auto;
   grid-gap: .5em;
-  color: #9a9a9a;
+  color: var(--lightGrey);
   line-height: 1;
   margin-bottom: 1em;
   fill: #68b78c;

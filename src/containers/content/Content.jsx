@@ -12,7 +12,7 @@ function Content() {
       <Switch>
         <Route path='/' exact component={Home} />
         <Route path='/packages/:tour?' exact component={Packages} />
-        <Route path='/news' exact component={News} />
+        <Route path='/news/:newsItem?' exact component={News} />
         <Route path='/contacts' exact component={Contacts} />
       </Switch>
     </main>
