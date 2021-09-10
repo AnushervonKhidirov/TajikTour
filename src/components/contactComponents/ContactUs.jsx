@@ -25,11 +25,11 @@ function ContactUs() {
       },
       {
         title: locales.phone,
-        value: '837920234'
+        value: '+992 111 222 422'
       },
       {
         title: locales.email,
-        value: 'info@travel.com'
+        value: 'tojiktour@mail.ru'
       },
       {
         title: locales.availableAt,

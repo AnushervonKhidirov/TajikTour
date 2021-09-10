@@ -21,7 +21,7 @@
   justify-content: space-between;
   align-items: center;
   font-size: 0.9em;
-  border-top: 1px solid var(--lightGrey);
+  border-top: 1px solid var(--borderColor);
   padding: 1em 0;
 }
 
