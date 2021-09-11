@@ -37,7 +37,7 @@ function Package({ packageData, locale, path }) {
 
         <div className={styles.typologies_price}>
           <Typologies typologies={packageData.typologies} />
-          <Price wasPrice={packageData.wasPrice} price={packageData.price} />
+          {packageData.price && <Price wasPrice={packageData.wasPrice} price={packageData.price} />}
         </div>
 
         <div className={styles.desc}>{packageData.desc}</div>

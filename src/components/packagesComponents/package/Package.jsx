@@ -16,10 +16,21 @@ function Package({ tour }) {
     <div className={`${styles.package_wrapper} block_item`}>
       <Headline title={packageData.tourName} />
       <div className={styles.package_img} style={{backgroundImage: `url(/img/packages/${packageData.img})`}}></div>
-      <Experience title={packageData.experience} desc={packageData.experienceDesc} />
-      <Gallery title={packageData.gallery} images={packageData.galleryImages} />
-      <Days title={packageData.dayByDay} desc={packageData.dayByDayDesc} list={packageData.dayByDayList} />
+      {/* <Desc title={packageData.desc && packageData.desc.title} text={packageData.desc && packageData.desc.text} /> */}
+
+      {packageData.desc && packageData.desc.map(desc => {
+        return <Desc title={desc.title} text={desc.text} key={desc.title} />
+      })}
+
+      {packageData.lists && packageData.lists.map(list => {
+        return <List title={list.title} list={list.list} key={list.title} />
+      })}
+
+      <Gallery title={packageData.gallery && packageData.gallery.title} images={packageData.gallery && packageData.gallery.images} />
       <SendForm title={packageData.sendForm} tourName={packageData.tourName} />
+
+      {/* <Experience title={packageData.experience} desc={packageData.experienceDesc} />
+      <Days title={packageData.dayByDay} desc={packageData.dayByDayDesc} list={packageData.dayByDayList} /> */}
     </div>
   );
 }
@@ -40,19 +51,6 @@ function Experience({ title, desc = [] }) {
   );
 }
 
-function Gallery({ title, images = [] }) {
-  return (
-    <div className={styles.gallery}>
-      <SubHeadline title={title} />
-      <div className={styles.image_list}>
-        {images.map((image, index) => {
-          return <div className={styles.image} style={{backgroundImage: `url(/img/packages/gallery/${image})`}} key={`gallery_img-${index}`}></div>
-        })}
-      </div>
-    </div>
-  );
-}
-
 function Days({ title, desc, list = [] }) {
   return (
     <div className={styles.days}>
@@ -64,6 +62,59 @@ function Days({ title, desc, list = [] }) {
           return <li key={`tour_dat-${index}`}><span className={styles.certain_day}>Day {index + 1}</span> - {day}</li>
         })}
       </ul>
+    </div>
+  );
+}
+
+
+
+
+function Desc({ title, text = [] }) {
+  return (
+    <div className={styles.desc_block}>
+      <SubHeadline title={title} />
+
+      <div className={styles.text}>
+        {text.map((paragraph, index) => {
+          return (
+            <p key={`${title}_paragraph-${index}`}>{paragraph}</p>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+
+function List({ title, list }) {
+  return (
+    <div className={styles.list_block}>
+      <SubHeadline title={title} />
+
+      <ul className={styles.list}>
+        {list.map((item, index) => {
+          return <ListItem item={item} key={`list_item-${index}`} />
+        })}
+      </ul>
+    </div>
+  );
+}
+
+function ListItem({ item }) {
+  return (
+    <li>{item}</li>
+  );
+}
+
+function Gallery({ title, images = [] }) {
+  return (
+    <div className={styles.gallery}>
+      <SubHeadline title={title} />
+      <div className={styles.image_list}>
+        {images.map((image, index) => {
+          return <div className={styles.image} style={{backgroundImage: `url(/img/packages/gallery/${image})`}} key={`gallery_img-${index}`}></div>
+        })}
+      </div>
     </div>
   );
 }

@@ -46,7 +46,6 @@ export const packageListData = [
     title: 'Safed Dara',
     // location: 'Нидерланды',
     typologies: ['Relax', 'Sport'],
-    price: 1500,
     desc: 'Safed-Dara is a modern ski resort located about 70 km north of the capital of Tajikistan - the city of Dushanbe at an altitude of 2450 meters above sea level in the Varzob region.'
   },
   {
@@ -55,7 +54,7 @@ export const packageListData = [
     title: 'Turkey',
     // location: 'Италия',
     typologies: ['History', 'Relax'],
-    price: 550,
+    price: 'from 550',
     desc: 'A large number of historical and architectural monuments, museums have been preserved in modern Istanbul. Here East and West, cultures and religions are intertwined, a special atmosphere of the times of sultans and harem reigns.'
   },
   {
@@ -64,7 +63,7 @@ export const packageListData = [
     title: 'UAE',
     // location: 'Нидерланды',
     typologies: ['Relax', 'Entertainment'],
-    price: 500,
+    price: 'from 500',
     desc: 'Clean beaches with white sand and developed infrastructure are great for parents with children. The alcohol-free hotel concept and heightened security measures in the country create ideal conditions for family holidays.'
   }
 ]

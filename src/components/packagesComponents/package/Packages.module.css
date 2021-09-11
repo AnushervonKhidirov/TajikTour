@@ -41,6 +41,13 @@
 
 
 /* ================
+	desc
+================ */
+.text p {
+  margin-bottom: .5em;
+}
+
+/* ================
 	gallery
 ================ */
 .image_list {
@@ -54,6 +61,17 @@
 }
 
 
+
+/* ================
+	list
+================ */
+.list {
+  list-style-type: none;
+  margin-left: 1em;
+}
+
+
+
 /* ================
 	adaptive
 ================ */
@@ -65,10 +83,6 @@
   .image_list {
     height: 500px;
   }
-}
-
-@media screen and (min-width: 568px) and (max-width: 992px) {
-  
 }
 
 @media screen and (min-width: 700px) {
