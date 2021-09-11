@@ -8,69 +8,13 @@ function PackageList() {
   const wrapper = useContext(WrapperContext);
   const path = useLocation().pathname;
   const [locales, setLocales] = useState({});
+  const [packagesData, setPackagesData] = useState([]);
 
-  useEffect(() => import(`./locales/${wrapper.lang}`).then(locale => setLocales(locale.locale)), [wrapper.lang]);
+  useEffect(() => import(`./packageListData/${wrapper.lang}`).then(packages => {
+    setPackagesData(packages.packageListData);
+    setLocales(packages.locale);
+  }), [wrapper.lang]);
 
-  const packagesData = [
-    {
-      key: 'koh_samui',
-      img: 'koh_samui.jpg',
-      title: locales.kohSamui,
-      location: locales.europe,
-      typologies: [locales.cultural, locales.relax],
-      price: 700,
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut efficitur ante. Donec dapibus dictum scelerisque.'
-    },
-    {
-      key: 'bora_bora',
-      img: 'bora_bora.jpg',
-      title: locales.boraBora,
-      location: locales.asia,
-      typologies: [locales.history, locales.cultural],
-      sale: true,
-      wasPrice: 700,
-      price: 500,
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut efficitur ante. Donec dapibus dictum scelerisque.'
-    },
-    {
-      key: 'maldives',
-      img: 'maldives.jpg',
-      title: locales.maldives,
-      location: locales.oceania,
-      typologies: [locales.sport, locales.relax],
-      price: 400,
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut efficitur ante. Donec dapibus dictum scelerisque.'
-    },
-    {
-      key: 'phuket',
-      img: 'phuket.jpg',
-      title: locales.phuket,
-      location: locales.thailandia,
-      typologies: [locales.relax, locales.cultural],
-      price: 1200,
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut efficitur ante. Donec dapibus dictum scelerisque.'
-    },
-    {
-      key: 'seychelles',
-      img: 'seychelles.jpg',
-      title: locales.seychelles,
-      location: locales.netherlands,
-      typologies: [locales.history, locales.sport],
-      price: 1500,
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut efficitur ante. Donec dapibus dictum scelerisque.'
-    },
-    {
-      key: 'hawaii',
-      img: 'hawaii.jpg',
-      title: locales.hawaii,
-      location: locales.italy,
-      typologies: [locales.sport, locales.relax],
-      sale: true,
-      wasPrice: 950,
-      price: 730,
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut efficitur ante. Donec dapibus dictum scelerisque.'
-    }
-  ]
 
   return (
     <div className={styles.packages_wrapper}>
@@ -89,7 +33,7 @@ function Package({ packageData, locale, path }) {
       <div className={styles.package_img} style={{backgroundImage: `url(/img/packages/${packageData.img})`}} />
 
       <div className={styles.package_inner}>
-        <PackagePlace title={packageData.title} location={packageData.location} />
+        <PackagePlace title={packageData.title} />
 
         <div className={styles.typologies_price}>
           <Typologies typologies={packageData.typologies} />
@@ -103,11 +47,11 @@ function Package({ packageData, locale, path }) {
   );
 }
 
-function PackagePlace({ title, location }) {
+function PackagePlace({ title }) {
   return (
     <div className={styles.place}>
       <h3 className={styles.place_title}>{title}</h3>
-      <div className={styles.place_location}>{location}</div>
+      {/* <div className={styles.place_location}>{location}</div> */}
     </div>
   );
 }
