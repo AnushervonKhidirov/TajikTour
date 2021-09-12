@@ -4,5 +4,7 @@ export const locale = {
   email: 'Email',
   phone: 'Phone',
   message: 'Message',
-  send: 'Send'
+  send: 'Send',
+  sendMessage: 'Your message has been sent',
+  errorMessage: 'Error sending data. Please try again later'
 }
