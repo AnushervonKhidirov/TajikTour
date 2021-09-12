@@ -10,7 +10,7 @@ function Package({ tour }) {
   const [packageData, setPackageData] = useState({});
 
   // add error page !!!
-  useEffect(() => import(`./packageData/${wrapper.lang}`).then(packages => setPackageData(packages.packages[tour] || {})), [wrapper.lang, tour]);
+  useEffect(() => import(`./packageData/${wrapper.lang}`).then(packages => setPackageData(packages.packages[tour])), [wrapper.lang, tour]);
 
   return (
     <div className={`${styles.package_wrapper} block_item`}>
@@ -35,36 +35,36 @@ function Package({ tour }) {
   );
 }
 
-function Experience({ title, desc = [] }) {
-  return (
-    <>
-      <div className={styles.experience}>
-        <SubHeadline title={title} />
+// function Experience({ title, desc = [] }) {
+//   return (
+//     <>
+//       <div className={styles.experience}>
+//         <SubHeadline title={title} />
 
-        <div className={styles.desc}>
-          {desc.map((desc, index) => {
-            return <p key={`exp_desc-${index}`}>{desc}</p>
-          })}
-        </div>
-      </div>
-    </>
-  );
-}
+//         <div className={styles.desc}>
+//           {desc.map((desc, index) => {
+//             return <p key={`exp_desc-${index}`}>{desc}</p>
+//           })}
+//         </div>
+//       </div>
+//     </>
+//   );
+// }
 
-function Days({ title, desc, list = [] }) {
-  return (
-    <div className={styles.days}>
-      <SubHeadline title={title} />
-      <div className={styles.desc}>{desc}</div>
+// function Days({ title, desc, list = [] }) {
+//   return (
+//     <div className={styles.days}>
+//       <SubHeadline title={title} />
+//       <div className={styles.desc}>{desc}</div>
 
-      <ul className={styles.days_list}>
-        {list.map((day, index) => {
-          return <li key={`tour_dat-${index}`}><span className={styles.certain_day}>Day {index + 1}</span> - {day}</li>
-        })}
-      </ul>
-    </div>
-  );
-}
+//       <ul className={styles.days_list}>
+//         {list.map((day, index) => {
+//           return <li key={`tour_dat-${index}`}><span className={styles.certain_day}>Day {index + 1}</span> - {day}</li>
+//         })}
+//       </ul>
+//     </div>
+//   );
+// }
 
 
 
