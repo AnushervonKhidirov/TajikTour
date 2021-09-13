@@ -62,7 +62,7 @@ function Social() {
   const socials = [
     {
       title: 'Facebook',
-      link: 'https://www.facebook.com/',
+      link: 'https://www.facebook.com/tojiktour.tj ',
       component: <FacebookIcon />
     },
     {
