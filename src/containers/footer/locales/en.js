@@ -1,5 +1,5 @@
 export const locale = {
-  footerDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut diam et nibh condimentum venenatis eu ac magnasin. Quisque interdum est mauris, eget ullamcorper.',
+  footerDesc: 'LLC "Tajik Tour" is a company established in the tourism sector with 10 years of experience, behind which thousands of satisfied tourists from different countries.',
   ourAgency: 'Our Agency',
   services: 'Services',
   insurancee: 'Insurancee',

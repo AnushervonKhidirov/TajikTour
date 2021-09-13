@@ -1,5 +1,5 @@
 export const locale = {
-  footerDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut diam et nibh condimentum venenatis eu ac magnasin. Quisque interdum est mauris, eget ullamcorper.',
+  footerDesc: 'ООО «Таджик Тур» - это состоявшаяся в туристической сфере компания с 10-летним стажем, за плечами которой тысячи довольных туристов из разных стран.',
   ourAgency: 'Наше агентство',
   services: 'Услуги',
   insurancee: 'Страхование',
