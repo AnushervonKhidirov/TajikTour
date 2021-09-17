@@ -8,6 +8,7 @@ function News({ newsItem }) {
 
   // add error page !!!
   useEffect(() => import(`./newsData/${wrapper.lang}`).then(news => setNews(news.newsData[newsItem] || {})), [wrapper.lang, newsItem]);
+  useEffect(() => window.scrollTo(0, 0), []);
 
   return (
     <div className={`${styles.news_item_wrapper} block_item`}>

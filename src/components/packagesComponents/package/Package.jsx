@@ -11,11 +11,12 @@ function Package({ tour }) {
 
   // add error page !!!
   useEffect(() => import(`./packageData/${wrapper.lang}`).then(packages => setPackageData(packages.packages[tour])), [wrapper.lang, tour]);
+  useEffect(() => window.scrollTo(0, 0), []);
 
   return (
     <div className={`${styles.package_wrapper} block_item`}>
       <Headline title={packageData.tourName} />
-      <div className={styles.package_img} style={{backgroundImage: `url(/img/packages/${packageData.img})`}}></div>
+      <div className={styles.package_img} data-title={tour} style={{backgroundImage: `url(/img/packages/${packageData.img})`}}></div>
       {/* <Desc title={packageData.desc && packageData.desc.title} text={packageData.desc && packageData.desc.text} /> */}
 
       {packageData.desc && packageData.desc.map(desc => {

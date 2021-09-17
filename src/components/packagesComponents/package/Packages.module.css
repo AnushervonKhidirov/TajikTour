@@ -13,6 +13,18 @@
   padding: 25%;
 }
 
+.package_img[data-title="city_tour"] {
+  background-position: 50% 70%;
+}
+
+.package_img[data-title="iskanderkul"] {
+  background-position: 50% 100%;
+}
+
+
+.package_img[data-title="emirates"] {
+  background-position: 50% 35%;
+}
 
 /* ================
 	experience

@@ -4,21 +4,23 @@
 
 .headline {
   color: var(--darkGrey);
-  font-size: 1.2em;
-  text-align: center;
+  font-size: 2em;
+  text-transform: uppercase;
   margin-bottom: 1em;
 }
 
 .image {
+  float: left;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
-  margin-bottom: 2em;
-  padding: 30%;
+  margin: 0 1em 1em 0;
+  padding: 30% 23%;
 }
 
 .paragraph {
   color: var(--lightGrey);
+  text-align: justify;
   margin-bottom: .5em;
 }
 
