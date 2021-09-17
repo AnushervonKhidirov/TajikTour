@@ -40,10 +40,10 @@ function ContactUs() {
 
   return (
     <div className={styles.contact_us}>
-      <Desc title={contactData.descTitle} text={contactData.descText} />
-      <Form />
       <Map url={contactData.mapUrl} />
       <AddressData address={contactData.addressData} />
+      <Desc title={contactData.descTitle} text={contactData.descText} />
+      <Form />
     </div>
   );
 }
