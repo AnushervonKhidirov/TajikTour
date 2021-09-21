@@ -10,10 +10,10 @@ function PackageList() {
   const [locales, setLocales] = useState({});
   const [packagesData, setPackagesData] = useState([]);
 
-  useEffect(() => import(`./packageListData/${wrapper.lang}`).then(packages => {
-    setPackagesData(packages.packageListData);
-    setLocales(packages.locale);
-  }), [wrapper.lang]);
+  useEffect(() => {
+    import(`../../common/data/packageListData/${wrapper.lang}`).then(packages => setPackagesData(packages.packageListData));
+    import(`./locales/${wrapper.lang}`).then(packages => setLocales(packages.locale));
+  }, [wrapper.lang]);
 
 
   return (

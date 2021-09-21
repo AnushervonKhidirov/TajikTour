@@ -79,8 +79,8 @@
   color: #fff;
   line-height: 30px;
   text-align: center;
+  text-transform: capitalize;
   border-radius: 30px;
-  cursor: pointer;
 }
 
 .destination_inner {
@@ -95,7 +95,7 @@
   background: var(--gradient90);
   color: #fff;
   text-align: center;
-  padding: 2em;
+  padding: 1em;
   opacity: 0;
   transition: opacity .5s;
 }
@@ -116,7 +116,8 @@
 }
 
 .destination_inner ul li {
-  margin: 0.5em;
+  line-height: 1;
+  margin: 1em 0.5em;
 }
 
 .destination_inner a.link {

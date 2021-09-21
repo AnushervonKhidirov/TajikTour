@@ -1,18 +1,7 @@
 export const locale = {
   ourDestinations: 'Наши направления',
-  asia: 'Азия',
-  europe: 'Европа',
-  oceania: 'Океания',
-  italy: 'Италия',
-  netherlands: 'Нидерланды',
-  thailandia: 'Таиланд',
-  kohSamui: 'Самуй',
-  boraBora: 'Бора Бора',
-  maldives: 'Мальдивы',
-  hawaii: 'Гаваи',
-  seychelles: 'Сейшелы',
-  phuket: 'Пхукет',
+  inside: 'Внутри страны',
+  outside: 'За рубежом',
   packages: 'тур пакеты',
-  from: 'От',
-  linkText: 'Посмотреть назначения'
+  linkText: 'Посмотреть направления'
 }
