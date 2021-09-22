@@ -11,19 +11,19 @@ function Achievements() {
   const achievementsData = [
     {
       name: locales.yearOfExperience,
-      number: 30
+      number: 10
     },
     {
       name: locales.satisfiedCustomers,
-      number: 78
+      number: 1000
     },
     {
-      name: locales.typesOfInsurance,
-      number: 45
+      name: locales.partners,
+      number: 50
     },
     {
       name: locales.travelDestinations,
-      number: 56
+      number: 100
     }
   ]
 
@@ -31,16 +31,17 @@ function Achievements() {
     <div className={`${styles.achievements_block} block_item`} style={{backgroundImage: `url(/img/main_tab/achievements.jpg)`}}>
       <div className={styles.achievents_inner}>
         {achievementsData.map((achievement, index) => {
-          return <AchievementsItem name={achievement.name} number={achievement.number} key={achievement.name + index.toString()} />
+          return <AchievementsItem name={achievement.name} number={achievement.number} moreText={locales.moreText} key={achievement.name + index.toString()} />
         })}
       </div>
     </div>
   );
 }
 
-function AchievementsItem({ number, name }) {
+function AchievementsItem({ number, name, moreText }) {
   return (
     <div className={styles.achievements_item}>
+      <div className={styles.more}>{moreText}</div>
       <div className={styles.achievements_number}>{number}</div>
       <div className={styles.achievements_name}>{name}</div>
     </div>

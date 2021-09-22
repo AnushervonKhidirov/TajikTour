@@ -1,6 +1,7 @@
 export const locale = {
+  moreText: 'More Than',
   yearOfExperience: 'YEARS OF EXPERIENCE',
   satisfiedCustomers: 'SATISFIED CUSTOMERS',
-  typesOfInsurance: 'TYPES OF INSURANCE',
+  partners: 'PARTNERS',
   travelDestinations: 'TRAVEL DESTINATIONS',
 }

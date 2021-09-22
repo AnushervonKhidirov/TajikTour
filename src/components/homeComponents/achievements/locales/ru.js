@@ -1,6 +1,7 @@
 export const locale = {
+  moreText: 'Более',
   yearOfExperience: 'Лет Опыта',
-  satisfiedCustomers: 'Удовлетворенных Клиентов',
-  typesOfInsurance: 'Видов Страхования',
-  travelDestinations: 'Направлений Путешествия',
+  satisfiedCustomers: 'Доволних Клиентов',
+  partners: 'Партнеров',
+  travelDestinations: 'Направлений По Всему Миру',
 }

@@ -1,33 +1,50 @@
-.achievements_block.block_item {
+.achievements_block {
+  position: relative;
   background-size: cover;
   background-position: center;
   margin-top: 2em;
   padding: 4em 0;
 }
 
+.achievements_block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .2);
+}
+
 .achievents_inner {
+  position: relative;
   display: grid;
   width: 925px;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 1.5em;
+  grid-gap: 5em 1.5em;
   margin: auto;
 }
 
 .achievements_item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: #fff;
   font-size: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  /* text-shadow: 0 0 .5em rgba(0, 0, 0, .5); */
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px; */
 }
 
 .achievements_number {
-  font-size: 3em;
-  margin-right: .5em;
+  font-size: 3.5em;
+  /* margin-right: .5em;
+  font-size: 3em; */
 }
 
 .achievements_name {
-  width: 8em;
+  /* width: 8em; */
 }
 
 
