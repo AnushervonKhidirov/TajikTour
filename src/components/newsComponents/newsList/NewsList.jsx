@@ -33,8 +33,9 @@ function NewsItem({ news, path }) {
     <div className={styles.news}>
       <div className={styles.news_img} style={{ backgroundImage: `url(/img/news/${news.newsImg})` }} ></div>
       <div className={styles.text}>
-        <div className={styles.type}>{news.newsType}</div>
+        {/* <div className={styles.type}>{news.newsType}</div> */}
         <h3 className={styles.title}>{news.newsTitle}</h3>
+        <div className={styles.desc}>{news.newsDesc}</div>
         <Link to={`${path}/${news.newsKey}`}>{news.linkText}</Link>
       </div>
     </div>
