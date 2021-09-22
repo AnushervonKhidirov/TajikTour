@@ -17,7 +17,6 @@ function Package({ tour }) {
     <div className={`${styles.package_wrapper} block_item`}>
       <Headline title={packageData.tourName} />
       <div className={styles.package_img} data-title={tour} style={{backgroundImage: `url(/img/packages/${packageData.img})`}}></div>
-      {/* <Desc title={packageData.desc && packageData.desc.title} text={packageData.desc && packageData.desc.text} /> */}
 
       {packageData.desc && packageData.desc.map(desc => {
         return <Desc title={desc.title} text={desc.text} key={desc.title} />
@@ -29,46 +28,9 @@ function Package({ tour }) {
 
       <Gallery title={packageData.gallery && packageData.gallery.title} images={packageData.gallery && packageData.gallery.images} />
       <SendForm title={packageData.sendForm} tourName={packageData.tourName} />
-
-      {/* <Experience title={packageData.experience} desc={packageData.experienceDesc} />
-      <Days title={packageData.dayByDay} desc={packageData.dayByDayDesc} list={packageData.dayByDayList} /> */}
     </div>
   );
 }
-
-// function Experience({ title, desc = [] }) {
-//   return (
-//     <>
-//       <div className={styles.experience}>
-//         <SubHeadline title={title} />
-
-//         <div className={styles.desc}>
-//           {desc.map((desc, index) => {
-//             return <p key={`exp_desc-${index}`}>{desc}</p>
-//           })}
-//         </div>
-//       </div>
-//     </>
-//   );
-// }
-
-// function Days({ title, desc, list = [] }) {
-//   return (
-//     <div className={styles.days}>
-//       <SubHeadline title={title} />
-//       <div className={styles.desc}>{desc}</div>
-
-//       <ul className={styles.days_list}>
-//         {list.map((day, index) => {
-//           return <li key={`tour_dat-${index}`}><span className={styles.certain_day}>Day {index + 1}</span> - {day}</li>
-//         })}
-//       </ul>
-//     </div>
-//   );
-// }
-
-
-
 
 function Desc({ title, text = [] }) {
   return (
