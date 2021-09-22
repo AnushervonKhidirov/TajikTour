@@ -3,5 +3,5 @@ export const locale = {
   inside: 'Внутри страны',
   outside: 'За рубежом',
   packages: 'тур пакеты',
-  linkText: 'Посмотреть направления'
+  linkText: 'Посмотреть все направления'
 }
