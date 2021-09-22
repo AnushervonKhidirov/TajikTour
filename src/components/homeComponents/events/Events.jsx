@@ -7,72 +7,42 @@ import styles from './Events.module.css';
 function Events() {
   const wrapper = useContext(WrapperContext);
   const [locales, setLocales] = useState({});
+  const [newsList, setNewsList] = useState([]);
 
-  useEffect(() => import(`./locales/${wrapper.lang}`).then(locale => setLocales(locale.locale)), [wrapper.lang]);
+  useEffect(() => {
+    import(`./locales/${wrapper.lang}`).then(locale => setLocales(locale.locale));
+    import(`../../common/data/newsListData/${wrapper.lang}`).then(newsList => {
+      let newsArray = [];
 
-  const eventsData = {
-    porposals: {
-      supTitle: locales.ourPorposals,
-      title: locales.porposalsTitle,
-      desc: locales.porposalsDesc,
-      link: {
-        title: locales.porposalsLink,
-        href: '/'
+      for (let i = 0; i < newsList.newsListData.length; i++) {
+        if (i >= 4) break;
+        newsArray.push(newsList.newsListData[i]);
       }
-    },
-    events: [
-      {
-        date: '04.11.2018',
-        title: locales.travelEvents,
-        desc: locales.travelEventsDesc,
-        link: {
-          title: locales.link,
-          href: '/news'
-        }
-      },
-      {
-        date: '04.11.2018',
-        title: locales.bestBeaches,
-        desc: locales.bestBeachesDesc,
-        link: {
-          title: locales.link,
-          href: '/news'
-        }
-      },
-      {
-        date: '04.11.2018',
-        title: locales.magicBlooms,
-        desc: locales.magicBloomsDesc,
-        link: {
-          title: locales.link,
-          href: '/news'
-        }
-      },
-      {
-        date: '04.11.2018',
-        title: locales.alternativeTrips,
-        desc: locales.alternativeTripsDesc,
-        link: {
-          title: locales.link,
-          href: '/news'
-        }
-      }
-    ]
+
+      setNewsList(newsArray);
+    });
+  }, [wrapper.lang]);
+
+  const porposals = {
+    supTitle: locales.ourPorposals,
+    title: locales.porposalsTitle,
+    desc: locales.porposalsDesc,
+    link: {
+      title: locales.porposalsLink,
+      href: '/news'
+    }
   }
 
   return (
     <div className={`${styles.events_block} block_item`}>
-      <Headline title="Events" />
+      <Headline title={locales.events} />
       <div className={styles.events}>
-        <Proposals supTitle={eventsData.porposals.supTitle} title={eventsData.porposals.title} desc={eventsData.porposals.desc} link={eventsData.porposals.link} />
-        {eventsData.events.map((event, index) => {
-          return <EventItems date={event.date} title={event.title} desc={event.desc} link={event.link} key={event.title + index.toString()} />
-        })}
+        <Proposals supTitle={porposals.supTitle} title={porposals.title} desc={porposals.desc} link={porposals.link} />
+        {newsList.map(event => <EventItems data={event} linkText={locales.link} key={event.newsKey} />)}
       </div>
     </div>
   );
 }
-
 
 function Proposals({ supTitle, title, desc, link }) {
   return (
@@ -85,13 +55,15 @@ function Proposals({ supTitle, title, desc, link }) {
   )
 }
 
-function EventItems({ date, title, desc, link }) {
+function EventItems({ data, linkText }) {
+  let { date, newsTitle, newsDesc, newsKey } = data;
+
   return (
     <div className={styles.event}>
       <div className={styles.event_date}>{date}</div>
-      <h2 className={styles.event_title}>{title}</h2>
-      <div className={styles.event_desc}>{desc}</div>
-      <Link to={link.href} className={styles.event_link}>{link.title}</Link>
+      <h2 className={styles.event_title}>{newsTitle}</h2>
+      <div className={styles.event_desc}>{newsDesc}</div>
+      <Link to={`/news/${newsKey}`} className={styles.event_link}>{linkText}</Link>
     </div>
   );
 }
