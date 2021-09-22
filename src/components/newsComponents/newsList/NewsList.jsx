@@ -11,32 +11,31 @@ function NewsList() {
   const [newsList, setNewsList] = useState([]);
   const [locales, setLocales] = useState({});
 
-  useEffect(() => import(`./newsListData/${wrapper.lang}`).then(newsList => {
-    setNewsList(newsList.newsListData);
-    setLocales(newsList.locales);
-  }), [wrapper.lang]);
+  useEffect(() => {
+    import(`./locales/${wrapper.lang}`).then(newsList => setLocales(newsList.locales));
+    import(`../../common/data/newsListData/${wrapper.lang}`).then(newsList => setNewsList(newsList.newsListData));
+  }, [wrapper.lang]);
 
   return (
     <div className={styles.news_list_wrapper}>
       <Headline title={locales.title} />
       <div className={styles.news_list}>
         {newsList.map(news => {
-          return <NewsItem news={news} path={path} key={news.newsKey} />
+          return <NewsItem news={news} path={path} linkText={locales.linkText} key={news.newsKey} />
         })}
       </div>
     </div>
   );
 }
 
-function NewsItem({ news, path }) {
+function NewsItem({ news, path, linkText }) {
   return (
     <div className={styles.news}>
       <div className={styles.news_img} style={{ backgroundImage: `url(/img/news/${news.newsImg})` }} ></div>
       <div className={styles.text}>
-        {/* <div className={styles.type}>{news.newsType}</div> */}
         <h3 className={styles.title}>{news.newsTitle}</h3>
         <div className={styles.desc}>{news.newsDesc}</div>
-        <Link to={`${path}/${news.newsKey}`}>{news.linkText}</Link>
+        <Link to={`${path}/${news.newsKey}`}>{linkText}</Link>
       </div>
     </div>
   );
