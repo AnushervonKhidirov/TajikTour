@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { SliderContext } from '../../../Context';
 import styles from './Slider.module.css';
@@ -29,6 +29,7 @@ function Slider() {
   const [activeSlide, setactiveSlide] = useState(Array(sliderInner.length));
   const [isRotate, setIsRotate] = useState(true);
   const slideLength = sliderInner.length - 1;
+  const autorotateDelay = 5000;
 
   useEffect(() => {
     const thumbsClasses = [];
@@ -40,18 +41,24 @@ function Slider() {
     setactiveSlide(thumbsClasses)
   }, [currentSlide, slideLength]);
   
-  function sliderHandler(current) {
+  let showCurrentSlide = useCallback((current) => {
+    if (current > slideLength) current = 0;
+    if (current < 0) current = slideLength;
+    return current;
+  }, [slideLength]);
+
+  let sliderHandler = useCallback((current) => {
     if (!isRotate) return;
     setIsRotate(false);
     setCurrentSlide(showCurrentSlide(current));
     setTimeout(() => setIsRotate(true), 1000);
-  }
+  }, [showCurrentSlide, isRotate]);
 
-  function showCurrentSlide(current) {
-    if (current > slideLength) current = 0;
-    if (current < 0) current = slideLength;
-    return current;
-  }
+  // autorotate slider
+  useEffect(() => {
+    const autorotate = setInterval(() => sliderHandler(currentSlide + 1), autorotateDelay);
+    return () => clearInterval(autorotate);
+  }, [sliderHandler, currentSlide]);
 
   return (
     <SliderContext.Provider value={{ sliderHandler: sliderHandler, currentSlide: currentSlide, activeSlide: activeSlide }}>
