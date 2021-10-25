@@ -1,101 +1,21 @@
 import React, { useState, useEffect, useContext, useCallback } from 'react';
+import { WrapperContext } from '../../../Context';
 import { Link } from 'react-router-dom';
 import { SliderContext } from '../../../Context';
 import styles from './Slider.module.css';
 
-const sliderInner = [
-  {
-    img: 'slide-0.jpg',
-    slideId: 0,
-    saleText: 'Package Sale -50%',
-    date: '10.01.21',
-    link: '/pakcages'
-  },
-  {
-    img: 'slide-1.jpg',
-    slideId: 1,
-    saleText: 'Package Sale -50%',
-    date: '10.01.21',
-    link: '/pakcages'
-  },
-  {
-    img: 'slide-2.jpg',
-    slideId: 2,
-    saleText: 'Package Sale -50%',
-    date: '10.01.21',
-    link: '/pakcages'
-  },
-  {
-    img: 'slide-3.jpg',
-    slideId: 3,
-    saleText: 'Package Sale -50%',
-    date: '10.01.21',
-    link: '/pakcages'
-  },
-  {
-    img: 'slide-4.jpg',
-    slideId: 4,
-    saleText: 'Package Sale -50%',
-    date: '10.01.21',
-    link: '/pakcages'
-  },
-  {
-    img: 'slide-5.jpg',
-    slideId: 5,
-    saleText: 'Package Sale -50%',
-    date: '10.01.21',
-    link: '/pakcages'
-  },
-  {
-    img: 'slide-6.jpg',
-    slideId: 6,
-    saleText: 'Package Sale -50%',
-    date: '10.01.21',
-    link: '/pakcages'
-  },
-  {
-    img: 'slide-7.jpg',
-    slideId: 7,
-    saleText: 'Package Sale -50%',
-    date: '10.01.21',
-    link: '/pakcages'
-  },
-  {
-    img: 'slide-8.jpg',
-    slideId: 8,
-    saleText: 'Package Sale -50%',
-    date: '10.01.21',
-    link: '/pakcages'
-  },
-  {
-    img: 'slide-9.jpg',
-    slideId: 9,
-    saleText: 'Package Sale -50%',
-    date: '10.01.21',
-    link: '/pakcages'
-  },
-  {
-    img: 'slide-10.jpg',
-    slideId: 10,
-    saleText: 'Package Sale -50%',
-    date: '10.01.21',
-    link: '/pakcages'
-  },
-  {
-    img: 'slide-11.jpg',
-    slideId: 11,
-    saleText: 'Package Sale -50%',
-    date: '10.01.21',
-    link: '/pakcages'
-  }
-];
-
 function Slider() {
+  const wrapper = useContext(WrapperContext);
+  const [sliderInner, setSliderInner] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [activeSlide, setactiveSlide] = useState(Array(sliderInner.length));
   const [isRotate, setIsRotate] = useState(true);
   const slideLength = sliderInner.length - 1;
   const autorotateDelay = 5000;
+
+  useEffect(() => {
+    import(`./sliderData/${wrapper.lang}`).then(sliderData => setSliderInner(sliderData.sliderData));
+  }, [wrapper.lang]);
 
   useEffect(() => {
     const thumbsClasses = [];
@@ -133,8 +53,9 @@ function Slider() {
           {sliderInner.map((slide, index) => {
             return <Slide 
               img={slide.img}
-              saleText={slide.saleText}
-              date={slide.date}
+              slideText={slide.slideText}
+              slideTitle={slide.slideTitle}
+              linkText={slide.linkText}
               link={slide.link}
               index={index}
               active={activeSlide[index]}
@@ -144,25 +65,22 @@ function Slider() {
         </div>
 
         <Arrows />
-        <ThumbsWrapper />
+        <ThumbsWrapper slider={sliderInner} />
       </div>
     </SliderContext.Provider>
   );
 }
 
-function Slide({ img, saleText, date, link, active, id }) {
+function Slide({ img, slideText, slideTitle, linkText, link, active, id }) {
   return (
     <div className={`${styles.slide_item} ${active}`} data-id={id}>
       <div className={styles.slide_img} style={{backgroundImage: `url(/img/slider/${img})`}} />
 
-      <div className={styles.slide_date}>
-        <div>Only until</div>
-        <div>{date}</div>
-      </div>
+      <div className={styles.slide_title}>{slideTitle}</div>
 
-      <div className={styles.slide_sale}>
-        <div className={styles.sale_text}>{saleText}</div>
-        <Link to={link} className={styles.sale_link}>Shop Now</Link>
+      <div className={styles.slide_desc}>
+        <div className={styles.slide_text}>{slideText}</div>
+        <Link to={link} className={styles.slide_link}>{linkText}</Link>
       </div>
     </div>
   );
@@ -180,12 +98,12 @@ function Arrows() {
   );
 }
 
-function ThumbsWrapper() {
+function ThumbsWrapper({ slider }) {
   const { sliderHandler, activeSlide } = useContext(SliderContext);
 
   return (
     <div className={styles.slider_thumbs}>
-      {sliderInner.map((thumb, index) => {
+      {slider.map((thumb, index) => {
         return <Thumb active={activeSlide[index]} switchSlide={() => sliderHandler(index)} key={'thumb-' + index.toString()} />
       })}
     </div>

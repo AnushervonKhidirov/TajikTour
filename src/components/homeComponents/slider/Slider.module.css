@@ -34,12 +34,12 @@
   background-position: center;
 }
 
-.slide_date,
-.slide_sale {
+.slide_title,
+.slide_desc {
   position: absolute;
   display: flex;
-  width: 9em;
-  height: 9em;
+  width: 11em;
+  height: 11em;
   flex-direction: column;
   justify-content: center;
   text-align: center;
@@ -50,17 +50,18 @@
 }
 
 /* date */
-.slide_date {
+.slide_title {
   top: 50%;
   right: 8%;
   font-size: 1vw;
+  padding: 0 1em;
   opacity: 0;
   transform: translateY(-180%);
   transition: opacity .5s 1s;
   z-index: 9;
 }
 
-.slide_date::after {
+.slide_title::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -74,7 +75,7 @@
   z-index: -1;
 }
 
-.active .slide_date {
+.active .slide_title {
   opacity: 1;
 }
 
@@ -89,31 +90,32 @@
 
 
 /* sale */
-.slide_sale {
+.slide_desc {
   position: absolute;
   top: 50%;
   right: -40%;
   background: rgba(88, 34, 88, .6);
   color: #fff;
-  font-size: 3vw;
-  padding: 0 2.2em;
+  font-size: 2.5vw;
+  padding: 0 1em;
   transform: translateY(-50%);
   transition: right 1s;
 }
 
-.sale_text {
+.slide_text {
   margin-bottom: 0.5em;
 }
 
-a.sale_link {
+a.slide_link {
   font-size: 0.35em;
   font-weight: bold;
   border: .15em solid #fff;
   border-radius: 5em;
+  margin: 0 3em;
   padding: 1em;
 }
 
-.active .slide_sale {
+.active .slide_desc {
   right: 10%;
 }
 
