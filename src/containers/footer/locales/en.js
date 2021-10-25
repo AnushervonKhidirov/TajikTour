@@ -1,22 +1,6 @@
 export const locale = {
-  footerDesc: 'LLC "Tajik Tour" is a company established in the tourism sector with 10 years of experience, behind which thousands of satisfied tourists from different countries.',
+  footerDesc: 'LLC "Tojik Tour" is a company established in the tourism sector with 10 years of experience, behind which thousands of satisfied tourists from different countries.',
   ourAgency: 'Our Agency',
-  services: 'Services',
-  insurancee: 'Insurancee',
-  agency: 'Agency',
-  tourism: 'Tourism',
-  payment: 'Payment',
-  partners: 'Partners',
-  booking: 'Booking',
-  rentalCar: 'RentalCar',
-  hostelWorld: 'HostelWorld',
-  trivago: 'Trivago',
-  tripAdvisor: 'TripAdvisor',
-  lastMinute: 'Last Minute',
-  london: 'London',
-  california: 'California',
-  indonesia: 'Indonesia',
-  europe: 'Europe',
-  oceania: 'Oceania',
-  bottomFooterText: 'The Best Travel Company'
+  partners: 'Our Partners',
+  bottomFooterText: 'Tojik Tour - National Company'
 }

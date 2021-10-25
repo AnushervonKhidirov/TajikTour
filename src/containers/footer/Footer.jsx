@@ -11,41 +11,46 @@ function Footer() {
 
   const footerData = {
     footerDesc: locales.footerDesc,
-    footerLists: [
-      {
-        title: locales.ourAgency,
-        list: [
-          locales.services,
-          locales.insurancee,
-          locales.agency,
-          locales.tourism,
-          locales.payment,
-        ]
-      },
-      {
-        title: locales.partners,
-        list: [
-          locales.booking,
-          locales.rentalCar,
-          locales.hostelWorld,
-          locales.trivago,
-          locales.tripAdvisor,
-        ]
-      },
-      {
-        title: locales.lastMinute,
-        list: [
-          locales.london,
-          locales.california,
-          locales.indonesia,
-          locales.europe,
-          locales.oceania,
-        ]
-      }
-    ],
+    footerPartners: {
+      headline: locales.partners,
+      list: [
+        {
+          title: 'Аэрофлот',
+          image: 'aeroflot.png'
+        },
+        {
+          title: 'Fly Dubai',
+          image: 'flydubai.png'
+        },
+        {
+          title: 'S7 Airlines',
+          image: 's7_airlines.png'
+        },
+        {
+          title: 'Somon Air',
+          image: 'somon_air.png'
+        },
+        {
+          title: 'Tajik Air',
+          image: 'tajikair.png'
+        },
+        {
+          title: 'Turkish Airlines',
+          image: 'turkish_airlines.png'
+        },
+        {
+          title: 'Ural Airlines',
+          image: 'ural_airlines.png'
+        },
+        {
+          title: 'Uzbekistan Airways',
+          image: 'uzbekistan_airways.png'
+        }
+      ]
+    },
     footerBottom: {
       leftText: locales.bottomFooterText,
-      rightText: '© Tajik Tour 2021'
+      rightText: '© Tojik Tour 2021'
     }
   }
 
@@ -80,36 +85,25 @@ function FooterLeft() {
 }
 
 function FooterRight() {
-  const { footerLists } = useContext(FooterContext);
+  const { footerPartners } = useContext(FooterContext);
 
   return (
     <div className={styles.footer_right}>
-      {footerLists.map((lists, index) => {
-        return <List title={lists.title} list={lists.list} key={lists.title + index.toString()} />
-      })}
+      <h3 className={styles.headline}>{footerPartners.headline}</h3>
+
+      <div className={styles.partner_list}>
+        {footerPartners.list.map((partner, index) => {
+          return <Partners title={partner.title} image={partner.image} key={partner.title} />
+        })}
+      </div>
     </div>
   );
 }
 
 
-function List({ title, list }) {
+function Partners({ title, image }) {
   return (
-    <div className={styles.footer_list}>
-      <h5 className={styles.list_title}>{title}</h5>
-
-      <ul>
-        {list.map((listItem, index) => <ListItem listText={listItem} key={listItem + index.toString()} />)}
-      </ul>
-    </div>
-  );
-}
-
-function ListItem({ listText }) {
-  return (
-    <li>
-      <div className={styles.list_arrow} />
-      <div className={styles.list_text}>{listText}</div>
-    </li>
+    <div className={styles.partner} data-title={title} style={{backgroundImage: `url(/img/partners/${image})`}}></div>
   );
 }
 

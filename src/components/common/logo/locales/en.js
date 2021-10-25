@@ -1,4 +1,4 @@
 export const locale = {
-  title: 'Tajik Tour',
+  title: 'Tojik Tour',
   slogan: 'Make your dream come true'
 }

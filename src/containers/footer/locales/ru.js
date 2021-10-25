@@ -1,22 +1,6 @@
 export const locale = {
   footerDesc: 'ООО «Таджик Тур» - это состоявшаяся в туристической сфере компания с 10-летним стажем, за плечами которой тысячи довольных туристов из разных стран.',
   ourAgency: 'Наше агентство',
-  services: 'Услуги',
-  insurancee: 'Страхование',
-  agency: 'Агентство',
-  tourism: 'Туризм',
-  payment: 'Оплата',
-  partners: 'Партнеры',
-  booking: 'Бронирование',
-  rentalCar: 'RentalCar',
-  hostelWorld: 'HostelWorld',
-  trivago: 'Trivago',
-  tripAdvisor: 'TripAdvisor',
-  lastMinute: 'Последнее',
-  london: 'Лондон',
-  california: 'Калифорния',
-  indonesia: 'Индонезия',
-  europe: 'Европа',
-  oceania: 'Океания',
-  bottomFooterText: 'Самая лучшая туристическая компания'
+  partners: 'Наши партнеры',
+  bottomFooterText: 'Таджик Тур - Национальная компания'
 }
