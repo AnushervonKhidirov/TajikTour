@@ -1,6 +1,6 @@
 export const sliderData = [
   {
-    img: 'slide-0.jpg',
+    img: 'dushanbe.jpg',
     slideId: 0,
     slideTitle: 'Dushanbe',
     slideText: 'Tour in Tajikistan',
@@ -8,7 +8,7 @@ export const sliderData = [
     link: '/pakcages'
   },
   {
-    img: 'slide-1.jpg',
+    img: 'hissar.jpg',
     slideId: 1,
     slideTitle: 'Hissar',
     slideText: 'Tour in Tajikistan',
@@ -16,7 +16,7 @@ export const sliderData = [
     link: '/pakcages'
   },
   {
-    img: 'slide-2.jpg',
+    img: 'iskanderkul.jpg',
     slideId: 2,
     slideTitle: 'Iskanderkul',
     slideText: 'Tour in Tajikistan',
@@ -24,7 +24,7 @@ export const sliderData = [
     link: '/pakcages'
   },
   {
-    img: 'slide-3.jpg',
+    img: 'national_library_dushanbe.jpg',
     slideId: 3,
     slideTitle: 'Dushanbe - National Library',
     slideText: 'Tour in Tajikistan',
@@ -32,7 +32,7 @@ export const sliderData = [
     link: '/pakcages'
   },
   {
-    img: 'slide-4.jpg',
+    img: 'safed_dara.jpg',
     slideId: 4,
     slideTitle: 'Safed-Dara',
     slideText: 'Tour in Tajikistan',
@@ -40,7 +40,7 @@ export const sliderData = [
     link: '/pakcages'
   },
   {
-    img: 'slide-5.jpg',
+    img: 'garmchashma_gbao.jpg',
     slideId: 5,
     slideTitle: 'Garmchashma. GBAO',
     slideText: 'Tour in Tajikistan',
@@ -48,7 +48,7 @@ export const sliderData = [
     link: '/pakcages'
   },
   {
-    img: 'slide-6.jpg',
+    img: 'saint_sophie_cathedral.jpg',
     slideId: 6,
     slideTitle: 'Saint Sophie Cathedral',
     slideText: 'Tour in Turkey',
@@ -56,7 +56,7 @@ export const sliderData = [
     link: '/pakcages'
   },
   {
-    img: 'slide-7.jpg',
+    img: 'wild_beach.jpg',
     slideId: 7,
     slideTitle: 'Wild beach',
     slideText: 'Tour in Turkey',
@@ -64,7 +64,7 @@ export const sliderData = [
     link: '/pakcages'
   },
   {
-    img: 'slide-8.jpg',
+    img: 'sheikh_zayed_mosque.jpg',
     slideId: 8,
     slideTitle: 'Sheikh Zayed Mosque',
     slideText: 'Dubai Tour',
@@ -72,7 +72,7 @@ export const sliderData = [
     link: '/pakcages'
   },
   {
-    img: 'slide-9.jpg',
+    img: 'dubai_uae.jpg',
     slideId: 9,
     slideTitle: 'Dubai. UAE',
     slideText: 'UAE Tour',
@@ -80,7 +80,7 @@ export const sliderData = [
     link: '/pakcages'
   },
   {
-    img: 'slide-10.jpg',
+    img: 'saint_sophie_cathedral.jpg',
     slideId: 10,
     slideTitle: 'Germany. Brandenburg Gate',
     slideText: 'European tour',
@@ -88,7 +88,7 @@ export const sliderData = [
     link: '/pakcages'
   },
   {
-    img: 'slide-11.jpg',
+    img: 'france_paris.jpg',
     slideId: 11,
     slideTitle: 'France. Paris',
     slideText: 'European tour',
