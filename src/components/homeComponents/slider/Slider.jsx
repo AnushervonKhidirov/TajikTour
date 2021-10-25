@@ -6,18 +6,84 @@ import styles from './Slider.module.css';
 const sliderInner = [
   {
     img: 'slide-0.jpg',
+    slideId: 0,
     saleText: 'Package Sale -50%',
     date: '10.01.21',
     link: '/pakcages'
   },
   {
     img: 'slide-1.jpg',
+    slideId: 1,
     saleText: 'Package Sale -50%',
     date: '10.01.21',
     link: '/pakcages'
   },
   {
     img: 'slide-2.jpg',
+    slideId: 2,
+    saleText: 'Package Sale -50%',
+    date: '10.01.21',
+    link: '/pakcages'
+  },
+  {
+    img: 'slide-3.jpg',
+    slideId: 3,
+    saleText: 'Package Sale -50%',
+    date: '10.01.21',
+    link: '/pakcages'
+  },
+  {
+    img: 'slide-4.jpg',
+    slideId: 4,
+    saleText: 'Package Sale -50%',
+    date: '10.01.21',
+    link: '/pakcages'
+  },
+  {
+    img: 'slide-5.jpg',
+    slideId: 5,
+    saleText: 'Package Sale -50%',
+    date: '10.01.21',
+    link: '/pakcages'
+  },
+  {
+    img: 'slide-6.jpg',
+    slideId: 6,
+    saleText: 'Package Sale -50%',
+    date: '10.01.21',
+    link: '/pakcages'
+  },
+  {
+    img: 'slide-7.jpg',
+    slideId: 7,
+    saleText: 'Package Sale -50%',
+    date: '10.01.21',
+    link: '/pakcages'
+  },
+  {
+    img: 'slide-8.jpg',
+    slideId: 8,
+    saleText: 'Package Sale -50%',
+    date: '10.01.21',
+    link: '/pakcages'
+  },
+  {
+    img: 'slide-9.jpg',
+    slideId: 9,
+    saleText: 'Package Sale -50%',
+    date: '10.01.21',
+    link: '/pakcages'
+  },
+  {
+    img: 'slide-10.jpg',
+    slideId: 10,
+    saleText: 'Package Sale -50%',
+    date: '10.01.21',
+    link: '/pakcages'
+  },
+  {
+    img: 'slide-11.jpg',
+    slideId: 11,
     saleText: 'Package Sale -50%',
     date: '10.01.21',
     link: '/pakcages'
@@ -66,13 +132,14 @@ function Slider() {
         <div className={styles.slides}>
           {sliderInner.map((slide, index) => {
             return <Slide 
-              img={slide.img} 
-              saleText={slide.saleText} 
-              date={slide.date} 
-              link={slide.link} 
-              index={index} 
-              active={activeSlide[index]} 
-              key={`slide-${index}`} />
+              img={slide.img}
+              saleText={slide.saleText}
+              date={slide.date}
+              link={slide.link}
+              index={index}
+              active={activeSlide[index]}
+              id={slide.slideId}
+              key={`slide-${slide.slideId}`} />
             })}
         </div>
 
@@ -83,9 +150,9 @@ function Slider() {
   );
 }
 
-function Slide({ img, saleText, date, link, index, active }) {
+function Slide({ img, saleText, date, link, active, id }) {
   return (
-    <div className={`${styles.slide_item} ${active}`}>
+    <div className={`${styles.slide_item} ${active}`} data-id={id}>
       <div className={styles.slide_img} style={{backgroundImage: `url(/img/slider/${img})`}} />
 
       <div className={styles.slide_date}>
