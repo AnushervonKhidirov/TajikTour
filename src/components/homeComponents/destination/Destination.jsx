@@ -55,7 +55,7 @@ function Destination() {
 
   return (
     <DestinationContext.Provider value={locales}>
-      <div className={`${styles.destination_block} block_item`}>
+      <div className='block_item'>
         <Headline title={locales.ourDestinations} />
 
         <div className={styles.destinations}>

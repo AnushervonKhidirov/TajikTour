@@ -34,7 +34,7 @@ function Events() {
   }
 
   return (
-    <div className={`${styles.events_block} block_item`}>
+    <div className='block_item'>
       <Headline title={locales.events} />
       <div className={styles.events}>
         <Proposals supTitle={porposals.supTitle} title={porposals.title} desc={porposals.desc} link={porposals.link} />
