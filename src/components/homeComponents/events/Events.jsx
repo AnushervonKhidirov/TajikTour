@@ -23,12 +23,12 @@ function Events() {
     });
   }, [wrapper.lang]);
 
-  const porposals = {
-    supTitle: locales.ourPorposals,
-    title: locales.porposalsTitle,
-    desc: locales.porposalsDesc,
+  const suggestions = {
+    supTitle: locales.ourSuggestions,
+    title: locales.suggestionsTitle,
+    desc: locales.suggestionsDesc,
     link: {
-      title: locales.porposalsLink,
+      title: locales.suggestionsLink,
       href: '/news'
     }
   }
@@ -37,7 +37,7 @@ function Events() {
     <div className='block_item'>
       <Headline title={locales.events} />
       <div className={styles.events}>
-        <Proposals supTitle={porposals.supTitle} title={porposals.title} desc={porposals.desc} link={porposals.link} />
+        <Proposals supTitle={suggestions.supTitle} title={suggestions.title} desc={suggestions.desc} link={suggestions.link} />
         {newsList.map(event => <EventItems data={event} linkText={locales.link} key={event.newsKey} />)}
       </div>
     </div>
@@ -46,7 +46,7 @@ function Events() {
 
 function Proposals({ supTitle, title, desc, link }) {
   return (
-    <div className={styles.proposals}>
+    <div className={styles.suggestions}>
       <div className={styles.sup_title}>{supTitle}</div>
       <h1 className={styles.title}>{title}</h1>
       <div className={styles.desc}>{desc}</div>

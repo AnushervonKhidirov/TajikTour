@@ -10,9 +10,9 @@
 
 
 /* ================
-	proposals
+	suggestions
 ================ */
-.proposals {
+.suggestions {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,14 +20,14 @@
   color: #fff;
 }
 
-.proposals h1 {
+.suggestions h1 {
   line-height: 1;
   border-bottom: .05em solid #fff;
   margin-bottom: .5em;
   padding: .5em 0;
 }
 
-.proposals .link {
+.suggestions .link {
   display: block;
   background: #fff;
   color: var(--darkBlue);
@@ -85,7 +85,7 @@
     grid-template-rows: repeat(2, 1fr);
   }
 
-  .proposals {
+  .suggestions {
     grid-row: 1/3;
   }
 }
@@ -96,7 +96,7 @@
     grid-template-rows: repeat(3, 1fr);
   }
 
-  .proposals {
+  .suggestions {
     grid-column: 1/3;
   }
 }

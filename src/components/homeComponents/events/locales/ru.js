@@ -1,8 +1,8 @@
 export const locale = {
   events: 'События',
-  ourPorposals: 'Наши предложения',
-  porposalsTitle: 'Статьи и новости',
-  porposalsDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor leo quam, in lacinia lacus congue venenatis.',
-  porposalsLink: 'Наши новости',
+  ourSuggestions: 'Наши предложения',
+  suggestionsTitle: 'Статьи и новости',
+  suggestionsDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor leo quam, in lacinia lacus congue venenatis.',
+  suggestionsLink: 'Наши новости',
   link: 'Читать дальше',
 }
