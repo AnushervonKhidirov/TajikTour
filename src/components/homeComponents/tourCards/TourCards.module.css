@@ -1,4 +1,4 @@
-.classes {
+.tour_cards {
   display: grid;
   width: 925px;
   grid-template-columns: repeat(3, 1fr);
@@ -8,7 +8,7 @@
 }
 
 
-.classes_wrapper {
+.tour_wrapper {
   border: 1px solid var(--borderColor);
   padding: 1em;
 }
@@ -20,7 +20,7 @@
   margin: 1em 0 2em 0;
 }
 
-.classes .price {
+.tour_cards .price {
   font-size: 3em;
   font-weight: 700;
 }
@@ -35,25 +35,39 @@
   padding: .3em 1em;
 }
 
-h2.classes_type {
+
+.stars {
+  display: flex;
+  margin-bottom: 10px;
+  fill: #f7cb03;
+}
+
+.stars>div {
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+}
+
+h3.classes_type {
+  font-size: .7em;
   border-bottom: 1px solid var(--borderColor);
+  margin-bottom: 1em;
   padding-bottom: 1em;
 }
 
-.classes_list {
-  list-style-type: none;
-  margin: 2em 0 2em 1em;
-  padding: 0;
+.list_title {
+  font-weight: 500;
 }
 
-.list_item {
-  display: grid;
-  grid-template-columns: .7em auto;
-  grid-gap: .5em;
-  color: var(--lightGrey);
-  line-height: 1;
-  margin-bottom: 1em;
-  fill: #68b78c;
+.headline {
+  margin-bottom: .5em;
+}
+
+.description .list {
+  font-size: 0.8em;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .classes_link {
@@ -62,23 +76,22 @@ h2.classes_type {
   color: #fff;
   border: 1px solid #fff;
   border-radius: 50px;
-  margin-top: 1em;
+  margin-top: 2em;
   padding: .3em 1em;
 }
 
 
-.classes_wrapper:nth-child(2) {
+.tour_wrapper:nth-child(2) {
   background: var(--gradient90);
   border: none;
 }
 
-.classes_wrapper:nth-child(2) * {
+.tour_wrapper:nth-child(2) * {
   background: transparent;
   color: #fff !important;
-  fill: #fff;
 }
 
-.classes_wrapper:nth-child(2) .month {
+.tour_wrapper:nth-child(2) .month {
   background: transparent;
 }
 
@@ -87,7 +100,7 @@ h2.classes_type {
 	adaptive
 ================ */
 @media screen and (min-width: 992px) {
-  .classes {
+  .tour_cards {
     display: grid;
     width: 925px;
     grid-template-columns: repeat(3, 1fr);
@@ -96,14 +109,14 @@ h2.classes_type {
 }
 
 @media screen and (max-width: 992px) {
-  .classes {
+  .tour_cards {
     display: flex;
     width: 100%;
     justify-content: center;
     flex-wrap: wrap;
   }
 
-  .classes_wrapper {
+  .tour_wrapper {
     width: 270px;
   }
 }
