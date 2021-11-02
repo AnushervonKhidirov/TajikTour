@@ -34,6 +34,8 @@ function TourCards() {
           );
         })}
       </div>
+
+      <Warning paragraphs={locales.warning} />
     </div>
   );
 }
@@ -86,6 +88,16 @@ function TourDesc({ headline, listTitle, list = [] }) {
           return <li key={`list_item_${index}`}>{listItem};</li>
         })}
       </ul>
+    </div>
+  );
+}
+
+function Warning({ paragraphs = [] }) {
+  return (
+    <div className={styles.warning}>
+      {paragraphs.map((paragraph, index) => {
+        return <p key={`paragraph_${index}`}>{paragraph}</p>
+      })}
     </div>
   );
 }

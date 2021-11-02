@@ -1,12 +1,21 @@
 .tour_cards {
   display: grid;
-  width: 925px;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.5em;
   color: var(--darkGrey);
   margin: auto;
 }
 
+.warning {
+  margin: auto;
+  line-height: 1;
+  text-align: center;
+  margin-top: 2em;
+}
+
+.warning p {
+  margin: .5em 0;
+}
 
 .tour_wrapper {
   border: 1px solid var(--borderColor);
@@ -106,6 +115,10 @@ h3.classes_type {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1.5em;
   }
+
+  .warning {
+    width: 925px;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -114,6 +127,10 @@ h3.classes_type {
     width: 100%;
     justify-content: center;
     flex-wrap: wrap;
+  }
+
+  .warning {
+    width: 100%;
   }
 
   .tour_wrapper {
