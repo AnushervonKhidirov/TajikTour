@@ -8,7 +8,7 @@ function Slider() {
   const wrapper = useContext(WrapperContext);
   const [sliderInner, setSliderInner] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [activeSlide, setactiveSlide] = useState(Array(sliderInner.length));
+  const [activeSlide, setActiveSlide] = useState(Array(sliderInner.length));
   const [isRotate, setIsRotate] = useState(true);
   const slideLength = sliderInner.length - 1;
   const autorotateDelay = 5000;
@@ -24,7 +24,7 @@ function Slider() {
       i === currentSlide ? thumbsClasses.push(styles.active) : thumbsClasses.push('');
     }
 
-    setactiveSlide(thumbsClasses)
+    setActiveSlide(thumbsClasses)
   }, [currentSlide, slideLength]);
   
   let showCurrentSlide = useCallback((current) => {

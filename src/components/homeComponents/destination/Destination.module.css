@@ -9,6 +9,13 @@
   grid-gap: 1.5em;
 }
 
+.destinations a {
+  transition: all .3s;
+}
+
+.destinations a:hover {
+  transform: scale(1.05);
+}
 
 /* ================
 	Big dest
@@ -59,11 +66,20 @@
   grid-gap: 1.5em;
 }
 
+.destination_img_wrapper {
+  overflow: hidden;
+}
+
 .destination_img {
   width: 100px;
   height: 100px;
   background-size: cover;
   background-position: center;
+  transition: transform 1s;
+}
+
+.destination_list_item:hover .destination_img {
+  transform: scale(1.1);
 }
 
 .destination_desc {

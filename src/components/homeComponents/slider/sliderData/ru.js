@@ -5,7 +5,7 @@ export const sliderData = [
     slideTitle: 'Душанбе',
     slideText: 'Тур по Таджикистану',
     linkText: 'Забронировать',
-    link: '/pakcages'
+    link: '/packages/city_tour'
   },
   {
     img: 'hissar.jpg',
@@ -13,7 +13,7 @@ export const sliderData = [
     slideTitle: 'Гиссар',
     slideText: 'Тур по Таджикистану',
     linkText: 'Забронировать',
-    link: '/pakcages'
+    link: '/packages/hissar'
   },
   {
     img: 'iskanderkul.jpg',
@@ -21,7 +21,7 @@ export const sliderData = [
     slideTitle: 'Искандеркуль',
     slideText: 'Тур по Таджикистану',
     linkText: 'Забронировать',
-    link: '/pakcages'
+    link: '/packages/iskanderkul'
   },
   {
     img: 'national_library_dushanbe.jpg',
@@ -29,7 +29,7 @@ export const sliderData = [
     slideTitle: 'Душанбе – Национальная библиотека',
     slideText: 'Тур по Таджикистану',
     linkText: 'Забронировать',
-    link: '/pakcages'
+    link: '/packages/city_tour'
   },
   {
     img: 'safed_dara.jpg',
@@ -37,7 +37,7 @@ export const sliderData = [
     slideTitle: 'Сафед-Дара',
     slideText: 'Тур по Таджикистану',
     linkText: 'Забронировать',
-    link: '/pakcages'
+    link: '/packages/safed_dara'
   },
   {
     img: 'garmchashma_gbao.jpg',
@@ -45,7 +45,7 @@ export const sliderData = [
     slideTitle: 'Гармчашма. ГБАО',
     slideText: 'Тур по Таджикистану',
     linkText: 'Забронировать',
-    link: '/pakcages'
+    link: '/packages'
   },
   {
     img: 'saint_sophie_cathedral.jpg',
@@ -53,7 +53,7 @@ export const sliderData = [
     slideTitle: 'Собор Святой Софии',
     slideText: 'Тур по Турции',
     linkText: 'Забронировать',
-    link: '/pakcages'
+    link: '/packages/turkey'
   },
   {
     img: 'wild_beach.jpg',
@@ -61,7 +61,7 @@ export const sliderData = [
     slideTitle: 'Дикий пляж',
     slideText: 'Тур по Турции',
     linkText: 'Забронировать',
-    link: '/pakcages'
+    link: '/packages/turkey'
   },
   {
     img: 'sheikh_zayed_mosque.jpg',
@@ -69,7 +69,7 @@ export const sliderData = [
     slideTitle: 'Мечеть шейха Зайда',
     slideText: 'Тур по Дубаю',
     linkText: 'Забронировать',
-    link: '/pakcages'
+    link: '/packages'
   },
   {
     img: 'dubai_uae.jpg',
@@ -77,7 +77,7 @@ export const sliderData = [
     slideTitle: 'Дубай. ОАЭ',
     slideText: 'Тур по ОАЭ',
     linkText: 'Забронировать',
-    link: '/pakcages'
+    link: '/packages/emirates'
   },
   {
     img: 'saint_sophie_cathedral.jpg',
@@ -85,7 +85,7 @@ export const sliderData = [
     slideTitle: 'Германия. Брандербурские ворота',
     slideText: 'Тур по Европы',
     linkText: 'Забронировать',
-    link: '/pakcages'
+    link: '/packages'
   },
   {
     img: 'france_paris.jpg',
@@ -93,6 +93,6 @@ export const sliderData = [
     slideTitle: 'Франция. Париж',
     slideText: 'Тур по Европы',
     linkText: 'Забронировать',
-    link: '/pakcages'
+    link: '/packages'
   }
 ];

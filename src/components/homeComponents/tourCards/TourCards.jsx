@@ -22,7 +22,7 @@ function TourCards() {
       <div className={styles.tour_cards}>
         {tourData.map(tour => {
           return (
-            <ClassesItem
+            <TourItem
             tour={tour}
             price={tour.price}
             stars={tour.stars}
@@ -41,7 +41,7 @@ function TourCards() {
 }
 
 
-function ClassesItem({ tour, monthly }) {
+function TourItem({ tour, monthly }) {
   return (
     <div className={styles.tour_wrapper}>
       <PriceBlock price={tour.price} monthly={monthly} />

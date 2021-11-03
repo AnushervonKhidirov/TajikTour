@@ -26,7 +26,7 @@ function Package({ tour }) {
         return <List title={list.title} list={list.list} key={list.title} />
       })}
 
-      <Gallery title={packageData.gallery && packageData.gallery.title} images={packageData.gallery && packageData.gallery.images} />
+      {/* <Gallery title={packageData.gallery && packageData.gallery.title} images={packageData.gallery && packageData.gallery.images} /> */}
       <SendForm title={packageData.sendForm} tourName={packageData.tourName} />
     </div>
   );

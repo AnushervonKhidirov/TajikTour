@@ -1,8 +1,8 @@
 export const locale = {
   events: 'События',
-  ourSuggestions: 'Наши предложения',
-  suggestionsTitle: 'Статьи и новости',
-  suggestionsDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor leo quam, in lacinia lacus congue venenatis.',
-  suggestionsLink: 'Наши новости',
+  ourEvents: 'Последние события',
+  eventsTitle: 'Статьи и новости',
+  eventsDesc: 'Свежие новости для туристов. Новости по Таджикистану и зарубежом.',
+  eventsLink: 'Наши новости',
   link: 'Читать дальше',
 }

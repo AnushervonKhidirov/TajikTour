@@ -44,9 +44,14 @@ function Destination() {
     packages.packageListData.forEach(packageItem => {
       bigDest[packageItem.location].inner.list.push(packageItem);
 
-      if (!packageItem.price || index >= 6) return;
-      smallDest[Math.floor(index/3)].push(packageItem);
-      index++;
+      if (packageItem.price && packageItem.location === 'inside' && smallDest[0].length < 3) {
+        smallDest[0].push(packageItem);
+        index++
+      }
+      if (packageItem.price && packageItem.location === 'outside' &&  smallDest[1].length < 3) {
+        smallDest[1].push(packageItem);
+        index++
+      }
     });
 
     setPackagesData(smallDest);
@@ -109,7 +114,10 @@ function DestinationSmallPackage({ dest }) {
 
   return (
     <div className={styles.destination_list_item}>
-      <div className={styles.destination_img} style={{backgroundImage: `url(/img/packages/${img})`}} />
+      <div className={styles.destination_img_wrapper}>
+        <div className={styles.destination_img} style={{backgroundImage: `url(/img/packages/${img})`}} />
+      </div>
+
       <div className={styles.destination_desc}>
         <h3 className={styles.title}>{title}</h3>
         <Link to={`/packages/${key}`} className={styles.link}>{price} $</Link>

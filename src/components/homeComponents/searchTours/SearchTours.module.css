@@ -45,6 +45,11 @@ form.search_tour {
   color: #fff;
   text-transform: uppercase;
   border: none;
+  transition: all .3s;
+}
+
+.submit_wrapper .submit_form:hover {
+  transform: scale(1.05);
 }
 
 

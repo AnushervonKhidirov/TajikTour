@@ -10,6 +10,20 @@
   position: relative;
   color: var(--lightGrey);
   border: 1px solid var(--borderColor);
+  transition: all .5s;
+}
+
+.package:hover {
+  box-shadow: 0 0 .3em .2em rgba(0, 0, 0, .3);
+  transform: scale(1.005);
+}
+
+.package a {
+  transition: all .3s;
+}
+
+.package a:hover {
+  transform: scale(1.05);
 }
 
 .sale {

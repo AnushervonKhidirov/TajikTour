@@ -11,6 +11,20 @@
 .news {
   display: grid;
   border: 1px solid var(--borderColor);
+  transition: all .5s;
+}
+
+.news:hover {
+  box-shadow: 0 0 .3em .2em rgba(0, 0, 0, .3);
+  transform: scale(1.005);
+}
+
+.news a {
+  transition: all .3s;
+}
+
+.news a:hover {
+  transform: scale(1.05);
 }
 
 .news_img {
@@ -32,9 +46,9 @@
 
 .title,
 .desc {
+  display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
-  display: -webkit-box;
   -webkit-box-orient: vertical;
 }
 
@@ -54,9 +68,9 @@
   display: inline-block;
   background: var(--gradient90);
   color: #fff;
+  font-size: .8em;
   text-transform: uppercase;
   border-radius: 5em;
-  font-size: .8em;
   margin-top: 1em;
   padding: .3em 1em;
 }

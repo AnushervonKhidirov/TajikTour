@@ -89,7 +89,7 @@
 }
 
 
-/* sale */
+/* desc */
 .slide_desc {
   position: absolute;
   top: 50%;
@@ -100,6 +100,15 @@
   padding: 0 1em;
   transform: translateY(-50%);
   transition: right 1s;
+}
+
+.slide_desc a {
+  transition: all .3s;
+}
+
+.slide_desc a:hover {
+  background: #fff;
+  color: var(--darkGrey);
 }
 
 .slide_text {

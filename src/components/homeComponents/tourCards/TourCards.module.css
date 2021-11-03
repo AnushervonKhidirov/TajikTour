@@ -20,6 +20,20 @@
 .tour_wrapper {
   border: 1px solid var(--borderColor);
   padding: 1em;
+  transition: all .5s;
+}
+
+.tour_wrapper:hover {
+  box-shadow: 0 0 .3em .2em rgba(0, 0, 0, .3);
+  transform: scale(1.005);
+}
+
+.tour_wrapper a {
+  transition: all .3s;
+}
+
+.tour_wrapper a:hover {
+  transform: scale(1.05);
 }
 
 .price_block {

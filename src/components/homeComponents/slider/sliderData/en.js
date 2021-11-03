@@ -5,7 +5,7 @@ export const sliderData = [
     slideTitle: 'Dushanbe',
     slideText: 'Tour in Tajikistan',
     linkText: 'Book now',
-    link: '/pakcages'
+    link: '/packages/city_tour'
   },
   {
     img: 'hissar.jpg',
@@ -13,7 +13,7 @@ export const sliderData = [
     slideTitle: 'Hissar',
     slideText: 'Tour in Tajikistan',
     linkText: 'Book now',
-    link: '/pakcages'
+    link: '/packages/hissar'
   },
   {
     img: 'iskanderkul.jpg',
@@ -21,7 +21,7 @@ export const sliderData = [
     slideTitle: 'Iskanderkul',
     slideText: 'Tour in Tajikistan',
     linkText: 'Book now',
-    link: '/pakcages'
+    link: '/packages/iskanderkul'
   },
   {
     img: 'national_library_dushanbe.jpg',
@@ -29,7 +29,7 @@ export const sliderData = [
     slideTitle: 'Dushanbe - National Library',
     slideText: 'Tour in Tajikistan',
     linkText: 'Book now',
-    link: '/pakcages'
+    link: '/packages/city_tour'
   },
   {
     img: 'safed_dara.jpg',
@@ -37,7 +37,7 @@ export const sliderData = [
     slideTitle: 'Safed-Dara',
     slideText: 'Tour in Tajikistan',
     linkText: 'Book now',
-    link: '/pakcages'
+    link: '/packages/safed_dara'
   },
   {
     img: 'garmchashma_gbao.jpg',
@@ -45,7 +45,7 @@ export const sliderData = [
     slideTitle: 'Garmchashma. GBAO',
     slideText: 'Tour in Tajikistan',
     linkText: 'Book now',
-    link: '/pakcages'
+    link: '/packages'
   },
   {
     img: 'saint_sophie_cathedral.jpg',
@@ -53,7 +53,7 @@ export const sliderData = [
     slideTitle: 'Saint Sophie Cathedral',
     slideText: 'Tour in Turkey',
     linkText: 'Book now',
-    link: '/pakcages'
+    link: '/packages/turkey'
   },
   {
     img: 'wild_beach.jpg',
@@ -61,7 +61,7 @@ export const sliderData = [
     slideTitle: 'Wild beach',
     slideText: 'Tour in Turkey',
     linkText: 'Book now',
-    link: '/pakcages'
+    link: '/packages/turkey'
   },
   {
     img: 'sheikh_zayed_mosque.jpg',
@@ -69,7 +69,7 @@ export const sliderData = [
     slideTitle: 'Sheikh Zayed Mosque',
     slideText: 'Dubai Tour',
     linkText: 'Book now',
-    link: '/pakcages'
+    link: '/packages'
   },
   {
     img: 'dubai_uae.jpg',
@@ -77,7 +77,7 @@ export const sliderData = [
     slideTitle: 'Dubai. UAE',
     slideText: 'UAE Tour',
     linkText: 'Book now',
-    link: '/pakcages'
+    link: '/packages/emirates'
   },
   {
     img: 'saint_sophie_cathedral.jpg',
@@ -85,7 +85,7 @@ export const sliderData = [
     slideTitle: 'Germany. Brandenburg Gate',
     slideText: 'European tour',
     linkText: 'Book now',
-    link: '/pakcages'
+    link: '/packages'
   },
   {
     img: 'france_paris.jpg',
@@ -93,6 +93,6 @@ export const sliderData = [
     slideTitle: 'France. Paris',
     slideText: 'European tour',
     linkText: 'Book now',
-    link: '/pakcages'
+    link: '/packages'
   }
 ];
