@@ -12,7 +12,6 @@ function Destination() {
 
   useEffect(() => import(`./locales/${wrapper.lang}`).then(locale => setLocales(locale.locale)), [wrapper.lang]);
   useEffect(() => import(`../../common/data/packageListData/${wrapper.lang}`).then(packages => {
-    let index = 0;
     let smallDest = [[], []];
     let bigDest = {
       inside: {
@@ -46,11 +45,9 @@ function Destination() {
 
       if (packageItem.price && packageItem.location === 'inside' && smallDest[0].length < 3) {
         smallDest[0].push(packageItem);
-        index++
       }
       if (packageItem.price && packageItem.location === 'outside' &&  smallDest[1].length < 3) {
         smallDest[1].push(packageItem);
-        index++
       }
     });
 
@@ -98,7 +95,7 @@ function DestinationBigPackage({ dest }) {
       <div className={styles.destination_inner}>
         <h3 className={styles.title}>{inner.title}</h3>
         <ul>
-          {inner.list.map(list => {
+          {inner.list.slice(0, 4).map(list => {
             return <Link to={`/packages/${list.key}`} key={list.key}><li>{list.title}</li></Link>
           })}
         </ul>
