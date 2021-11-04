@@ -69,7 +69,7 @@ export const sliderData = [
     slideTitle: 'Sheikh Zayed Mosque',
     slideText: 'Dubai Tour',
     linkText: 'Book now',
-    link: '/packages'
+    link: '/packages/nwtcd'
   },
   {
     img: 'dubai_uae.jpg',

@@ -69,7 +69,7 @@ export const sliderData = [
     slideTitle: 'Мечеть шейха Зайда',
     slideText: 'Тур по Дубаю',
     linkText: 'Забронировать',
-    link: '/packages'
+    link: '/packages/nwtcd'
   },
   {
     img: 'dubai_uae.jpg',

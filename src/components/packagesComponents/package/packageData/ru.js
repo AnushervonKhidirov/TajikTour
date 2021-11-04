@@ -345,191 +345,167 @@ export const packages = {
       }
     ],
     sendForm: 'Отправить форму'
-  }
+  },
+  nwtcd: {
+    tourName: 'NOVOTEL WORLD TRADE CENTRE DUBAI',
+    img: 'nwtcd.jpg',
+    desc: [
+      {
+        title: 'Описание',
+        text: [
+          '«Таджик Тур» организует для вас увлекательные туры  в несравненные Эмираты!',
+          'Парки развлечений с уникальными аттракционами понравятся всем, кто любит необычный и активный отдых. Для любителей шопинга в ОАЭ множество огромных торговых центров и традиционных восточных базаров. В Дубае находится самый большой океанариум в мире. В Индийском океане, богатом коралловыми рифами, есть много точек погружения для дайверов. В ОАЭ даже есть крытый горнолыжный комплекс — крупнейший в мире.',
+          'Чистые пляжи с белоснежным песком и развитой инфраструктурой отлично подходят для родителей с детьми. Безалкогольная концепция отелей и повышенные меры безопасности в стране создают идеальные условия для семейного отдыха. Cоral Travel предлагает в ОАЭ отели, работающие по концепции Sun Family Club, в рамках которой детей развлекают и обучают в игровой форме профессиональные педагоги.'
+        ]
+      }
+    ],
+    gallery: {
+      title: 'Галерея',
+      images: [
+        'koh_samui-0.jpg',
+        'koh_samui-1.jpg',
+        'koh_samui-2.jpg',
+        'koh_samui-3.jpg'
+      ]
+    },
+    lists: [
+      {
+        title: 'Почему стоит отдохнуть в ОАЭ?',
+        list: [
+          'Безопасная страна, в которой соблюдаются законы и практически отсутствует преступность.',
+          'Теплая погода круглый год.',
+          'Чудеса инженерной мысли – все новейшие технологии строительства на территории страны.',
+          'Большое количество тематических парков развлечений.',
+          'Множество отелей высокого уровня с соответствующим сервисом и питанием.',
+          'Прекрасные песчаные пляжи Оманского и Персидского заливов.',
+          'Качественный и выгодный шопинг.',
+          'Грандиозные фестивали и праздники.',
+          'Уникальные достопримечательности.'
+        ]
+      },
+      {
+        title: 'Стоимость',
+        list: ['850$ (Стоимость указана на человека при двухместном проживании.)']
+      },
+      {
+        title: 'В стоимость включено',
+        list: [
+          'авиаперелет а/к Fly Dubai',
+          'проживание в отеле 6 ночей 7 дней',
+          'завтраки',
+          'трансфер',
+          'медстраховка'
+        ]
+      }
+    ],
+    sendForm: 'Отправить форму'
+  },
+  fih: {
+    tourName: 'FLORA INN HOTEL',
+    img: 'fih.jpg',
+    desc: [
+      {
+        title: 'Описание',
+        text: [
+          '«Таджик Тур» организует для вас увлекательные туры  в несравненные Эмираты!',
+          'Парки развлечений с уникальными аттракционами понравятся всем, кто любит необычный и активный отдых. Для любителей шопинга в ОАЭ множество огромных торговых центров и традиционных восточных базаров. В Дубае находится самый большой океанариум в мире. В Индийском океане, богатом коралловыми рифами, есть много точек погружения для дайверов. В ОАЭ даже есть крытый горнолыжный комплекс — крупнейший в мире.',
+          'Чистые пляжи с белоснежным песком и развитой инфраструктурой отлично подходят для родителей с детьми. Безалкогольная концепция отелей и повышенные меры безопасности в стране создают идеальные условия для семейного отдыха. Cоral Travel предлагает в ОАЭ отели, работающие по концепции Sun Family Club, в рамках которой детей развлекают и обучают в игровой форме профессиональные педагоги.'
+        ]
+      }
+    ],
+    gallery: {
+      title: 'Галерея',
+      images: [
+        'koh_samui-0.jpg',
+        'koh_samui-1.jpg',
+        'koh_samui-2.jpg',
+        'koh_samui-3.jpg'
+      ]
+    },
+    lists: [
+      {
+        title: 'Почему стоит отдохнуть в ОАЭ?',
+        list: [
+          'Безопасная страна, в которой соблюдаются законы и практически отсутствует преступность.',
+          'Теплая погода круглый год.',
+          'Чудеса инженерной мысли – все новейшие технологии строительства на территории страны.',
+          'Большое количество тематических парков развлечений.',
+          'Множество отелей высокого уровня с соответствующим сервисом и питанием.',
+          'Прекрасные песчаные пляжи Оманского и Персидского заливов.',
+          'Качественный и выгодный шопинг.',
+          'Грандиозные фестивали и праздники.',
+          'Уникальные достопримечательности.'
+        ]
+      },
+      {
+        title: 'Стоимость',
+        list: ['940$ (Стоимость указана на человека при двухместном проживании.)']
+      },
+      {
+        title: 'В стоимость включено',
+        list: [
+          'авиаперелет а/к Fly Dubai',
+          'проживание в отеле 6 ночей 7 дней',
+          'завтраки',
+          'трансфер',
+          'медстраховка'
+        ]
+      }
+    ],
+    sendForm: 'Отправить форму'
+  },
+  wdmh: {
+    tourName: 'WYNDHAM DUBAI MARINA HOTEL',
+    img: 'wdmh.jpg',
+    desc: [
+      {
+        title: 'Описание',
+        text: [
+          '«Таджик Тур» организует для вас увлекательные туры  в несравненные Эмираты!',
+          'Парки развлечений с уникальными аттракционами понравятся всем, кто любит необычный и активный отдых. Для любителей шопинга в ОАЭ множество огромных торговых центров и традиционных восточных базаров. В Дубае находится самый большой океанариум в мире. В Индийском океане, богатом коралловыми рифами, есть много точек погружения для дайверов. В ОАЭ даже есть крытый горнолыжный комплекс — крупнейший в мире.',
+          'Чистые пляжи с белоснежным песком и развитой инфраструктурой отлично подходят для родителей с детьми. Безалкогольная концепция отелей и повышенные меры безопасности в стране создают идеальные условия для семейного отдыха. Cоral Travel предлагает в ОАЭ отели, работающие по концепции Sun Family Club, в рамках которой детей развлекают и обучают в игровой форме профессиональные педагоги.'
+        ]
+      }
+    ],
+    gallery: {
+      title: 'Галерея',
+      images: [
+        'koh_samui-0.jpg',
+        'koh_samui-1.jpg',
+        'koh_samui-2.jpg',
+        'koh_samui-3.jpg'
+      ]
+    },
+    lists: [
+      {
+        title: 'Почему стоит отдохнуть в ОАЭ?',
+        list: [
+          'Безопасная страна, в которой соблюдаются законы и практически отсутствует преступность.',
+          'Теплая погода круглый год.',
+          'Чудеса инженерной мысли – все новейшие технологии строительства на территории страны.',
+          'Большое количество тематических парков развлечений.',
+          'Множество отелей высокого уровня с соответствующим сервисом и питанием.',
+          'Прекрасные песчаные пляжи Оманского и Персидского заливов.',
+          'Качественный и выгодный шопинг.',
+          'Грандиозные фестивали и праздники.',
+          'Уникальные достопримечательности.'
+        ]
+      },
+      {
+        title: 'Стоимость',
+        list: ['1250$ (Стоимость указана на человека при двухместном проживании.)']
+      },
+      {
+        title: 'В стоимость включено',
+        list: [
+          'авиаперелет а/к Fly Dubai',
+          'проживание в отеле 6 ночей 7 дней',
+          'завтраки',
+          'трансфер',
+          'медстраховка'
+        ]
+      }
+    ],
+    sendForm: 'Отправить форму'
+  },
 }
-
-
-// export const packages = {
-//   hissar: {
-//     tourName: 'Тайны Гиссарской крепости',
-//     img: 'hissar.jpg',
-//     experience: 'Удивительный опыт',
-//     experienceDesc: [
-//       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut venenatis lorem. Nunc sodales interdum rhoncus. Nulla a leo finibus, ullamcorper lorem vel, scelerisque massa. Vivamus leo dui, interdum non fermentum eget, laoreet ac lorem. Aliquam a ultricies nisl. Nulla consequat lobortis urna sed cursus.',
-//       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut venenatis lorem. Nunc sodales interdum rhoncus. Nulla a leo finibus, ullamcorper lorem vel, scelerisque massa. Vivamus leo dui, interdum non fermentum eget, laoreet ac lorem. Aliquam a ultricies nisl. Nulla consequat lobortis urna sed cursus.'
-//     ],
-//     gallery: 'Галерея',
-//     galleryImages: [
-//         'koh_samui-0.jpg',
-//         'koh_samui-1.jpg',
-//         'koh_samui-2.jpg',
-//         'koh_samui-3.jpg'
-//     ],
-//     dayByDay: 'Дни',
-//     dayByDayDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut venenatis lorem. Nunc sodales interdum rhoncus. Nulla a leo finibus, ullamcorper lorem vel, scelerisque massa. Vivamus leo dui, interdum non fermentum eget, laoreet ac lorem. Aliquam a ultricies nisl. Nulla consequat lobortis urna sed cursus. ipsum dolor sit amet, consectetur adipiscing elit consectef lorem vel, scelerisque massa. Vivamus leo dui, interdum non.',
-//     dayByDayList: [
-//       'Departure at the airport and arrival at the hotel',
-//       'Visit the main museums and lunch included',
-//       'Excursion in the natural oasis and picnic',
-//       'Transfer to the airport and return to the agency',
-//       'Lorem ipsum dolor sit amet, consectetur adipiscing'
-//     ],
-//     sendForm: 'Отправить форму'
-//   },
-//   city_tour: {
-//     tourName: 'Сердце столицы',
-//     img: 'city_tour.jpg',
-//     experience: 'Удивительный опыт',
-//     experienceDesc: [
-//       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut venenatis lorem. Nunc sodales interdum rhoncus. Nulla a leo finibus, ullamcorper lorem vel, scelerisque massa. Vivamus leo dui, interdum non fermentum eget, laoreet ac lorem. Aliquam a ultricies nisl. Nulla consequat lobortis urna sed cursus.',
-//       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut venenatis lorem. Nunc sodales interdum rhoncus. Nulla a leo finibus, ullamcorper lorem vel, scelerisque massa. Vivamus leo dui, interdum non fermentum eget, laoreet ac lorem. Aliquam a ultricies nisl. Nulla consequat lobortis urna sed cursus.'
-//     ],
-//     gallery: 'Галерея',
-//     galleryImages: [
-//         'koh_samui-0.jpg',
-//         'koh_samui-1.jpg',
-//         'koh_samui-2.jpg',
-//         'koh_samui-3.jpg'
-//     ],
-//     dayByDay: 'Дни',
-//     dayByDayDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut venenatis lorem. Nunc sodales interdum rhoncus. Nulla a leo finibus, ullamcorper lorem vel, scelerisque massa. Vivamus leo dui, interdum non fermentum eget, laoreet ac lorem. Aliquam a ultricies nisl. Nulla consequat lobortis urna sed cursus. ipsum dolor sit amet, consectetur adipiscing elit consectef lorem vel, scelerisque massa. Vivamus leo dui, interdum non.',
-//     dayByDayList: [
-//       'Departure at the airport and arrival at the hotel',
-//       'Visit the main museums and lunch included',
-//       'Excursion in the natural oasis and picnic',
-//       'Transfer to the airport and return to the agency',
-//       'Lorem ipsum dolor sit amet, consectetur adipiscing'
-//     ],
-//     sendForm: 'Отправить форму'
-//   },
-//   chil_duhtaron: {
-//     tourName: '«40 духтарон» - сокровище Муминабада',
-//     img: 'chil_duhtaron.jpg',
-//     experience: 'Удивительный опыт',
-//     experienceDesc: [
-//       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut venenatis lorem. Nunc sodales interdum rhoncus. Nulla a leo finibus, ullamcorper lorem vel, scelerisque massa. Vivamus leo dui, interdum non fermentum eget, laoreet ac lorem. Aliquam a ultricies nisl. Nulla consequat lobortis urna sed cursus.',
-//       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut venenatis lorem. Nunc sodales interdum rhoncus. Nulla a leo finibus, ullamcorper lorem vel, scelerisque massa. Vivamus leo dui, interdum non fermentum eget, laoreet ac lorem. Aliquam a ultricies nisl. Nulla consequat lobortis urna sed cursus.'
-//     ],
-//     gallery: 'Галерея',
-//     galleryImages: [
-//         'koh_samui-0.jpg',
-//         'koh_samui-1.jpg',
-//         'koh_samui-2.jpg',
-//         'koh_samui-3.jpg'
-//     ],
-//     dayByDay: 'Дни',
-//     dayByDayDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut venenatis lorem. Nunc sodales interdum rhoncus. Nulla a leo finibus, ullamcorper lorem vel, scelerisque massa. Vivamus leo dui, interdum non fermentum eget, laoreet ac lorem. Aliquam a ultricies nisl. Nulla consequat lobortis urna sed cursus. ipsum dolor sit amet, consectetur adipiscing elit consectef lorem vel, scelerisque massa. Vivamus leo dui, interdum non.',
-//     dayByDayList: [
-//       'Departure at the airport and arrival at the hotel',
-//       'Visit the main museums and lunch included',
-//       'Excursion in the natural oasis and picnic',
-//       'Transfer to the airport and return to the agency',
-//       'Lorem ipsum dolor sit amet, consectetur adipiscing'
-//     ],
-//     sendForm: 'Отправить форму'
-//   },
-//   iskanderkul: {
-//     tourName: '«Искандеркуль» - по следам Александра Македонского',
-//     img: 'iskanderkul.jpg',
-//     experience: 'Удивительный опыт',
-//     experienceDesc: [
-//       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut venenatis lorem. Nunc sodales interdum rhoncus. Nulla a leo finibus, ullamcorper lorem vel, scelerisque massa. Vivamus leo dui, interdum non fermentum eget, laoreet ac lorem. Aliquam a ultricies nisl. Nulla consequat lobortis urna sed cursus.',
-//       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut venenatis lorem. Nunc sodales interdum rhoncus. Nulla a leo finibus, ullamcorper lorem vel, scelerisque massa. Vivamus leo dui, interdum non fermentum eget, laoreet ac lorem. Aliquam a ultricies nisl. Nulla consequat lobortis urna sed cursus.'
-//     ],
-//     gallery: 'Галерея',
-//     galleryImages: [
-//         'koh_samui-0.jpg',
-//         'koh_samui-1.jpg',
-//         'koh_samui-2.jpg',
-//         'koh_samui-3.jpg'
-//     ],
-//     dayByDay: 'Дни',
-//     dayByDayDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut venenatis lorem. Nunc sodales interdum rhoncus. Nulla a leo finibus, ullamcorper lorem vel, scelerisque massa. Vivamus leo dui, interdum non fermentum eget, laoreet ac lorem. Aliquam a ultricies nisl. Nulla consequat lobortis urna sed cursus. ipsum dolor sit amet, consectetur adipiscing elit consectef lorem vel, scelerisque massa. Vivamus leo dui, interdum non.',
-//     dayByDayList: [
-//       'Departure at the airport and arrival at the hotel',
-//       'Visit the main museums and lunch included',
-//       'Excursion in the natural oasis and picnic',
-//       'Transfer to the airport and return to the agency',
-//       'Lorem ipsum dolor sit amet, consectetur adipiscing'
-//     ],
-//     sendForm: 'Отправить форму'
-//   },
-//   safed_dara: {
-//     tourName: 'Зимняя сказка в Сафед-Дара',
-//     img: 'safed_dara.jpg',
-//     experience: 'Удивительный опыт',
-//     experienceDesc: [
-//       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut venenatis lorem. Nunc sodales interdum rhoncus. Nulla a leo finibus, ullamcorper lorem vel, scelerisque massa. Vivamus leo dui, interdum non fermentum eget, laoreet ac lorem. Aliquam a ultricies nisl. Nulla consequat lobortis urna sed cursus.',
-//       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut venenatis lorem. Nunc sodales interdum rhoncus. Nulla a leo finibus, ullamcorper lorem vel, scelerisque massa. Vivamus leo dui, interdum non fermentum eget, laoreet ac lorem. Aliquam a ultricies nisl. Nulla consequat lobortis urna sed cursus.'
-//     ],
-//     gallery: 'Галерея',
-//     galleryImages: [
-//         'koh_samui-0.jpg',
-//         'koh_samui-1.jpg',
-//         'koh_samui-2.jpg',
-//         'koh_samui-3.jpg'
-//     ],
-//     dayByDay: 'Дни',
-//     dayByDayDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut venenatis lorem. Nunc sodales interdum rhoncus. Nulla a leo finibus, ullamcorper lorem vel, scelerisque massa. Vivamus leo dui, interdum non fermentum eget, laoreet ac lorem. Aliquam a ultricies nisl. Nulla consequat lobortis urna sed cursus. ipsum dolor sit amet, consectetur adipiscing elit consectef lorem vel, scelerisque massa. Vivamus leo dui, interdum non.',
-//     dayByDayList: [
-//       'Departure at the airport and arrival at the hotel',
-//       'Visit the main museums and lunch included',
-//       'Excursion in the natural oasis and picnic',
-//       'Transfer to the airport and return to the agency',
-//       'Lorem ipsum dolor sit amet, consectetur adipiscing'
-//     ],
-//     sendForm: 'Отправить форму'
-//   },
-//   turkey: {
-//     tourName: 'Турция',
-//     img: 'turkey.jpg',
-//     experience: 'Удивительный опыт',
-//     experienceDesc: [
-//       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut venenatis lorem. Nunc sodales interdum rhoncus. Nulla a leo finibus, ullamcorper lorem vel, scelerisque massa. Vivamus leo dui, interdum non fermentum eget, laoreet ac lorem. Aliquam a ultricies nisl. Nulla consequat lobortis urna sed cursus.',
-//       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut venenatis lorem. Nunc sodales interdum rhoncus. Nulla a leo finibus, ullamcorper lorem vel, scelerisque massa. Vivamus leo dui, interdum non fermentum eget, laoreet ac lorem. Aliquam a ultricies nisl. Nulla consequat lobortis urna sed cursus.'
-//     ],
-//     gallery: 'Галерея',
-//     galleryImages: [
-//         'koh_samui-0.jpg',
-//         'koh_samui-1.jpg',
-//         'koh_samui-2.jpg',
-//         'koh_samui-3.jpg'
-//     ],
-//     dayByDay: 'Дни',
-//     dayByDayDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut venenatis lorem. Nunc sodales interdum rhoncus. Nulla a leo finibus, ullamcorper lorem vel, scelerisque massa. Vivamus leo dui, interdum non fermentum eget, laoreet ac lorem. Aliquam a ultricies nisl. Nulla consequat lobortis urna sed cursus. ipsum dolor sit amet, consectetur adipiscing elit consectef lorem vel, scelerisque massa. Vivamus leo dui, interdum non.',
-//     dayByDayList: [
-//       'Departure at the airport and arrival at the hotel',
-//       'Visit the main museums and lunch included',
-//       'Excursion in the natural oasis and picnic',
-//       'Transfer to the airport and return to the agency',
-//       'Lorem ipsum dolor sit amet, consectetur adipiscing'
-//     ],
-//     sendForm: 'Отправить форму'
-//   },
-//   emirates: {
-//     tourName: 'ОАЭ',
-//     img: 'emirates.jpg',
-//     experience: 'Удивительный опыт',
-//     experienceDesc: [
-//       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut venenatis lorem. Nunc sodales interdum rhoncus. Nulla a leo finibus, ullamcorper lorem vel, scelerisque massa. Vivamus leo dui, interdum non fermentum eget, laoreet ac lorem. Aliquam a ultricies nisl. Nulla consequat lobortis urna sed cursus.',
-//       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut venenatis lorem. Nunc sodales interdum rhoncus. Nulla a leo finibus, ullamcorper lorem vel, scelerisque massa. Vivamus leo dui, interdum non fermentum eget, laoreet ac lorem. Aliquam a ultricies nisl. Nulla consequat lobortis urna sed cursus.'
-//     ],
-//     gallery: 'Галерея',
-//     galleryImages: [
-//         'koh_samui-0.jpg',
-//         'koh_samui-1.jpg',
-//         'koh_samui-2.jpg',
-//         'koh_samui-3.jpg'
-//     ],
-//     dayByDay: 'Дни',
-//     dayByDayDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut venenatis lorem. Nunc sodales interdum rhoncus. Nulla a leo finibus, ullamcorper lorem vel, scelerisque massa. Vivamus leo dui, interdum non fermentum eget, laoreet ac lorem. Aliquam a ultricies nisl. Nulla consequat lobortis urna sed cursus. ipsum dolor sit amet, consectetur adipiscing elit consectef lorem vel, scelerisque massa. Vivamus leo dui, interdum non.',
-//     dayByDayList: [
-//       'Departure at the airport and arrival at the hotel',
-//       'Visit the main museums and lunch included',
-//       'Excursion in the natural oasis and picnic',
-//       'Transfer to the airport and return to the agency',
-//       'Lorem ipsum dolor sit amet, consectetur adipiscing'
-//     ],
-//     sendForm: 'Отправить форму'
-//   }
-// }

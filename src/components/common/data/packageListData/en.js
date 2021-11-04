@@ -60,5 +60,32 @@ export const packageListData = [
     price: 'from 500',
     location: 'outside',
     desc: 'Clean beaches with white sand and developed infrastructure are great for parents with children. The alcohol-free hotel concept and heightened security measures in the country create ideal conditions for family holidays.'
+  },
+  {
+    key: 'nwtcd',
+    img: 'nwtcd.jpg',
+    title: 'Dubai',
+    typologies: ['Relax', 'Entertainment'],
+    price: '850',
+    location: 'outside',
+    desc: 'Clean beaches with white sand and developed infrastructure are great for parents with children. The alcohol-free hotel concept and heightened security measures in the country create ideal conditions for family holidays.'
+  },
+  {
+    key: 'fih',
+    img: 'fih.jpg',
+    title: 'Dubai',
+    typologies: ['Relax', 'Entertainment'],
+    price: '940',
+    location: 'outside',
+    desc: 'Clean beaches with white sand and developed infrastructure are great for parents with children. The alcohol-free hotel concept and heightened security measures in the country create ideal conditions for family holidays.'
+  },
+  {
+    key: 'wdmh',
+    img: 'wdmh.jpg',
+    title: 'Dubai',
+    typologies: ['Relax', 'Entertainment'],
+    price: '1250',
+    location: 'outside',
+    desc: 'Clean beaches with white sand and developed infrastructure are great for parents with children. The alcohol-free hotel concept and heightened security measures in the country create ideal conditions for family holidays.'
   }
 ]

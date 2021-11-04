@@ -27,7 +27,7 @@ export const tourData = [
     },
     link: {
       title: 'Забронировать',
-      href: '/contacts'
+      href: '/packages/nwtcb'
     }
   },
   {
@@ -47,7 +47,7 @@ export const tourData = [
     },
     link: {
       title: 'Забронировать',
-      href: '/contacts'
+      href: '/packages/fih'
     }
   },
   {
@@ -67,7 +67,7 @@ export const tourData = [
     },
     link: {
       title: 'Забронировать',
-      href: '/contacts'
+      href: '/packages/wdmh'
     }
   }
 ]
