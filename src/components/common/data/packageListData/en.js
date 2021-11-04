@@ -64,7 +64,7 @@ export const packageListData = [
   {
     key: 'nwtcd',
     img: 'nwtcd.jpg',
-    title: 'Dubai',
+    title: 'NOVOTEL WORLD TRADE CENTRE DUBAI',
     typologies: ['Relax', 'Entertainment'],
     price: '850',
     location: 'outside',
@@ -73,7 +73,7 @@ export const packageListData = [
   {
     key: 'fih',
     img: 'fih.jpg',
-    title: 'Dubai',
+    title: 'FLORA INN HOTEL',
     typologies: ['Relax', 'Entertainment'],
     price: '940',
     location: 'outside',
@@ -82,7 +82,7 @@ export const packageListData = [
   {
     key: 'wdmh',
     img: 'wdmh.jpg',
-    title: 'Dubai',
+    title: 'WYNDHAM DUBAI MARINA HOTEL',
     typologies: ['Relax', 'Entertainment'],
     price: '1250',
     location: 'outside',

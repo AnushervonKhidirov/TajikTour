@@ -89,6 +89,14 @@
 
 .destination_desc .title {
   color: var(--darkGrey);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.destination_desc .title {
+  -webkit-line-clamp: 2;
 }
 
 .destination_desc .location {
