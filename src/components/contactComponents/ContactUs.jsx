@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext, useCallback } from 'react';
 import { WrapperContext } from '../../Context';
 import SubHeadline from '../common/subHeadline/SubHeadline';
 import Form from '../common/form/Form';
@@ -7,8 +7,42 @@ import styles from './Contact.module.css';
 function ContactUs() {
   const wrapper = useContext(WrapperContext);
   const [locales, setLocales] = useState({});
+  const [status, setStatus] = useState({});
 
   useEffect(() => import(`./locales/${wrapper.lang}`).then(locale => setLocales(locale.locale)), [wrapper.lang]);
+
+  const isOpen = useCallback(() => {
+    const date = new Date();
+    let year = date.getFullYear();
+    let month = date.getMonth();
+    let day = date.getDate();
+    let hour = date.getHours();
+    let minute = date.getMinutes();
+    let weekDay = date.getDay();
+  
+    if (day < 10) day = '0' + day.toString();
+    if (month < 10) month = '0' + month.toString();
+    if (hour < 10) hour = '0' + hour.toString();
+    if (minute < 10) minute = '0' + minute.toString();
+  
+    let openFrom = Date.parse(`${year}-${month}-${day}T07:30:00.000Z`);
+    let currentHour = Date.parse(`${year}-${month}-${day}T${hour}:${minute}:00.000Z`);
+    let openTo = Date.parse(`${year}-${month}-${day}T23:00:00.000Z`);
+
+    if (currentHour >= openFrom && currentHour <= openTo && weekDay !== 0) {
+      setStatus({
+        text: locales.opened,
+        value: 'opened'
+      });
+    } else {
+      setStatus({
+        text: locales.closed,
+        value: 'closed'
+      });
+    }
+  }, [locales.opened, locales.closed])
+
+  useEffect(() => isOpen(), [locales, isOpen]);
 
   const contactData = {
     descTitle: locales.descTitle,
@@ -33,26 +67,37 @@ function ContactUs() {
       },
       {
         title: locales.availableAt,
+        status: status,
         value: locales.availableAtData
       }
-    ]
+    ],
+    desc: locales.desc
   }
+
 
   return (
     <div className={styles.contact_us}>
       <Map url={contactData.mapUrl} />
       <AddressData address={contactData.addressData} />
-      <Desc title={contactData.descTitle} text={contactData.descText} />
+      <Description paragraph={contactData.desc} />
       <Form />
     </div>
   );
 }
 
-function Desc({ title, text }) {
+function Description({ paragraph }) {
   return (
     <div className={styles.description}>
-      <SubHeadline title={title} />
-      <div className={styles.text}>{text}</div>
+      {paragraph && paragraph.map((paragraph, index) => {
+        return (
+          <div className={styles.paragraph} key={`paragraph-${index}`}>
+            <SubHeadline title={paragraph.headline} key={`headline-${index}`} />
+            {paragraph.text.map((text, index) => {
+              return <div key={`text-${index}`}>{text}</div>;
+            })}
+          </div>
+        )
+      })}
     </div>
   );
 }
@@ -68,16 +113,19 @@ function Map({ url }) {
 function AddressData({ address }) {
   return (
     <div className={styles.address_data}>
-      {address.map((data, index) => <AddressItem title={data.title} value={data.value} key={data.title + index.toString()} />)}
+      {address.map((data, index) => <AddressItem title={data.title} status={data.status} value={data.value} key={data.title + index.toString()} />)}
     </div>
   );
 }
 
-function AddressItem({ title, value }) {
+function AddressItem({ title, status, value }) {
   return (
     <div className={styles.address}>
       <div className={styles.title}>{title} :</div>
-      <div className={styles.value}>{value}</div>
+      <div className={styles.value}>
+        {status && <span data-status={status.value}>({status.text}) </span>}
+        {value}
+      </div>
     </div>
   );
 }

@@ -29,8 +29,22 @@
   border: none;
 }
 
+.address .title {
+  white-space: nowrap;
+  margin-right: 2em;
+}
+
 .address .value {
   color: var(--lightGrey);
+  text-align: right;
+}
+
+.value span[data-status="opened"] {
+  color: #188038;
+}
+
+.value span[data-status="closed"] {
+  color: #b00000;
 }
 
 
