@@ -83,7 +83,7 @@ export const sliderData = [
     img: 'saint_sophie_cathedral.jpg',
     slideId: 10,
     slideTitle: 'Германия. Брандербурские ворота',
-    slideText: 'Тур по Европы',
+    slideText: 'Тур по Европе',
     linkText: 'Забронировать',
     link: '/packages'
   },
@@ -91,7 +91,7 @@ export const sliderData = [
     img: 'france_paris.jpg',
     slideId: 11,
     slideTitle: 'Франция. Париж',
-    slideText: 'Тур по Европы',
+    slideText: 'Тур по Европе',
     linkText: 'Забронировать',
     link: '/packages'
   }
