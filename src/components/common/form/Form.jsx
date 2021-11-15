@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import emailjs from 'emailjs-com';
 import { WrapperContext } from '../../../Context';
-import { accessData } from './accessData';
 import styles from './Form.module.css';
 
 function Form({ tourPackage }) {
@@ -16,12 +14,24 @@ function Form({ tourPackage }) {
     e.preventDefault();
     if(sendData.package) e.target.package.value = sendData.package;
 
-    emailjs.sendForm(accessData.serviceId, accessData.templateId, e.target, accessData.userId)
-      .then((result) => {
-          alert(locales.sendMessage);
-      }, (error) => {
-          alert(locales.errorMessage)
-      });
+    fetch('/server/sendForm.php', {
+      method: 'POST',
+      headers: { 
+        'Access-Control-Allow-Origin':'*'
+      },
+      body: new FormData(e.target)
+    })
+    .then(response => {
+      if (response.status === 200) {
+        alert('Ваше сообщение отправлено');
+      } else {
+        throw new Error('error');
+      }
+    })
+    .catch(err => {
+      alert('Ошибка при отправке, повторите попытку позже');
+      console.log('Error', {err});
+    })
   }
 
   function recordValues(e) {
@@ -34,8 +44,8 @@ function Form({ tourPackage }) {
   return (
     <form className={styles.form} onSubmit={e => sendEmail(e)}>
       <input className={`${styles.form_input} ${styles.name}`} type="text" name="name" required placeholder={locales.name} onChange={e => recordValues(e)} />
-      <input className={`${styles.form_input} ${styles.surname}`} type="text" name="surname" required placeholder={locales.surname} onChange={e => recordValues(e)} />
-      <input className={`${styles.form_input} ${styles.email}`} type="email" name="email" placeholder={locales.email} onChange={e => recordValues(e)} />
+      <input className={`${styles.form_input} ${styles.surname}`} type="text" name="surname" placeholder={locales.surname} onChange={e => recordValues(e)} />
+      <input className={`${styles.form_input} ${styles.email}`} type="email" name="email" required placeholder={locales.email} onChange={e => recordValues(e)} />
       <input className={`${styles.form_input} ${styles.phone}`} type="tel" name="phone" required placeholder={locales.phone} onChange={e => recordValues(e)} />
       <input style={{display: 'none'}} type="text" name="package" />
       <textarea className={styles.form_message} name="message" resize="false" placeholder={locales.message} onChange={e => recordValues(e)} />
