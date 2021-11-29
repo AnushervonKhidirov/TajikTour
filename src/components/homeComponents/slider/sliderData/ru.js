@@ -82,7 +82,7 @@ export const sliderData = [
   {
     img: 'germany_brandenburg_gate.jpg',
     slideId: 10,
-    slideTitle: 'Германия. Брандербурские ворота',
+    slideTitle: 'Германия. Бранденбургские ворота',
     slideText: 'Тур по Европе',
     linkText: 'Забронировать',
     link: '/packages'
