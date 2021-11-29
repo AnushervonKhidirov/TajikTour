@@ -72,7 +72,7 @@ function Social() {
     },
     {
       title: 'Instagram',
-      link: 'https://www.instagram.com/explore/locations/1769774493240541/tojik-tour?hl=en',
+      link: 'https://www.instagram.com/tojiktour.tj/',
       component: <Instagram />
     }
   ];
