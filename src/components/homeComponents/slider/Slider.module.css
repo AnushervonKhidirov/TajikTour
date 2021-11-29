@@ -34,6 +34,18 @@
   background-position: center;
 }
 
+.slide_item[data-id="0"] .slide_img {
+  background-position: 50% 70%;
+}
+
+.slide_item[data-id="4"] .slide_img {
+  background-position: 50% 75%;
+}
+
+.slide_item[data-id="10"] .slide_img {
+  background-position: 50% 20%;
+}
+
 .slide_title,
 .slide_desc {
   position: absolute;

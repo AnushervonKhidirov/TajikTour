@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from 'react';
 import { WrapperContext, HeaderContext } from '../../Context';
 import { NavLink } from 'react-router-dom';
 import Logo from '../../components/common/logo/Logo';
-import { LangIcon, FacebookIcon, Twitter, LinkedIn, Pinterest } from '../../components/common/Icons';
+import { LangIcon, FacebookIcon, Twitter, Instagram} from '../../components/common/Icons';
 import styles from './Header.module.css';
 
 function Header() {
@@ -67,18 +67,13 @@ function Social() {
     },
     {
       title: 'Twitter',
-      link: 'https://twitter.com/',
+      link: 'https://mobile.twitter.com/Tojiktour',
       component: <Twitter />
     },
     {
-      title: 'LinkedIn',
-      link: 'https://www.linkedin.com/',
-      component: <LinkedIn />
-    },
-    {
-      title: 'Pinterest',
-      link: 'https://www.pinterest.com/',
-      component: <Pinterest />
+      title: 'Instagram',
+      link: 'https://www.instagram.com/explore/locations/1769774493240541/tojik-tour?hl=en',
+      component: <Instagram />
     }
   ];
 

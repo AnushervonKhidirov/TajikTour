@@ -1,15 +1,22 @@
-import React, { useState, useEffect, useContext, useCallback } from 'react';
-import { WrapperContext } from '../../Context';
-import SubHeadline from '../common/subHeadline/SubHeadline';
-import Form from '../common/form/Form';
-import styles from './Contact.module.css';
+import React, { useState, useEffect, useContext, useCallback } from "react";
+import { WrapperContext } from "../../Context";
+import SubHeadline from "../common/subHeadline/SubHeadline";
+import Form from "../common/form/Form";
+import styles from "./Contact.module.css";
 
 function ContactUs() {
   const wrapper = useContext(WrapperContext);
   const [locales, setLocales] = useState({});
   const [status, setStatus] = useState({});
+  const [infoState, setInfoState] = useState();
 
-  useEffect(() => import(`./locales/${wrapper.lang}`).then(locale => setLocales(locale.locale)), [wrapper.lang]);
+  useEffect(
+    () =>
+      import(`./locales/${wrapper.lang}`).then((locale) =>
+        setLocales(locale.locale)
+      ),
+    [wrapper.lang]
+  );
 
   const isOpen = useCallback(() => {
     const date = new Date();
@@ -19,28 +26,30 @@ function ContactUs() {
     let hour = date.getHours();
     let minute = date.getMinutes();
     let weekDay = date.getDay();
-  
-    if (day < 10) day = '0' + day.toString();
-    if (month < 10) month = '0' + month.toString();
-    if (hour < 10) hour = '0' + hour.toString();
-    if (minute < 10) minute = '0' + minute.toString();
-  
+
+    if (day < 10) day = "0" + day.toString();
+    if (month < 10) month = "0" + month.toString();
+    if (hour < 10) hour = "0" + hour.toString();
+    if (minute < 10) minute = "0" + minute.toString();
+
     let openFrom = Date.parse(`${year}-${month}-${day}T07:30:00.000Z`);
-    let currentHour = Date.parse(`${year}-${month}-${day}T${hour}:${minute}:00.000Z`);
+    let currentHour = Date.parse(
+      `${year}-${month}-${day}T${hour}:${minute}:00.000Z`
+    );
     let openTo = Date.parse(`${year}-${month}-${day}T23:00:00.000Z`);
 
     if (currentHour >= openFrom && currentHour <= openTo && weekDay !== 0) {
       setStatus({
         text: locales.opened,
-        value: 'opened'
+        value: "opened",
       });
     } else {
       setStatus({
         text: locales.closed,
-        value: 'closed'
+        value: "closed",
       });
     }
-  }, [locales.opened, locales.closed])
+  }, [locales.opened, locales.closed]);
 
   useEffect(() => isOpen(), [locales, isOpen]);
 
@@ -51,35 +60,40 @@ function ContactUs() {
     addressData: [
       {
         title: locales.city,
-        value: locales.cityData
+        value: locales.cityData,
       },
       {
         title: locales.address,
-        value: locales.addressData
+        value: locales.addressData,
       },
       {
         title: locales.phone,
-        value: '+992 111 222 422'
+        value: "+992985331717\n+992446251717",
       },
       {
         title: locales.email,
-        value: 'tojiktour@mail.ru'
+        value: "tojiktour@mail.ru",
       },
       {
         title: locales.availableAt,
         status: status,
-        value: locales.availableAtData
-      }
+        value: locales.availableAtData,
+      },
     ],
-    desc: locales.desc
-  }
-
+    desc: locales.desc,
+  };
 
   return (
     <div className={styles.contact_us}>
       <Map url={contactData.mapUrl} />
       <AddressData address={contactData.addressData} />
-      <Description paragraph={contactData.desc} />
+      {/* <Description paragraph={contactData.desc} /> */}
+      <div className={styles.info_wrapper}>
+        {locales.info &&
+          locales.info.map((info, index) => {
+            return <Info info={info} key={`info_${index}`} />;
+          })}
+      </div>
       <Form />
     </div>
   );
@@ -88,16 +102,20 @@ function ContactUs() {
 function Description({ paragraph }) {
   return (
     <div className={styles.description}>
-      {paragraph && paragraph.map((paragraph, index) => {
-        return (
-          <div className={styles.paragraph} key={`paragraph-${index}`}>
-            <SubHeadline title={paragraph.headline} key={`headline-${index}`} />
-            {paragraph.text.map((text, index) => {
-              return <div key={`text-${index}`}>{text}</div>;
-            })}
-          </div>
-        )
-      })}
+      {paragraph &&
+        paragraph.map((paragraph, index) => {
+          return (
+            <div className={styles.paragraph} key={`paragraph-${index}`}>
+              <SubHeadline
+                title={paragraph.headline}
+                key={`headline-${index}`}
+              />
+              {paragraph.text.map((text, index) => {
+                return <div key={`text-${index}`}>{text}</div>;
+              })}
+            </div>
+          );
+        })}
     </div>
   );
 }
@@ -105,7 +123,13 @@ function Description({ paragraph }) {
 function Map({ url }) {
   return (
     <div className={styles.map}>
-      <iframe title='TajikTour' src={url} style={{ width: '100%', height: '100%', border: 'none' }} allowFullScreen loading="lazy" />
+      <iframe
+        title="TajikTour"
+        src={url}
+        style={{ width: "100%", height: "100%", border: "none" }}
+        allowFullScreen
+        loading="lazy"
+      />
     </div>
   );
 }
@@ -113,7 +137,14 @@ function Map({ url }) {
 function AddressData({ address }) {
   return (
     <div className={styles.address_data}>
-      {address.map((data, index) => <AddressItem title={data.title} status={data.status} value={data.value} key={data.title + index.toString()} />)}
+      {address.map((data, index) => (
+        <AddressItem
+          title={data.title}
+          status={data.status}
+          value={data.value}
+          key={data.title + index.toString()}
+        />
+      ))}
     </div>
   );
 }
@@ -126,6 +157,42 @@ function AddressItem({ title, status, value }) {
         {status && <span data-status={status.value}>({status.text}) </span>}
         {value}
       </div>
+    </div>
+  );
+}
+
+// info
+function Info({ info }) {
+  function expandInfo(e) {
+    e.target.parentElement.classList.toggle(styles.expanded);
+  }
+
+  return (
+    <div className={styles.info}>
+      <InfoBtn title={info.title} expand={expandInfo} />
+      <InfoText text={info.text} />
+    </div>
+  );
+}
+
+function InfoBtn({ title, expand }) {
+  return (
+    <div onClick={expand} className={styles.info_btn}>
+      {title}
+    </div>
+  );
+}
+
+function InfoText({ text }) {
+  return (
+    <div className={styles.info_text}>
+      {text.map((textItem, index) => {
+        return (
+          <div className={styles.text_item} key={index}>
+            {textItem}
+          </div>
+        );
+      })}
     </div>
   );
 }

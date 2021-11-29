@@ -39,6 +39,10 @@
   text-align: right;
 }
 
+.address:nth-child(3) .value {
+  white-space: pre;
+}
+
 .value span[data-status="opened"] {
   color: #188038;
 }
@@ -46,6 +50,52 @@
 .value span[data-status="closed"] {
   color: #b00000;
 }
+
+
+
+/* info */
+.info_wrapper {
+  padding-bottom: 1em;
+}
+
+.info {
+  padding: .5em 0;
+}
+
+.info_btn {
+  width: 8em;
+  background: var(--gradient90);
+  color: #fff;
+  text-align: center;
+  border-radius: 50px;
+  padding: .2em 0;
+  cursor: pointer;
+}
+
+.info_text {
+  display: none;
+  font-size: 0.9em;
+}
+
+.expanded .info_text {
+  display: block;
+}
+
+.text_item {
+  position: relative;
+  padding: .1em 0;
+}
+
+.info:nth-child(2) .text_item {
+  padding: .1em 0 .1em .7em;
+}
+
+.info:nth-child(2) .text_item:before {
+  position: absolute;
+  content: '-';
+  left: 0;
+}
+
 
 
 /* ================

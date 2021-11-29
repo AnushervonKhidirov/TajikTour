@@ -28,7 +28,27 @@ export const locale = {
         '- Visa support and reception in GBAO;',
         '- Hotel reservation;',
         '- Guide services;',
-        '- Flights in all directions;'
+        '- Flights in all directions;',
+      ]
+    }
+  ],
+
+  info: [
+    {
+      title: 'Information about the company',
+      text: ['LLC "Tajik Tour" is a company held in the tourism sector with 10 years of experience, behind which thousands of satisfied tourists from different countries. The company is headed by professionals - people who have dedicated their lives to tourism. Our team consists of qualified managers, marketers and analysts who have received professional education and have relevant work experience. A clear vision of the peculiarities of a particular country, the knowledge gained by managers during trainings and seminars abroad, an individual approach to each guest guarantee the clients of "Tajik Tour" a high level of service.']
+    },
+    {
+      title: 'Our services',
+      text: [
+        'Organization of a tour around the world;',
+        'Tours along the Great Silk Road (Tajikistan, Uzbekistan, Kyrgyzstan, Kazakhstan, Turkmenistan);',
+        'Tour in Tajikistan: cultural, educational, historical, wedding, children, business tours, craft, gastronomic and medical;',
+        'Transfer services for about 15 vehicles: (mountain jeeps, minivans, buses);',
+        'Visa support and reception in GBAO;',
+        'Hotel reservation;',
+        'Guide services;',
+        'Flights in all directions;',
       ]
     }
   ]

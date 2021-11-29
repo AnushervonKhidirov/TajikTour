@@ -4,7 +4,7 @@ export const locale = {
   warning: [
     'The visa is paid separately (if you have Russian citizenship, a visa is not required to enter Dubai).',
     'The tour price may change due to changes in the airfare.',
-    'Accurate calculation and more hotels by calling +992 111 222 422'
+    'Accurate calculation and more hotels by calling  +992985331717 or +992446251717'
   ]
 }
 

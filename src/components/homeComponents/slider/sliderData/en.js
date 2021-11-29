@@ -67,7 +67,7 @@ export const sliderData = [
     img: 'sheikh_zayed_mosque.jpg',
     slideId: 8,
     slideTitle: 'Sheikh Zayed Mosque',
-    slideText: 'Dubai Tour',
+    slideText: 'UAE Tour',
     linkText: 'Book now',
     link: '/packages/nwtcd'
   },
@@ -80,7 +80,7 @@ export const sliderData = [
     link: '/packages/emirates'
   },
   {
-    img: 'saint_sophie_cathedral.jpg',
+    img: 'germany_brandenburg_gate.jpg',
     slideId: 10,
     slideTitle: 'Germany. Brandenburg Gate',
     slideText: 'European tour',
