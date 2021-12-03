@@ -11,6 +11,7 @@ export const locale = {
   availableAtData: '7:30 AM - 11:00 PM',
   opened: 'open',
   closed: 'close',
+  feedback: 'Feedback',
   desc: [
     {
       headline: 'Information about the company:',

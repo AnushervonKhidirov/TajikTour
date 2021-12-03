@@ -8,7 +8,6 @@ function ContactUs() {
   const wrapper = useContext(WrapperContext);
   const [locales, setLocales] = useState({});
   const [status, setStatus] = useState({});
-  const [infoState, setInfoState] = useState();
 
   useEffect(
     () =>
@@ -94,6 +93,7 @@ function ContactUs() {
             return <Info info={info} key={`info_${index}`} />;
           })}
       </div>
+      <SubHeadline title={locales.feedback} />
       <Form />
     </div>
   );
